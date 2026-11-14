@@ -145,7 +145,7 @@ export function JourneySection() {
           </figure>
         </div>
 
-        <section id={processSectionId} className={styles.process} aria-labelledby="surec-baslik" data-ground-start data-hero-end>
+        <section id={processSectionId} className={styles.process} aria-labelledby="surec-baslik" data-hero-end>
           <div className={styles.processIntro}>
             <p className={`eyebrow ${styles.eyebrow}`}>Üretim yolculuğu</p>
             <h2 id="surec-baslik" className={styles.processTitle}>

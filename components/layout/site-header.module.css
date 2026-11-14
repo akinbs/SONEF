@@ -24,6 +24,7 @@
   border-bottom-color: transparent;
 }
 
+
 /* İki logo üst üste; yalnızca navbar tonuna uyan görünür (gizli olan erişilebilirlik ağacından da çıkar). */
 .logoStack {
   display: grid;
@@ -257,5 +258,19 @@
 
   .mobile {
     display: none;
+  }
+}
+
+/*
+ * Mobil (alt alta yerleşim): ton değişimi anlıktır. 220 ms'lik geçişte beyaz ile lacivert
+ * karışıp gri bir ara ton oluşuyor, hero sınırında parmakla ileri geri kaydırıldığında navbar
+ * soluk ara tonlar arasında titriyordu. Lacivert navbar, mobildeki lacivert sahne paneliyle
+ * kesintisiz birleşir.
+ */
+@media (max-width: 63.99rem) {
+  .header,
+  .logoLight,
+  .logoDark {
+    transition: none;
   }
 }

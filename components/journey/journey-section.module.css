@@ -141,33 +141,23 @@
 
 /* ——— Sahne ——— */
 
+/*
+ * Mobil sahne: bağımsız bir "PCB inceleme penceresi". Her zaman marka laciverti, alt köşeleri
+ * yuvarlatılmış, altından kayan metinden hafif gölgeyle ayrılan bir panel. Arkasındaki sayfanın
+ * zeminini taklit etmez (önceden hero sınırı JavaScript ile pencereye çiziliyordu; dokunmatik
+ * kaydırmada geride kalıp modelin ortasında renk kırılması yapıyordu). Kart ve ray her an aynı
+ * zeminde görünür; hero'nun lacivert fotoğrafıyla da kesintisiz birleşir.
+ * Süreç footer'dan önce biter; sticky sahne yolculuk kapsayıcısının dışına çıkmaz.
+ */
 .stageColumn {
   position: sticky;
   top: var(--header-height);
   z-index: 5;
   margin-inline: calc(var(--gutter) * -1);
   padding: 0 var(--gutter) 0.75rem;
-  border-bottom: 1px solid var(--line);
-  /* Mobilde sahne kendi opak penceresidir; altından kayan metin modelin üzerine çıkmaz.
-     Zemini arkasındaki bölümün zeminidir: süreçte kırık beyaz; hero'nun lacivert zemini,
-     sayfadaki sınırla aynı konumda pencerenin içine de çizilir (journey-driver.tsx --ground-top
-     yazar). Süreç footer'dan önce biter; sticky sahne yolculuk kapsayıcısının dışına çıkmadığı
-     için footer'ın üstüne binmez, alt zemin katmanı gerekmez. JS yokken ilk ekran: lacivert. */
-  background: var(--surface);
-}
-
-.stageColumn::before {
-  content: "";
-  position: absolute;
-  inset-inline: 0;
-  z-index: -1;
+  border-radius: 0 0 1.25rem 1.25rem;
   background: var(--color-navy);
-  pointer-events: none;
-}
-
-.stageColumn::before {
-  top: 0;
-  height: var(--ground-top, 100%);
+  box-shadow: 0 0.75rem 1.5rem -1rem rgb(12 26 46 / 0.55);
 }
 
 .stage {
@@ -769,13 +759,9 @@
     z-index: 0;
     margin: 0;
     padding: 0;
-    border-bottom: 0;
+    border-radius: 0;
     background: none;
-  }
-
-  .stageColumn::before,
-  .stageColumn::after {
-    content: none;
+    box-shadow: none;
   }
 
   .stage {

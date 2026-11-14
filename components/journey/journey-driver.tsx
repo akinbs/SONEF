@@ -3,7 +3,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { lanePose, stageSide, traceEase } from "@/lib/journey/motion-plan";
 import { journeySceneConfig, resolvePoint } from "@/lib/journey/scene-config";
 import { STAGE_COUNT } from "@/lib/journey/stages";
@@ -165,38 +165,6 @@ function toLane(progress: number, lanes: readonly [number, number, number][]): n
 export function JourneyDriver() {
   const markerRef = useRef<HTMLSpanElement>(null);
 
-  /*
-   * Alt alta yerleşimde sahne opak ve sticky bir penceredir. Pencerenin zemini, o anda
-   * arkasında kalan bölümün zemini olsun diye hero (lacivert) ile süreç (kırık beyaz)
-   * arasındaki sayfa sınırı pencerenin içinde de aynı konumda çizilir:
-   * --ground-top: üstteki hero zemininin pencere içindeki yüksekliği. Süreçten sonra kapanış
-   * bandı yoktur (Blok 08); süreç doğrudan footer'a bağlanır. Yan yana yerleşimde kullanılmaz.
-   */
-  useEffect(() => {
-    const root = markerRef.current?.closest<HTMLElement>("[data-journey]");
-    const stage = root?.querySelector<HTMLElement>("[data-journey-stage]");
-    const groundStart = root?.querySelector<HTMLElement>("[data-ground-start]");
-    if (!stage || !groundStart) return;
-    let frame = 0;
-    const update = () => {
-      frame = 0;
-      const box = stage.getBoundingClientRect();
-      const clamp = (value: number) => Math.min(box.height, Math.max(0, value));
-      stage.style.setProperty("--ground-top", `${clamp(groundStart.getBoundingClientRect().top - box.top)}px`);
-    };
-    const schedule = () => {
-      if (!frame) frame = requestAnimationFrame(update);
-    };
-    update();
-    window.addEventListener("scroll", schedule, { passive: true });
-    window.addEventListener("resize", schedule);
-    return () => {
-      cancelAnimationFrame(frame);
-      window.removeEventListener("scroll", schedule);
-      window.removeEventListener("resize", schedule);
-    };
-  }, []);
-
   useGSAP(() => {
     const root = markerRef.current?.closest<HTMLElement>("[data-journey]");
     if (!root) return;
@@ -311,6 +279,11 @@ export function JourneyDriver() {
         let synced = false;
         let ticking = false;
         let lastIntent = -Infinity;
+        // Dokunmatik: tarayıcının kendi kaydırması (parmak + momentum) zaten akıcıdır. Üstüne ikinci
+        // bir yumuşatma eklemek, momentum sırasında yumuşatma ile doğrudan eşitleme arasında gidip
+        // gelmeye (titreme) ve kartın sayfanın gerisinde kalmasına yol açıyordu. Son girdi dokunma
+        // ise ilerleme doğrudan uygulanır; tekerlek/klavye/işaretçide yumuşatma sürer.
+        let touchDriven = false;
         root.dataset.coordTarget = "0.000";
 
         const stopTicker = () => {
@@ -339,7 +312,7 @@ export function JourneyDriver() {
           root.dataset.coordTarget = toCoord(progress, layout.bounds).toFixed(3);
           const jump = Math.abs(target - shown) * range;
           const intended = performance.now() - lastIntent < intentWindowMs;
-          if (!synced || jump > window.innerHeight * maxSmoothJumpViewports || (!ticking && !intended)) {
+          if (touchDriven || !synced || jump > window.innerHeight * maxSmoothJumpViewports || (!ticking && !intended)) {
             snap(progress);
             return;
           }
@@ -349,8 +322,9 @@ export function JourneyDriver() {
           }
         };
 
-        const markIntent = () => {
+        const markIntent = (event: Event) => {
           lastIntent = performance.now();
+          touchDriven = event.type === "touchstart" || event.type === "touchmove";
         };
         const intentEvents = ["wheel", "touchstart", "touchmove", "keydown", "pointerdown"] as const;
         // Yakalama aşaması: ScrollTrigger'ın pencere dinleyicilerinden önce çalışır. Aksi halde
