@@ -132,8 +132,24 @@ function measureLayout(
     bounds.push(Math.max((from + to) / 2, previous + 1e-4));
   }
   bounds.push(1);
+
+  // Son aşamalar sayfa sonunda sıkışmasın: kartlar kısa olduğunda (alt alta yerleşim) son kartın
+  // başı okuma çizgisine ulaşmadan sayfa biter; sınırlar 1'e yığılır ve gösterge bir aşamayı
+  // atlar. Her aşamaya sondan geriye doğru en az MIN_STAGE_PX kaydırma payı ayrılır. Yan yana
+  // yerleşimde aşamalar bundan çok daha uzun olduğu için sonuç değişmez.
+  const minSpan = Math.min(MIN_STAGE_PX / range, 1 / (bounds.length - 1));
+  for (let i = bounds.length - 2; i >= 1; i--) {
+    if (bounds[i] > bounds[i + 1] - minSpan) {
+      bounds[i] = bounds[i + 1] - minSpan;
+      const half = Math.min(lanes[i - 1][1] - lanes[i - 1][0], minSpan) / 2;
+      lanes[i - 1] = [bounds[i] - half, bounds[i] + half, lanes[i - 1][2]];
+    }
+  }
   return { bounds, lanes };
 }
+
+/** Sayfa sonunda her aşamaya ayrılan en az kaydırma payı (px). */
+const MIN_STAGE_PX = 200;
 
 function toCoord(progress: number, bounds: readonly number[]): number {
   if (progress >= 1) return STAGE_COUNT;

@@ -812,7 +812,8 @@
  * normal akışta alt alta durur; o an okunan kart (data-current) vurgulanır, şerit aşamayı ve
  * ilerlemeyi gösterir.
  */
-@media not ((min-width: 64rem) or ((min-width: 30rem) and (min-aspect-ratio: 4/3))) {
+/* Klasik sözdizimi (eski Safari de anlar): (genişlik < 64rem ve < 30rem) veya (genişlik < 64rem ve oran < 4:3). */
+@media (max-width: 63.99rem) and (max-width: 29.99rem), (max-width: 63.99rem) and (max-aspect-ratio: 1333/1000) {
   .journey {
     /* Şerit yüksekliği: bağlantıyla gelindiğinde başlıklar şeridin altında açılsın. */
     --stage-block: 3.5rem;
@@ -825,6 +826,11 @@
   }
 
   .canvasArea > :not(.indicator) {
+    display: none;
+  }
+
+  /* "Kaydırmalı mod" kuralı (.journey[data-motion="scroll"] .track) daha özgül; burada da açıkça gizlenir. */
+  .journey[data-motion="scroll"] .track {
     display: none;
   }
 
@@ -849,8 +855,11 @@
     margin-top: 1rem;
   }
 
+  /* Sabitlenmez ama şeridin (::before) konum bağlamı olarak kalır; aksi halde şerit kartın
+     yuvarlak köşelerinin dışına taşıyordu. */
   .stepInner {
-    position: static;
+    position: relative;
+    top: auto;
   }
 
   .steps {
@@ -881,7 +890,8 @@
   }
 
   .stepInner {
-    position: static;
+    position: relative;
+    top: auto;
   }
 
   .process,
