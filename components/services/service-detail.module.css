@@ -1,0 +1,614 @@
+/*
+ * Hizmet detay sayfası (Blok 04B SMD, 04C PCB). 04A'nın görsel dili: kırık beyaz #F7F6F3 içerik zemini,
+ * beyaz #FFFFFF kartlar, #D5CFC5 ince kenarlık, 22px köşe, #252422 ana / #514E48 ikincil metin.
+ * Kart yüksekliği içerikten gelir; yan yana kartlar satırlarını `subgrid` ile paylaşır.
+ *
+ * Kırılma noktaları:
+ * - İki kart (`.cards`): < 48rem alt alta, ≥ 48rem iki sütun.
+ * - Süreç adımları: < 40rem tek sütun, 40–70rem ikiye iki, ≥ 70rem dört sütun.
+ * - Kartlar + fotoğraf (`.mediaGrid`): < 64rem kartlar ve ardından fotoğraf alanı,
+ *   ≥ 64rem kartlar solda, fotoğraf sağda; iki grubun üst kenarı aynı çizgide.
+ */
+
+.section {
+  padding-top: clamp(3.5rem, 7vw, 5.5rem);
+}
+
+/* İlk bölüm girişin hemen altında: biraz daha yakın başlar. */
+.sectionFirst {
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+/*
+ * Sayfa içi bağlantıyla (ör. #teklif-dosyalari) gelindiğinde bölümün üst boşluğu atlanır:
+ * html'deki scroll-padding-top (navbar + 1rem) ile birlikte başlık navbar'ın hemen altına iner.
+ */
+.section {
+  scroll-margin-top: calc(-1 * clamp(3.5rem, 7vw, 5.5rem));
+}
+
+.sectionFirst {
+  scroll-margin-top: calc(-1 * clamp(2.5rem, 5vw, 4rem));
+}
+
+/* Girişte açıklamanın altındaki kısa bilgi satırı. */
+.heroNote {
+  display: flex;
+  align-items: baseline;
+  gap: 0.625rem;
+  color: var(--color-ink);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.heroNote::before {
+  content: "";
+  flex-shrink: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--color-ink);
+  transform: translateY(-0.0625rem);
+}
+
+/*
+ * Fotoğraf alanları tek sütunda (tablet) en fazla 36rem: 4:3 alan ekranı kaplamaz,
+ * ortak sol çizgide durur. Yan yana düzende sütun genişliğini alır.
+ */
+.heroMedia,
+.sideMedia {
+  max-width: 36rem;
+}
+
+@media (min-width: 56rem) {
+  .heroMedia {
+    max-width: none;
+  }
+}
+
+@media (min-width: 64rem) {
+  .sideMedia {
+    max-width: none;
+  }
+}
+
+/* ——— Ortak kart ——— */
+
+.card {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  align-content: start;
+  row-gap: 0.75rem;
+  height: 100%;
+  padding: 1.25rem;
+  border: 1px solid var(--color-rule);
+  border-radius: 1.375rem;
+  background: var(--color-card);
+  box-shadow: var(--shadow-card);
+}
+
+.cardTitle {
+  display: block;
+  color: var(--color-ink);
+  font-size: clamp(1.1875rem, 1.1rem + 0.35vw, 1.375rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.cardText {
+  max-width: 36rem;
+  color: var(--color-ink-soft);
+  font-size: clamp(1rem, 0.96rem + 0.15vw, 1.0625rem);
+  line-height: 1.65;
+}
+
+@media (min-width: 40rem) {
+  .card {
+    padding: 1.75rem;
+  }
+}
+
+/* Metin bağlantısı (kart altı hizmet bağlantıları ve e-posta) */
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 100%;
+  padding-block: 0.25rem;
+  color: var(--text-strong);
+  font-weight: 650;
+  line-height: 1.35;
+  text-decoration: underline;
+  text-decoration-color: var(--link-decoration);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color var(--duration) var(--ease-out);
+}
+
+.textLink:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 0.25rem;
+}
+
+.arrow {
+  flex-shrink: 0;
+  transition: transform var(--duration) var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .textLink:hover {
+    text-decoration-color: currentColor;
+  }
+
+  .textLink:hover .arrow {
+    transform: translateX(3px);
+  }
+}
+
+/* ——— İki eş ağırlıklı kart (malzemeyi kim sağlar, sipariş seçenekleri) ——— */
+
+.cards {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards > li {
+  display: grid;
+}
+
+.cardLinks {
+  display: grid;
+  align-self: end;
+  justify-items: start;
+  gap: 0.25rem;
+  margin: 0.25rem 0 0;
+  padding: 0.875rem 0 0;
+  border-top: 1px solid var(--color-rule);
+  list-style: none;
+  font-size: 0.9375rem;
+}
+
+@media (min-width: 48rem) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1.25rem;
+    row-gap: 0;
+  }
+
+  /* Başlık, açıklama ve bağlantı satırları iki kartta aynı çizgide başlar. */
+  .cards > li {
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+  }
+
+  .cards .card {
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+  }
+}
+
+/* ——— Süreç adımları ——— */
+
+.steps {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  align-content: start;
+  row-gap: 0.75rem;
+  padding: 1.25rem;
+  border: 1px solid var(--color-rule);
+  border-radius: 1.375rem;
+  background: var(--color-card);
+  box-shadow: var(--shadow-card);
+}
+
+.stepNumber {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1.5px solid var(--color-ink);
+  border-radius: 50%;
+  color: var(--color-ink);
+  font-size: 0.9375rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+.stepTitle {
+  margin-top: 0.25rem;
+  color: var(--color-ink);
+  font-size: clamp(1.1875rem, 1.1rem + 0.35vw, 1.3125rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.stepText {
+  color: var(--color-ink-soft);
+  font-size: clamp(1rem, 0.96rem + 0.15vw, 1.0625rem);
+  line-height: 1.65;
+}
+
+/* İkiye iki: aynı satırdaki iki adımın numara, başlık ve metin satırları ortaktır. */
+@media (min-width: 40rem) {
+  .steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1.25rem;
+    row-gap: 1.25rem;
+  }
+
+  .step {
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    row-gap: 0.75rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 70rem) {
+  .steps {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* ——— Kartlar + kenar fotoğraf alanı (kontrol, teklif dosyaları) ——— */
+
+.mediaGrid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.stack {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.checkCard {
+  grid-template-rows: auto 1fr;
+}
+
+.checkHeading {
+  display: grid;
+  justify-items: start;
+  gap: 0.75rem;
+}
+
+/*
+ * Kapsam etiketi. Fark yalnızca renkle verilmez: etiket metni kapsamı söyler. Dizgi sonrası
+ * kontrol dolu koyu etiket, müşteri onayına bağlı kontrol kenarlıklı etikettir.
+ */
+.checkLabel {
+  display: inline-block;
+  padding: 0.3125rem 0.625rem;
+  border: 1.5px solid var(--color-ink);
+  border-radius: 999px;
+  background: var(--color-ink);
+  color: var(--color-white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.checkLabel[data-conditional] {
+  border-style: dashed;
+  background: var(--color-card);
+  color: var(--color-ink);
+}
+
+@media (min-width: 40rem) {
+  .mediaGrid {
+    gap: 1.25rem;
+  }
+
+  .stack {
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .mediaGrid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+/* ——— Teklif dosyaları: kontrol listesi ——— */
+
+.groupCard {
+  grid-template-rows: auto auto auto;
+}
+
+.checklist {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--color-ink);
+  font-size: clamp(1rem, 0.96rem + 0.15vw, 1.0625rem);
+  line-height: 1.5;
+}
+
+/* Boş onay kutusu işareti: ziyaretçi listeyi hazırlık sırasında işaretleyebileceği bir liste olarak okur. */
+.checklist li {
+  position: relative;
+  padding-left: 1.875rem;
+}
+
+.checklist li::before {
+  content: "";
+  position: absolute;
+  top: 0.1875rem;
+  left: 0;
+  width: 1.125rem;
+  height: 1.125rem;
+  border: 1.5px solid var(--color-ink-soft);
+  border-radius: 0.3125rem;
+  background: var(--color-card);
+}
+
+.groupNote {
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-rule);
+  color: var(--color-ink-soft);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+/* SMD dizgiye ait dosyalar: gruplardan ayrı, kesikli çerçeveli not. */
+.asideNote {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  border: 1px dashed #b3ab9e;
+  border-radius: 1.375rem;
+  background: transparent;
+}
+
+.asideTitle {
+  color: var(--color-ink);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+@media (min-width: 40rem) {
+  .asideNote {
+    padding: 1.5rem 1.75rem;
+  }
+}
+
+/* ——— Bilgi alanı (açık taş tonu) ——— */
+
+.callout {
+  display: grid;
+  justify-items: start;
+  gap: 0.875rem;
+  padding: clamp(1.5rem, 4vw, 2.75rem);
+  border-radius: 1.375rem;
+}
+
+.calloutTitle {
+  color: var(--color-ink);
+  font-size: clamp(1.375rem, 1.15rem + 1vw, 1.875rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.calloutText {
+  max-width: 44rem;
+  color: var(--color-ink-soft);
+  font-size: clamp(1rem, 0.96rem + 0.15vw, 1.0625rem);
+  line-height: 1.65;
+}
+
+/* Üç adım: 56rem altında tek sütun (ikiye iki düzende tek kalan kart olmaz), üstünde üç sütun. */
+@media (min-width: 40rem) {
+  .steps[data-count="3"] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 56rem) {
+  .steps[data-count="3"] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ——— Numaralı seçenek kartları (üç tedarik kapsamı) ——— */
+
+.options {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.options > li {
+  display: grid;
+}
+
+.optionCard {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  align-content: start;
+  row-gap: 0.75rem;
+  height: 100%;
+  padding: 1.25rem;
+  border: 1px solid var(--color-rule);
+  border-radius: 1.375rem;
+  background: var(--color-card);
+  box-shadow: var(--shadow-card);
+}
+
+.optionNumber {
+  color: var(--color-ink-soft);
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+}
+
+/* Tablet: tek sütunlu yatay kart; numara solda dar sütunda, metin sağda. */
+@media (min-width: 40rem) {
+  .options {
+    gap: 1.25rem;
+  }
+
+  .optionCard {
+    grid-template-columns: 3.5rem minmax(0, 1fr);
+    grid-template-rows: auto auto 1fr;
+    column-gap: 1.5rem;
+    padding: 1.75rem;
+  }
+
+  .optionNumber {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    padding-top: 0.25rem;
+  }
+
+  .optionCard > :not(.optionNumber) {
+    grid-column: 2;
+  }
+}
+
+/* Geniş masaüstü: üç eş sütun; numara, başlık, metin ve bağlantı satırları `subgrid` ile ortak. */
+@media (min-width: 70rem) {
+  .options {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 1.25rem;
+    row-gap: 0;
+  }
+
+  .options > li {
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+  }
+
+  .optionCard {
+    grid-row: span 4;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: subgrid;
+  }
+
+  .optionNumber {
+    grid-row: auto;
+    padding-top: 0;
+  }
+
+  .optionCard > :not(.optionNumber) {
+    grid-column: 1;
+  }
+}
+
+/* ——— Teklif listesi: parça başına bilgiler ——— */
+
+.fields {
+  display: grid;
+  margin: 0.25rem 0 0;
+  border-top: 1px solid var(--color-rule);
+}
+
+.fields > div {
+  display: grid;
+  gap: 0.125rem;
+  padding-block: 0.75rem;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.fields > div:last-child {
+  border-bottom: 0;
+  padding-bottom: 0.25rem;
+}
+
+.fields dt {
+  color: var(--color-ink);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Uzun parça kodu veya dosya adı yatay kaydırma yerine satır sonunda kırılır. */
+.fields dd {
+  margin: 0;
+  color: var(--color-ink-soft);
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 30rem) {
+  .fields > div {
+    grid-template-columns: 7rem minmax(0, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* ——— Onaylı teknik bilgiler (veri gelince) ——— */
+
+.specs {
+  display: grid;
+  gap: 0;
+  margin: 2rem 0 0;
+  border-top: 1px solid var(--color-rule);
+}
+
+.specs > div {
+  display: grid;
+  gap: 0.25rem;
+  padding-block: 0.875rem;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.specs dt {
+  color: var(--color-ink-soft);
+  font-size: 0.9375rem;
+}
+
+.specs dd {
+  margin: 0;
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+@media (min-width: 48rem) {
+  .specs > div {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 1.5rem;
+  }
+}
+
+/* ——— Kapanış: e-posta satırı ——— */
+
+.email {
+  margin-top: 0.5rem;
+  color: var(--color-ink-soft);
+}
+
+/* Uzun adres dar ekranda satır sonunda bölünebilir; yatay taşma olmaz. */
+.email .textLink {
+  display: inline;
+  overflow-wrap: anywhere;
+}

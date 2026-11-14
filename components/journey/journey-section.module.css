@@ -1,0 +1,917 @@
+/*
+ * Yolculuk yerleşimi
+ * - Mobil: blok akış; sahne başlığın altında sticky ve sabit yükseklikte (svh: adres
+ *   çubuğu açılıp kapanınca değişmez), süreç metni altındaki ayrı alanda okunur. Kart
+ *   sahnenin içinde küçük yanal hareketlerle sağa–sola geçer.
+ * - Yan yana (≥64rem veya yatay/basık ekran): sahne bütün genişlikte, sticky ve metnin
+ *   arkasında; metin bölümleri dönüşümlü olarak sol ve sağ sütuna yerleşir, kart karşı
+ *   taraftaki yerleşim alanında durur. Her adımın başındaki geçiş boşluğunda kart taraf
+ *   değiştirir (journey-driver.tsx bu boşlukları ölçer).
+ * - Azaltılmış hareket: uzun kaydırma alanları, geçiş boşlukları ve sticky davranış kaldırılır.
+ *
+ * Zeminler düz ve tam opaktır: hero #E3DFD7 (açık taş grisi; metin ve 3D alanı birlikte),
+ * yedi süreç adımının ortak zemini #F7F6F3 (kırık beyaz), kapanış yine #E3DFD7; footer'a
+ * lacivert sınırla geçer. Degrade yoktur. Hero ve kapanış tam genişlikte bir renk
+ * bandı çizer; bantlar yolculuğun yığın bağlamında en altta kalır, sticky 3D sahne ve kartlar
+ * her zaman üstlerindedir. Sınırlar bölümlerle birlikte doğal biçimde kayar; aktif aşamaya
+ * göre ekranın rengi değişmez. Canvas şeffaftır.
+ * Süreç kartları tek tasarım dilindedir (#FFFFFF, ince #D5CFC5 kenarlık, hafif gölge);
+ * metinleri kartın tonundan gelir.
+ */
+
+.journey {
+  --stage-height: clamp(14rem, 40svh, 24rem);
+  --stage-block: calc(var(--stage-height) + 0.75rem);
+  --text-top: calc(var(--header-height) + var(--stage-block));
+  --step-length: 58svh;
+  --step-length-long: 140svh;
+  --step-gap: 16svh;
+
+  position: relative;
+  /* Bantların negatif katmanı bu bağlamda kalır; yatay taşan bant kenarları kırpılır
+     (clip kaydırma kabı oluşturmaz, sticky davranışı bozulmaz). */
+  isolation: isolate;
+  overflow-x: clip;
+  background: var(--surface);
+}
+
+.step {
+  position: relative;
+}
+
+/*
+ * Tam genişlikte renk bandı: hero. Bant öğenin kendi kutusunu yatayda ekran kenarlarına kadar
+ * uzatır; üst ve alt sınır öğenin sınırıdır (keskin, geçişsiz).
+ */
+.heroBand::before {
+  content: "";
+  position: absolute;
+  inset: 0 -100vmax;
+  z-index: -1;
+  background: var(--surface);
+  pointer-events: none;
+}
+
+/* Mobil: hero zemini giriş bölümünün kendisidir; ayrı bant öğesi gerekmez. */
+.heroBand {
+  display: none;
+}
+
+.intro {
+  position: relative;
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  inset: 0 -100vmax;
+  z-index: -1;
+  background: var(--surface);
+  pointer-events: none;
+}
+
+.layout {
+  display: block;
+}
+
+/* ——— Hero ve kapanış fotoğrafları (BackdropImage "clear") ———
+ * Fotoğraf, bulunduğu öğeden bağımsız olarak ekranın bir kenarından diğerine uzanır. İçerik
+ * kenarının ekrana uzaklığı: (100vw − container) / 2 + gutter. 100vw kaydırma çubuğunu da
+ * içerdiği için fotoğraf birkaç piksel taşar; `.journey` yatayda kırptığı için görünmez.
+ * Bantların lacivert ::before zemininin üstünde, sahnenin (3D) altında kalır.
+ */
+.journey {
+  --content-edge: calc((100vw - min(100vw, var(--container))) / 2 + var(--gutter));
+}
+
+.journey .bleed {
+  inset: 0 auto;
+  left: calc(var(--content-edge) * -1);
+  width: 100vw;
+}
+
+/* Dar ekran (metin bandın tamamında): üstte fotoğraf daha açık, metnin yoğunlaştığı altta koyu. */
+.journey .heroBackdrop::after {
+  background: linear-gradient(
+    180deg,
+    rgb(12 26 46 / 0.6) 0%,
+    rgb(12 26 46 / 0.74) 45%,
+    rgb(12 26 46 / 0.82) 100%
+  );
+}
+
+.splitOnly {
+  display: none;
+}
+
+/* ——— Giriş ——— */
+
+/* Giriş: lacivert hero zemininde, ayrı kart yüzeyi olmadan beyaz başlık + krem metin. */
+.intro {
+  padding-block: 2rem 2.25rem;
+  color: var(--text-body);
+}
+
+.introCard {
+  display: grid;
+  justify-items: start;
+  gap: 1.25rem;
+}
+
+.title {
+  font-size: clamp(2.5rem, 1.6rem + 3.4vw, 4.5rem);
+  font-weight: 750;
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+.lead {
+  max-width: 34rem;
+  color: var(--text-body);
+  font-size: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
+  line-height: 1.55;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+/* ——— Sahne ——— */
+
+.stageColumn {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 5;
+  margin-inline: calc(var(--gutter) * -1);
+  padding: 0 var(--gutter) 0.75rem;
+  border-bottom: 1px solid var(--line);
+  /* Mobilde sahne kendi opak penceresidir; altından kayan metin modelin üzerine çıkmaz.
+     Zemini arkasındaki bölümün zeminidir: süreçte kırık beyaz; hero'nun lacivert zemini,
+     sayfadaki sınırla aynı konumda pencerenin içine de çizilir (journey-driver.tsx --ground-top
+     yazar). Süreç footer'dan önce biter; sticky sahne yolculuk kapsayıcısının dışına çıkmadığı
+     için footer'ın üstüne binmez, alt zemin katmanı gerekmez. JS yokken ilk ekran: lacivert. */
+  background: var(--surface);
+}
+
+.stageColumn::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  z-index: -1;
+  background: var(--color-navy);
+  pointer-events: none;
+}
+
+.stageColumn::before {
+  top: 0;
+  height: var(--ground-top, 100%);
+}
+
+.stage {
+  margin: 0;
+}
+
+.canvasArea {
+  /* Yerleşim alanları ve poster, sahnenin kendi boyutuna göre (cqw/cqh) konumlanır. */
+  container-type: size;
+  position: relative;
+  isolation: isolate;
+  height: var(--stage-height);
+
+  /* Mobil: sahne kendi alanında; kart yalnızca küçük yanal hareketle taraf değiştirir. */
+  --slot-size: min(96cqh, 88cqw);
+  --slot-left-x: 45cqw;
+  --slot-right-x: 55cqw;
+  --slot-y: 50cqh;
+  /* Soldaki karşı yatışın gücü (model-canvas.tsx okur): mobilde daha küçük açı. */
+  --lane-mirror: 0.75;
+}
+
+/*
+ * Sahnedeki PCB yolu (ray). Kartın izlediği rota iki paralel iz olarak çizilir: maske, yolu
+ * dış genişlikte beyaz, iç boşlukta siyah boyar; iki ray her zeminde (lacivert hero, açık süreç)
+ * gerçekten saydam aralıklı kalır. Önümüzdeki kısım soluk, geçilen kısım dolu gök mavisi.
+ * Poster (-1) ve 3D sahnenin altında; JS yokken ve azaltılmış harekette çizilmez.
+ */
+.track {
+  --rail-gap: 8px;
+  --rail-width: 2px;
+
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.journey[data-motion="scroll"] .track {
+  display: block;
+}
+
+.railOuter,
+.railInner {
+  fill: none;
+  stroke-linecap: butt;
+  stroke-linejoin: round;
+}
+
+.railOuter {
+  stroke: #fff;
+  stroke-width: calc(var(--rail-gap) + 2 * var(--rail-width));
+}
+
+.railInner {
+  stroke: #000;
+  stroke-width: var(--rail-gap);
+}
+
+.railsAhead {
+  fill: var(--color-sky);
+  opacity: 0.4;
+}
+
+.railsTraveled {
+  fill: var(--color-sky);
+}
+
+.trackPad {
+  fill: none;
+  stroke: var(--color-sky);
+  stroke-width: 3;
+}
+
+/* Yerleşim alanları: görünmez ölçü kutuları. 3D kamera bunları ölçer (model-canvas.tsx). */
+.slot {
+  position: absolute;
+  top: var(--slot-y);
+  width: var(--slot-size);
+  height: var(--slot-size);
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.slot[data-model-slot="left"] {
+  left: var(--slot-left-x);
+}
+
+.slot[data-model-slot="right"] {
+  left: var(--slot-right-x);
+}
+
+/*
+ * Poster ve parıltı, 3D kamerayla aynı şerit pozunu izler: sürücü --journey-lane-u,
+ * --journey-scale ve --journey-rise değerlerini (motion-plan.ts `lanePose`) yazar.
+ */
+.posterFrame {
+  position: absolute;
+  z-index: -1;
+  left: calc(var(--slot-left-x) + (var(--slot-right-x) - var(--slot-left-x)) * var(--journey-lane-u, 1));
+  top: calc(var(--slot-y) - var(--journey-rise, 0) * 100cqh);
+  width: var(--slot-size);
+  height: var(--slot-size);
+  transform: translate(-50%, -50%) scale(var(--journey-scale, 1));
+}
+
+.poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 500ms var(--ease-out);
+}
+
+.posterAssembled {
+  opacity: 0;
+}
+
+.journey[data-poster="assembled"] .posterExploded {
+  opacity: 0;
+}
+
+.journey[data-poster="assembled"] .posterAssembled {
+  opacity: 1;
+}
+
+/* Model hazır: posterler canvas ile aynı anda ve aynı türde geçişle çekilir (hero-model.module.css). */
+.canvasArea:has([data-model-state="ready"]) .poster {
+  opacity: 0;
+}
+
+.canvasArea:has([data-model-reveal="fade"]) .poster {
+  transition-duration: 250ms;
+}
+
+.canvasArea:has([data-model-reveal="cut"]) .poster {
+  transition: none;
+}
+
+/* ——— Aşama göstergesi ——— */
+
+/* Hero, açık zemin ve kapanış üzerinde aynı biçimde okunan beyaz etiket yüzeyi. */
+.indicator {
+  position: absolute;
+  inset: 0.25rem auto auto 0;
+  display: none;
+  padding: 0.5rem 0.875rem 0.625rem;
+  border: 1px solid var(--line);
+  border-radius: 0.875rem;
+  background: var(--surface);
+  pointer-events: none;
+}
+
+.journey[data-motion="scroll"] .indicator {
+  display: block;
+}
+
+.indicatorLabel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.625rem;
+  color: var(--text-strong);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.indicatorNumber {
+  color: var(--highlight);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.06em;
+}
+
+.indicatorTrack {
+  display: block;
+  width: 100%;
+  min-width: 8rem;
+  height: 2px;
+  margin-top: 0.5rem;
+  background: var(--line);
+}
+
+.indicatorBar {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transform: scaleX(var(--journey-progress, 0));
+  transform-origin: left;
+}
+
+/* ——— Süreç ——— */
+
+.process {
+  /* Mobilde hedef başlık sticky sahnenin altında kalmasın. */
+  scroll-margin-top: var(--stage-block);
+}
+
+.processIntro {
+  display: grid;
+  justify-items: start;
+  gap: 1rem;
+  padding-block: 2.5rem 2rem;
+}
+
+.processTitle {
+  max-width: 16ch;
+  font-size: clamp(1.875rem, 1.3rem + 2.4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.processLead {
+  max-width: 30rem;
+  color: var(--text-body);
+}
+
+.steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  min-height: calc(var(--step-gap) + var(--step-length));
+  /* Bağlantıyla gelindiğinde geçiş boşluğu atlanır; metin sahnenin altında açılır. */
+  scroll-margin-top: calc(var(--stage-block) - var(--step-gap));
+}
+
+.step[data-length="long"] {
+  min-height: calc(var(--step-gap) + var(--step-length-long));
+}
+
+.stepGap {
+  height: var(--step-gap);
+}
+
+/* Son kart footer'a yapışmaz: açık zeminde bir kart boşluğu kalır (Blok 08'den beri kapanış bandı yok). */
+.step:last-child {
+  padding-bottom: var(--card-padding);
+}
+
+/*
+ * Süreç kartı (Blok 02E + gradient efekti): yukarıdan aşağıya üst satır (solda "03 / 07",
+ * sağda taş zeminli aşama etiketi), güçlü başlık, sıcak gri açıklama ve varsa ince ayırıcının
+ * altında hizmet bağlantısı. Yüzey #FFFFFF, kenarlık #D5CFC5, hafif gölge; yükseklik içerikten gelir.
+ *
+ * Solda marka gradientinde (lacivert → çelik → açık mavi) ince bir şerit durur. İşaretçi kartın
+ * üzerine gelince (ya da klavye odağı kartın içindeyken) şerit bütün kartı kaplar ve metinler
+ * koyu zemin renklerine (beyaz / krem) geçer. Efekt yalnızca gerçek işaretçili cihazlarda çalışır;
+ * dokunmatikte kart açık kalır, şerit görünür. Etkin aşamada şerit kalınlaşır ve kenarlık koyulaşır;
+ * kartın ölçüsü ve konumu hiçbir durumda değişmez (3D sahneyle arası sabit kalır).
+ */
+.stepInner {
+  --step-card-padding: clamp(1.25rem, 0.95rem + 1.4vw, 1.5rem);
+  --step-ease: cubic-bezier(0.23, 1, 0.32, 1);
+  --step-fx: 500ms;
+  --step-bar: 5px;
+  /* Koyu uç metnin çoğunun durduğu sol üstte; açık mavi yalnızca sağ alt köşeye sızar,
+     beyaz metin her noktada okunur kalır. */
+  --step-gradient: linear-gradient(-45deg, #60c1e5 -100%, var(--color-steel) 40%, var(--color-navy) 100%);
+
+  position: sticky;
+  top: calc(var(--text-top) + 1rem);
+  /* Gradient katmanı (::before, z-index -1) kart zemininin üstünde, içeriğin altında boyanır. */
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  gap: 0.875rem;
+  padding: var(--step-card-padding);
+  padding-left: calc(var(--step-card-padding) + 4px);
+  border: 1px solid var(--color-rule);
+  border-radius: 1.375rem;
+  background: var(--color-card);
+  box-shadow: var(--shadow-card);
+  transition:
+    border-color var(--step-fx) var(--step-ease),
+    box-shadow var(--step-fx) var(--step-ease);
+}
+
+.stepInner::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  z-index: -1;
+  width: var(--step-bar);
+  background: var(--step-gradient);
+  transition: width var(--step-fx) var(--step-ease);
+  pointer-events: none;
+}
+
+.step[data-current="true"] .stepInner {
+  --step-bar: 8px;
+  border-color: rgb(37 36 34 / 0.42);
+}
+
+.stepMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.number {
+  color: var(--color-ink-soft);
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  transition: color var(--step-fx) var(--step-ease);
+}
+
+.numberTotal {
+  font-weight: 500;
+}
+
+.step[data-current="true"] .number {
+  color: var(--color-ink);
+}
+
+.stepLabel {
+  padding: 0.3125rem 0.75rem;
+  border-radius: 999px;
+  background: var(--color-stone);
+  color: var(--color-ink);
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  transition:
+    background-color var(--step-fx) var(--step-ease),
+    color var(--step-fx) var(--step-ease);
+}
+
+.stepTitle {
+  margin-top: 0.375rem;
+  color: var(--color-ink);
+  font-size: clamp(1.625rem, 1.45rem + 0.5vw, 1.875rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  transition: color var(--step-fx) var(--step-ease);
+}
+
+.stepText {
+  max-width: 34rem;
+  color: var(--color-ink-soft);
+  font-size: clamp(1rem, 0.96rem + 0.15vw, 1.0625rem);
+  line-height: 1.65;
+  transition: color var(--step-fx) var(--step-ease);
+}
+
+/* Süreç adımından ilgili hizmet sayfasına: ince ayırıcı + gradient düğme biçiminde bağlantı. */
+.stepLinks {
+  display: grid;
+  justify-items: start;
+  gap: 0.5rem;
+  margin: 0.375rem 0 0;
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--color-rule);
+  list-style: none;
+  transition: border-color var(--step-fx) var(--step-ease);
+}
+
+.stepLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.875rem;
+  border-radius: 0.625rem;
+  background: var(--step-gradient);
+  box-shadow: 0 5px 10px rgb(27 54 93 / 0.2);
+  color: var(--color-white);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-decoration: none;
+  transition:
+    background var(--step-fx) var(--step-ease),
+    color var(--step-fx) var(--step-ease),
+    box-shadow var(--step-fx) var(--step-ease),
+    outline-color var(--step-fx) var(--step-ease);
+}
+
+.stepLink:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 3px;
+  border-radius: 0.625rem;
+}
+
+.stepLink:active {
+  box-shadow: none;
+}
+
+.stepLinkArrow {
+  transition: transform var(--step-fx) var(--step-ease);
+}
+
+/* Dolu durum: işaretçi kartta (gerçek işaretçi) ya da klavye odağı kartın içinde. */
+@media (hover: hover) and (pointer: fine) {
+  .stepInner:hover::before {
+    width: 100%;
+  }
+
+  .stepInner:hover {
+    border-color: var(--color-navy);
+    box-shadow: none;
+  }
+
+  .stepInner:hover .number,
+  .stepInner:hover .stepText {
+    color: var(--color-cream);
+  }
+
+  .stepInner:hover .stepTitle {
+    color: var(--color-white);
+  }
+
+  .stepInner:hover .stepLabel {
+    background: rgb(255 255 255 / 0.14);
+    color: var(--color-white);
+  }
+
+  .stepInner:hover .stepLinks {
+    border-top-color: rgb(252 241 208 / 0.3);
+  }
+
+  .stepInner:hover .stepLink {
+    background: var(--color-white);
+    color: var(--color-navy);
+  }
+
+  .stepInner:hover .stepLink:hover {
+    outline: 2px solid var(--color-white);
+    outline-offset: 0;
+    background: transparent;
+    color: var(--color-white);
+  }
+
+  .stepLink:hover .stepLinkArrow {
+    transform: translateX(3px);
+  }
+}
+
+.stepInner:has(:focus-visible)::before {
+  width: 100%;
+}
+
+.stepInner:has(:focus-visible) {
+  border-color: var(--color-navy);
+  box-shadow: none;
+}
+
+.stepInner:has(:focus-visible) .number,
+.stepInner:has(:focus-visible) .stepText {
+  color: var(--color-cream);
+}
+
+.stepInner:has(:focus-visible) .stepTitle {
+  color: var(--color-white);
+}
+
+.stepInner:has(:focus-visible) .stepLabel {
+  background: rgb(255 255 255 / 0.14);
+  color: var(--color-white);
+}
+
+.stepInner:has(:focus-visible) .stepLinks {
+  border-top-color: rgb(252 241 208 / 0.3);
+}
+
+.stepInner:has(:focus-visible) .stepLink {
+  background: var(--color-white);
+  color: var(--color-navy);
+}
+
+.stepInner .stepLink:focus-visible {
+  outline-color: var(--color-white);
+}
+
+/*
+ * Kısa dikey ekranlar (ör. 320×568, Blok 08): varsayılan sahne en az 14rem olduğundan metne
+ * ~250 px kalıyor, bazı kartlar hiçbir an bütünüyle görünmüyordu. Burada sahne küçülür, kart
+ * sahneye yaklaşır ve kartın sabit kaldığı kaydırma uzunluğu artar. Aşama sınırları DOM'dan
+ * ölçüldüğü için (journey-driver.tsx) zamanlama kendiliğinden uyar. Yan yana yerleşim bu
+ * sorguya girmez (genişlik < 64rem ve dikey oran).
+ */
+@media (max-width: 63.99rem) and (max-height: 44rem) and (max-aspect-ratio: 4/3) {
+  .journey {
+    --stage-height: clamp(9rem, 27svh, 14rem);
+    --step-length: 80svh;
+  }
+
+  .stepInner {
+    --step-card-padding: 1rem;
+    top: calc(var(--text-top) + 0.5rem);
+    gap: 0.625rem;
+  }
+
+  .stepLinks {
+    gap: 0.375rem;
+    padding-top: 0.75rem;
+  }
+
+  .stepLink {
+    padding-block: 0.375rem;
+  }
+
+  /* Alçak sahnede kart, sol üstteki aşama göstergesinin (≈3.2rem) altındaki alana yerleşir;
+     aksi halde kartın üst kenarı göstergenin arkasında kalıyordu. */
+  .canvasArea {
+    --slot-size: min(calc(100cqh - 3.5rem), 88cqw);
+    --slot-y: calc(50cqh + 1.75rem);
+  }
+}
+
+/* ——— Yan yana yerleşim: masaüstü ve yatay/basık ekranlar ———
+ * Sorgu journey-driver.tsx içindeki SPLIT_LAYOUT_QUERY ile aynı olmalı. */
+
+@media (min-width: 64rem), (min-width: 30rem) and (min-aspect-ratio: 4/3) {
+  .journey {
+    --text-top: var(--header-height);
+    --step-length: 62svh;
+    --step-length-long: 150svh;
+    /* Metin blokları arasındaki geçiş boşluğu: kart bu aralıkta karşı tarafa geçer. */
+    --step-gap: 62svh;
+    /* Metin sütunu; kalan genişlik kartın yerleşim alanıdır. */
+    --text-col: 40%;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /*
+   * Hero zemini ayrı bir ızgara öğesidir (1. satır, girişle aynı yükseklik). Bant negatif
+   * katmanda kalır; sahne bandın üstünde, giriş metni (z-index: 1) sahnenin üstündedir.
+   */
+  .heroBand {
+    display: block;
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    z-index: -1;
+  }
+
+  .splitOnly {
+    display: block;
+  }
+
+  .stackedOnly {
+    display: none;
+  }
+
+  /*
+   * Yan yana: metin solda (%40). Katman metnin arkasında yoğun, sağa doğru incelir; 3D kartın
+   * durduğu sağ tarafta fotoğraf net kalır ama kart zeminden ayrışsın diye hafif bir koyuluk kalır.
+   */
+  .journey .heroBackdrop::after {
+    background: linear-gradient(
+      90deg,
+      rgb(12 26 46 / 0.88) 0%,
+      rgb(12 26 46 / 0.74) 34%,
+      rgb(12 26 46 / 0.3) 56%,
+      rgb(12 26 46 / 0.18) 100%
+    );
+  }
+
+  .intro::before {
+    content: none;
+  }
+
+  .intro {
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    z-index: 1;
+    width: min(40%, 34rem);
+    display: grid;
+    align-content: center;
+    min-height: calc(100svh - var(--header-height));
+    padding-block: 3rem;
+  }
+
+  /* Sahne bütün genişlikte ve metnin arkasında; kart metnin karşı tarafında durur. */
+  .stageColumn {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    position: static;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    border-bottom: 0;
+    background: none;
+  }
+
+  .stageColumn::before,
+  .stageColumn::after {
+    content: none;
+  }
+
+  .stage {
+    position: sticky;
+    top: var(--header-height);
+    height: calc(100svh - var(--header-height));
+  }
+
+  .track {
+    --rail-gap: 14px;
+    --rail-width: 3px;
+  }
+
+  .canvasArea {
+    height: 100%;
+    --slot-size: min(56cqw, 88cqh);
+    --slot-left-x: 29cqw;
+    --slot-right-x: 71cqw;
+    /* Soldaki görünüm, sağdakinin tam karşı yatışı. */
+    --lane-mirror: 1;
+  }
+
+  /*
+   * Aşama göstergesi iki metin sütununun arasındaki orta şeritte durur; kayan metinler
+   * sütunlarda kaldığı için onunla üst üste gelmez. (Model açıklama yazısı kaldırıldı.)
+   */
+
+  .canvasArea {
+    --model-controls-bottom: 2.75rem;
+  }
+
+  .indicator {
+    inset: 0.75rem auto auto 50%;
+    width: 18%;
+    min-width: 13rem;
+    transform: translateX(-50%);
+  }
+
+  .indicatorLabel {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .indicatorTrack {
+    width: 100%;
+  }
+
+  /* Süreç metni sahnenin üstünde; boş alanlar tıklamayı sahneye (ör. 3D düğmesi) bırakır. */
+  /* z-index yok: süreç kendi yığın bağlamını kurmaz; bant zeminleri sahnenin altında kalır,
+     kartlar (sticky) sahnenin üstünde boyanır. */
+  .process {
+    grid-column: 1;
+    grid-row: 2;
+    position: relative;
+    scroll-margin-top: 0;
+    pointer-events: none;
+  }
+
+  .processIntro,
+  .step {
+    width: var(--text-col);
+    pointer-events: auto;
+  }
+
+  .step[data-side="right"] {
+    margin-left: auto;
+  }
+
+  .step {
+    scroll-margin-top: calc(var(--step-gap) * -1);
+  }
+
+  .stepLink {
+    padding: 0.625rem 1rem;
+    font-size: 0.9375rem;
+  }
+
+  .stepInner {
+    --step-card-padding: clamp(1.75rem, 1.2rem + 0.9vw, 2rem);
+    top: calc(var(--header-height) + 20svh);
+  }
+}
+
+/* ——— Azaltılmış hareket: normal okuma akışı ——— */
+
+@media (prefers-reduced-motion: reduce) {
+  .journey {
+    --step-gap: 0px;
+  }
+
+  /* Akışta kalır; taş/kırık beyaz zemin katmanları için konumlandırma bağlamı korunur. */
+  .stageColumn {
+    position: relative;
+    top: auto;
+  }
+
+  .stage {
+    position: static;
+  }
+
+  .step,
+  .step[data-length="long"] {
+    min-height: 0;
+  }
+
+  .stepInner {
+    position: static;
+  }
+
+  .process,
+  .step {
+    scroll-margin-top: 0;
+  }
+
+  .poster {
+    transition: none;
+  }
+
+  .posterExploded {
+    opacity: 0;
+  }
+
+  .posterAssembled {
+    opacity: 1;
+  }
+}
+
+/* Yan yana + azaltılmış hareket: tamamlanmış kart girişin yanında, süreç altında normal akışta. */
+@media (prefers-reduced-motion: reduce) and (min-width: 64rem),
+  (prefers-reduced-motion: reduce) and (min-width: 30rem) and (min-aspect-ratio: 4/3) {
+  .stageColumn {
+    grid-row: 1;
+    position: static;
+  }
+
+  .step {
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,71 @@
+.band {
+  padding-block: clamp(3rem, 7vw, 5.5rem);
+}
+
+.panel {
+  /* Silik arka plan fotoğrafı (BackdropImage) panelin köşelerine uyar, içeriğin altında kalır. */
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  /* Geniş ekranda düğme ve metin bağlantısı sağdadır: fotoğraf orada da geri planda kalır. */
+  --backdrop-end: 48%;
+  display: grid;
+  gap: 1.75rem;
+  padding: clamp(1.75rem, 4vw, 3rem);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+/*
+ * Net fotoğraflı koyu panel (footer üstü banner): data-tone="dark" ile başlık beyaz, metin krem.
+ * Düğmeler ve ek bağlantılar geniş ekranda sağda durduğu için katman sağ uçta da yarı koyu kalır.
+ */
+/* Gölge yalnızca başlık ve metinde; düğmelerin dolu zemini kendi kontrastını taşır. */
+.clearPanel .text {
+  text-shadow: 0 1px 2px rgb(8 18 33 / 0.45);
+}
+
+@media (min-width: 56rem) {
+  .panel .clearBackdrop::after {
+    background: linear-gradient(
+      90deg,
+      rgb(12 26 46 / 0.86) 0%,
+      rgb(12 26 46 / 0.66) 45%,
+      rgb(12 26 46 / 0.5) 100%
+    );
+  }
+}
+
+.text {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 38rem;
+}
+
+.title {
+  font-size: clamp(1.5rem, 1.2rem + 1.3vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.body {
+  color: var(--text-body);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+@media (min-width: 56rem) {
+  .panel {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+  }
+
+  .actions {
+    justify-content: flex-end;
+  }
+}

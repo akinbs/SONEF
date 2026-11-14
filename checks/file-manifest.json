@@ -1,0 +1,62 @@
+[
+  {
+    "path": "01_Claude_Proje_Baslangic_Promptu.md",
+    "bytes": 10481,
+    "sha256": "8a7da18ab57c4903f77a844fbdce9f0cbad7499d8ae785620a47065814692ad9"
+  },
+  {
+    "path": "BASLANGIC.md",
+    "bytes": 3815,
+    "sha256": "4b9e5ca023bc08b7f79659d4a5f00a4af7502e6aee7a459e48991923d1cf4592"
+  },
+  {
+    "path": "checks/asset-checks.json",
+    "bytes": 528,
+    "sha256": "5a4ebddd4f5d4445740042f126827371d699276de16f365e22055581e3d99e26"
+  },
+  {
+    "path": "checks/compression-validation.json",
+    "bytes": 160,
+    "sha256": "a08f199863edfd95bb81f9590b62fca63eda74dbc468d6f3e660c15012956bb1"
+  },
+  {
+    "path": "checks/gltf-validation.json",
+    "bytes": 2633,
+    "sha256": "46a49d7726bb6130165ee25491235a3d3439b42f25934703980e2057178273d4"
+  },
+  {
+    "path": "checks/source-placement-validation.json",
+    "bytes": 1281,
+    "sha256": "a1f37b5791289e04b35dccb6f92ef5471513c6a6dbf10606e23cf8911ef4ebf8"
+  },
+  {
+    "path": "public/brand/SONEF_Logo_Transparan_300ppi.png",
+    "bytes": 86693,
+    "sha256": "d9a8d969986874061283fcb002aa4ef99b69f3d615e2ea7c7946bfccea50693f"
+  },
+  {
+    "path": "public/models/esp32/esp32-38pines.glb",
+    "bytes": 5831192,
+    "sha256": "e2c26d1a29d284471b153931763aed3bb91c716dd8ea00914f67f5e1af844d8b"
+  },
+  {
+    "path": "public/models/esp32/esp32-manifest.json",
+    "bytes": 133783,
+    "sha256": "9ef00b215429d4868d802ce53764d678d87fdfdbdcd69b6cdb83dd81305c98bc"
+  },
+  {
+    "path": "public/models/esp32/esp32-poster.webp",
+    "bytes": 69734,
+    "sha256": "1e84a1e79acb7965dd1aab1f05275224003fe409aacd3d7d6cde93eca7d6e5d9"
+  },
+  {
+    "path": "reference/SONEF_CAD_Onizleme.png",
+    "bytes": 182048,
+    "sha256": "75408cb57a74e0f79b9c8e868bffcd2ad2b1b4bfd70425c3560f3293d1b607af"
+  },
+  {
+    "path": "reference/esp32-38pines-uncompressed.glb",
+    "bytes": 15568564,
+    "sha256": "4663f2aa03b468f97b449b201eed91c3a82ce3ff0803f9015aabacdfb6d16abe"
+  }
+]

@@ -1,0 +1,306 @@
+/*
+ * Renk sistemi: açık nötr içerik zemini + lacivert çerçeve (navbar, mobil menü, footer).
+ * Bileşenler yalnızca rol değişkenlerini (--surface, --text-*, --accent*, --secondary-*,
+ * --highlight, --line*, --focus-ring) kullanır. Rollerin değeri, öğenin içinde bulunduğu en
+ * yakın `data-tone` yüzeyinden gelir; böylece bir kartın metni bölümün değil kartın kendi
+ * zeminine uyar.
+ *
+ * Tonlar: light #F7F6F3 (ana zemin) · stone #E3DFD7 (hero, sayfa girişi, kapanış) ·
+ * card #FFFFFF (metin ve hizmet kartları) · dark #1B365D (yalnızca navbar, mobil menü, footer).
+ * Yaklaşık kontrast: #252422 ↔ #FFFFFF 15,6:1 · ↔ #F7F6F3 14,4:1 · ↔ #E3DFD7 11,6:1;
+ * #514E48 ↔ #FFFFFF 8,6:1 · ↔ #F7F6F3 7,9:1 · ↔ #E3DFD7 6,4:1.
+ */
+:root {
+  /* İçerik paleti (açık nötr) */
+  --color-stone: #e3dfd7; /* hero, sayfa girişi ve kapanış zemini */
+  --color-paper: #f7f6f3; /* süreç ve iç sayfaların ana zemini */
+  --color-card: #ffffff; /* metin ve hizmet kartları */
+  --color-rule: #d5cfc5; /* kart kenarlıkları ve ince ayırıcılar */
+  --color-ink: #252422; /* başlıklar, ana metin, içerikteki ana buton */
+  --color-ink-soft: #514e48; /* ikincil metin */
+  --color-ink-hover: #3d3b37; /* ana buton hover */
+
+  /* Çerçeve paleti: navbar, mobil menü ve footer (kendi renk düzenleri) */
+  --color-navy: #1b365d;
+  --color-sky: #60c1e5;
+  --color-white: #ffffff;
+  --color-cream: #fcf1d0;
+  --color-steel: #2f5480;
+
+  /* Kart dili: bütün sayfalarda aynı köşe, gölge ve iç boşluk */
+  --radius: 0.625rem;
+  --radius-card: 1.25rem;
+  --card-padding: clamp(1.25rem, 0.9rem + 1.6vw, 2rem);
+  --shadow-card: 0 1px 2px rgb(37 36 34 / 0.05), 0 0.75rem 1.5rem -1rem rgb(37 36 34 / 0.22);
+
+  /* Tipografi */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
+    Arial, sans-serif;
+  --measure: 38rem;
+
+  --container: 76rem;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --header-height: 4rem;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration: 220ms;
+
+  color-scheme: light;
+}
+
+/*
+ * Ton kapsamları. Açık tonlar aynı metin ve buton rollerini paylaşır; yalnızca zemin ve
+ * ikincil buton hover zemini (zeminden ayrışsın diye) değişir. İkincil metin #514E48'dir.
+ */
+:root,
+[data-tone="light"],
+[data-tone="stone"],
+[data-tone="card"] {
+  --surface: var(--color-paper);
+  --text-strong: var(--color-ink);
+  --text-body: var(--color-ink);
+  --text-muted: var(--color-ink-soft);
+  --highlight: var(--color-ink-soft);
+  --accent: var(--color-ink);
+  --text-on-accent: var(--color-white);
+  --accent-hover: var(--color-ink-hover);
+  --text-on-accent-hover: var(--color-white);
+  --accent-pressed: var(--color-ink-soft);
+  --text-on-accent-pressed: var(--color-white);
+  --secondary-hover-bg: var(--color-stone);
+  --secondary-hover-text: var(--color-ink);
+  --secondary-pressed-bg: var(--color-ink);
+  --secondary-pressed-text: var(--color-white);
+  --line-subtle: var(--color-rule);
+  --line: var(--color-rule);
+  --line-strong: var(--color-ink);
+  --line-control: var(--color-ink);
+  --link-decoration: var(--color-ink-soft);
+  --focus-ring: var(--color-ink);
+}
+
+/* Açık taş grisi (#E3DFD7): hero, sayfa girişleri, kapanış ve CTA panelleri. */
+[data-tone="stone"] {
+  --surface: var(--color-stone);
+  --secondary-hover-bg: var(--color-card);
+}
+
+/* Beyaz (#FFFFFF): metin ve hizmet kartları. */
+[data-tone="card"] {
+  --surface: var(--color-card);
+  --secondary-hover-bg: var(--color-paper);
+}
+
+/* Lacivert (#1B365D): yalnızca navbar, mobil menü ve footer. */
+[data-tone="dark"] {
+  --surface: var(--color-navy);
+  --text-strong: var(--color-white);
+  --text-body: var(--color-cream);
+  --text-muted: var(--color-cream);
+  --highlight: var(--color-sky);
+  --accent: var(--color-sky);
+  --text-on-accent: var(--color-navy);
+  --accent-hover: var(--color-cream);
+  --text-on-accent-hover: var(--color-navy);
+  --accent-pressed: var(--color-steel);
+  --text-on-accent-pressed: var(--color-white);
+  --secondary-hover-bg: var(--color-steel);
+  --secondary-hover-text: var(--color-white);
+  --secondary-pressed-bg: var(--color-cream);
+  --secondary-pressed-text: var(--color-navy);
+  --line-subtle: rgb(252 241 208 / 0.16);
+  --line: rgb(252 241 208 / 0.3);
+  --line-strong: var(--color-sky);
+  --line-control: var(--color-sky);
+  --link-decoration: var(--color-sky);
+  --focus-ring: var(--color-sky);
+}
+
+/*
+ * Navbar ve mobil menü, hero görünürken: beyaz zemin, lacivertin tersi. Metin #1B365D (≈12,9:1),
+ * odak çerçevesi lacivert. Hero ekrandan çıkınca navbar "dark" tonuna geçer (header-tone.tsx).
+ */
+[data-tone="header"] {
+  --surface: var(--color-white);
+  --text-strong: var(--color-navy);
+  --text-body: var(--color-navy);
+  --text-muted: var(--color-steel);
+  --highlight: #005a9c;
+  --line-subtle: var(--color-rule);
+  --line: var(--color-rule);
+  --line-strong: var(--color-navy);
+  --line-control: var(--color-navy);
+  --link-decoration: #005a9c;
+  --focus-ring: var(--color-navy);
+}
+
+/* Tam genişlikte renk bandı veya dolu yüzey: kendi tonunun zemini ve metni. */
+.band {
+  background: var(--surface);
+  color: var(--text-body);
+}
+
+/* İç sayfalarda renk bandı olan bölüm: üstte ve altta eşit boşluk, komşularından net sınır. */
+.band.band-section {
+  margin-top: clamp(3rem, 7vw, 5.5rem);
+  padding-block: clamp(3rem, 7vw, 5.5rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-height) + 1rem);
+  /* Klavyeyle odaklanan öğe ekranın alt kenarına yapışmaz; odak çerçevesi kesilmez (Blok 08). */
+  scroll-padding-bottom: 1.5rem;
+}
+
+/*
+ * Kasıtlı olarak `scroll-behavior: smooth` yok: tarayıcı geri/ileri gezinmede kaydırma
+ * konumunu da bu kuralla geri getirir; uzun yolculuk sayfasında bu, sayfanın baştan
+ * kayarak (ve sahneyi baştan oynatarak) dönmesine yol açıyordu.
+ */
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-paper);
+  color: var(--text-body);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/*
+ * Son içerik bölümü ile footer arası (Blok 08). Sayfa sonundaki genel çağrı bantları kaldırıldı;
+ * bölümler yalnızca üst boşluk taşıdığı için son bölüme bölüm boşluğuyla aynı alt boşluk verilir.
+ * `:where` özgüllüğü sıfırdır: kendi alt boşluğunu tanımlayan öğe (sayfa girişi, renkli bant) kendi
+ * değerini korur. Ana sayfa yolculuğu kendi ölçüsünü taşır ([data-journey]), dışarıda kalır.
+ */
+:where(main > :last-child:not([data-journey])) {
+  padding-bottom: clamp(3.5rem, 7vw, 5.5rem);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: var(--text-strong);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+img,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 0.2em;
+}
+
+/*
+ * Metin içindeki sınıfsız bağlantılar (ör. paragraf içi Link): alt çizgiyle tanınır;
+ * hover kontrastı düşürmez, yalnızca çizgiyi belirginleştirir.
+ */
+:where(p, li, dd) a:not([class]) {
+  color: var(--text-strong);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: var(--link-decoration);
+}
+
+@media (hover: hover) {
+  :where(p, li, dd) a:not([class]):hover {
+    text-decoration-color: currentColor;
+  }
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/*
+ * Kendi tonunu taşıyan odaklanabilir yüzeylerde (ör. beyaz hap bağlantı) halka, öğenin dışına
+ * değil içine çizilir: renk öğenin tonundan gelir, bu yüzden öğenin kendi zemininde durmalıdır.
+ */
+[data-tone]:focus-visible {
+  outline-offset: -6px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--gutter);
+  top: 0.5rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--text-on-accent);
+  font-weight: 600;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus-visible {
+  transform: none;
+}
+
+.eyebrow {
+  color: var(--highlight);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

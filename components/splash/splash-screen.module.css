@@ -1,0 +1,196 @@
+/*
+ * Açılış ekranı (kodla çizilen devre yönlendirmesi). Zaman çizelgesi (sn):
+ * 0.00–1.40  izler kenardan pedlere çizilir (her iz 0.9 sn, 0–0.5 sn kaydırmalı)
+ * 0.75–1.35  pedler ve via'lar belirir
+ * 1.05–1.95  izlerden bir kez sinyal geçer
+ * 0.95–1.75  logo soldan sağa açılır
+ * 1.45–2.15  "Fikirden Üretime." gelir
+ * 3.00–3.50  ekran solar ve `visibility: hidden` olur (tıklama ve klavye engellenmez)
+ * Süreler splash-screen.tsx içindeki TOTAL_MS ile aynıdır.
+ * `<html data-splash-seen>` varsa (bu oturumda gösterildi) hiç çizilmez.
+ */
+.splash {
+  --splash-navy: #1b365d;
+  --splash-deep: #10233d;
+  --splash-cream: #fcf1d0;
+  --splash-sky: #60c1e5;
+  --splash-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  overflow: hidden;
+  /* Ortada lacivert, kenarlara doğru hafifçe koyulaşan düz zemin. */
+  background: radial-gradient(ellipse 75% 70% at 50% 50%, var(--splash-navy) 0%, var(--splash-navy) 45%, var(--splash-deep) 100%);
+  pointer-events: none;
+  animation: splash-out 500ms var(--ease-out) 3s forwards;
+}
+
+:global(html[data-splash-seen]) .splash {
+  display: none;
+}
+
+.board {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ——— İzler ——— */
+
+.faint path,
+.traces path,
+.signal path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.faint path {
+  stroke: var(--splash-sky);
+  stroke-opacity: 0.12;
+  stroke-width: 3;
+}
+
+.traces path {
+  stroke: var(--splash-sky);
+  stroke-opacity: 0.6;
+  stroke-width: 3;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: route 900ms var(--splash-ease) forwards;
+}
+
+/* Sinyal: izin üzerinde kayan kısa, açık renkli bir parça; bir kez geçer ve kaybolur. */
+.signal path {
+  stroke: var(--splash-cream);
+  stroke-width: 3;
+  stroke-dasharray: 0.12 1.2;
+  stroke-dashoffset: 0.12;
+  opacity: 0;
+  animation: signal 900ms cubic-bezier(0.45, 0, 0.55, 1) forwards;
+}
+
+/* ——— Pedler ve via'lar ——— */
+
+.pads rect,
+.pads circle {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  transform: scale(0.4);
+  animation: pad 360ms var(--splash-ease) forwards;
+}
+
+.pads rect {
+  fill: var(--splash-cream);
+}
+
+.via {
+  fill: var(--splash-deep);
+  stroke: var(--splash-cream);
+  stroke-width: 3;
+}
+
+/* ——— Logo ve slogan ——— */
+
+.logo {
+  clip-path: inset(0 100% 0 0);
+  animation: wipe 800ms var(--splash-ease) 950ms forwards;
+}
+
+.tagline {
+  fill: var(--splash-cream);
+  font-family: var(--font-sans);
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: rise 700ms var(--splash-ease) 1450ms forwards;
+}
+
+@keyframes route {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes signal {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 0.12;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    stroke-dashoffset: -1;
+  }
+}
+
+@keyframes pad {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes wipe {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes splash-out {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Azaltılmış hareket: çizim yok, son kare doğrudan görünür; 3 sn sonunda solmadan kapanır. */
+@media (prefers-reduced-motion: reduce) {
+  .splash {
+    animation-duration: 1ms;
+  }
+
+  .traces path,
+  .signal path,
+  .pads rect,
+  .pads circle,
+  .logo,
+  .tagline {
+    animation: none;
+  }
+
+  .traces path {
+    stroke-dashoffset: 0;
+  }
+
+  .pads rect,
+  .pads circle,
+  .tagline {
+    opacity: 1;
+    transform: none;
+  }
+
+  .logo {
+    clip-path: none;
+  }
+}

@@ -1,0 +1,4488 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "source_name": "PCB_ESP32-38Pines.STEP",
+    "sha256": "af428ab5ee05c8c3bd1feddfc415c65adb3d9bc229a2acc038586a7a13bbe13e",
+    "solid_count": 879
+  },
+  "modelUrl": "/models/esp32/esp32-38pines.glb",
+  "units": "metre",
+  "upAxis": "Y",
+  "pcbDimensionsMm": [
+    55,
+    28,
+    1.5
+  ],
+  "recommendedPresentationScale": 70,
+  "readiness": {
+    "geometry": "CAD-derived",
+    "materials": "provisional_needs_visual_review",
+    "motion": "exploded_offsets_for_review_only",
+    "productionReady": false
+  },
+  "geometry": {
+    "sourceVertices": 391674,
+    "triangles": 508144,
+    "linearDeflectionMm": 0.035,
+    "glbBytes": 5831192,
+    "drawCalls": 86,
+    "uncompressedGlbBytes": 15568564
+  },
+  "groups": [
+    {
+      "id": "PCB_BASE",
+      "category": "pcb",
+      "fixed": true,
+      "assembledPositionM": [
+        0,
+        0.0009083321931452768,
+        0
+      ],
+      "explodeOffsetM": [
+        0,
+        0,
+        0
+      ],
+      "boundsMm": [
+        -14.000000100000008,
+        -0.10070810325652627,
+        -27.50000010000001,
+        14.000000100000008,
+        1.9173724895470798,
+        27.50000010000001
+      ],
+      "sourceBodyCount": 343,
+      "classification": {
+        "board": 1,
+        "unclassified_board_detail": 48,
+        "silkscreen": 294
+      },
+      "sourceBodies": [
+        {
+          "index": 422,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered).step-1-solid1"
+        },
+        {
+          "index": 537,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-114.step-1-solid1"
+        },
+        {
+          "index": 538,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-115.step-1-solid1"
+        },
+        {
+          "index": 539,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-116.step-1-solid1"
+        },
+        {
+          "index": 540,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-117.step-1-solid1"
+        },
+        {
+          "index": 541,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-118.step-1-solid1"
+        },
+        {
+          "index": 542,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-119.step-1-solid1"
+        },
+        {
+          "index": 543,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-120.step-1-solid1"
+        },
+        {
+          "index": 544,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-121.step-1-solid1"
+        },
+        {
+          "index": 545,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-122.step-1-solid1"
+        },
+        {
+          "index": 546,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-123.step-1-solid1"
+        },
+        {
+          "index": 547,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-124.step-1-solid1"
+        },
+        {
+          "index": 548,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-125.step-1-solid1"
+        },
+        {
+          "index": 549,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-126.step-1-solid1"
+        },
+        {
+          "index": 550,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-127.step-1-solid1"
+        },
+        {
+          "index": 551,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-128.step-1-solid1"
+        },
+        {
+          "index": 552,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-129.step-1-solid1"
+        },
+        {
+          "index": 553,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-130.step-1-solid1"
+        },
+        {
+          "index": 554,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-131.step-1-solid1"
+        },
+        {
+          "index": 555,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-132.step-1-solid1"
+        },
+        {
+          "index": 556,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-133.step-1-solid1"
+        },
+        {
+          "index": 557,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-134.step-1-solid1"
+        },
+        {
+          "index": 558,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-135.step-1-solid1"
+        },
+        {
+          "index": 559,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-136.step-1-solid1"
+        },
+        {
+          "index": 560,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-137.step-1-solid1"
+        },
+        {
+          "index": 561,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-138.step-1-solid1"
+        },
+        {
+          "index": 562,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-139.step-1-solid1"
+        },
+        {
+          "index": 563,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-140.step-1-solid1"
+        },
+        {
+          "index": 564,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-141.step-1-solid1"
+        },
+        {
+          "index": 565,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-142.step-1-solid1"
+        },
+        {
+          "index": 566,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-143.step-1-solid1"
+        },
+        {
+          "index": 567,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-144.step-1-solid1"
+        },
+        {
+          "index": 568,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-145.step-1-solid1"
+        },
+        {
+          "index": 569,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-146.step-1-solid1"
+        },
+        {
+          "index": 570,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-147.step-1-solid1"
+        },
+        {
+          "index": 571,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-148.step-1-solid1"
+        },
+        {
+          "index": 572,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-149.step-1-solid1"
+        },
+        {
+          "index": 573,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-150.step-1-solid1"
+        },
+        {
+          "index": 574,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-151.step-1-solid1"
+        },
+        {
+          "index": 575,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-152.step-1-solid1"
+        },
+        {
+          "index": 576,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-153.step-1-solid1"
+        },
+        {
+          "index": 577,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-154.step-1-solid1"
+        },
+        {
+          "index": 578,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-155.step-1-solid1"
+        },
+        {
+          "index": 579,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-156.step-1-solid1"
+        },
+        {
+          "index": 580,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-157.step-1-solid1"
+        },
+        {
+          "index": 581,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-158.step-1-solid1"
+        },
+        {
+          "index": 582,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-159.step-1-solid1"
+        },
+        {
+          "index": 583,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-160.step-1-solid1"
+        },
+        {
+          "index": 584,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-161.step-1-solid1"
+        },
+        {
+          "index": 585,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-162.step-1-solid1"
+        },
+        {
+          "index": 586,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-163.step-1-solid1"
+        },
+        {
+          "index": 587,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-164.step-1-solid1"
+        },
+        {
+          "index": 588,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-165.step-1-solid1"
+        },
+        {
+          "index": 589,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-166.step-1-solid1"
+        },
+        {
+          "index": 590,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-167.step-1-solid1"
+        },
+        {
+          "index": 591,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-168.step-1-solid1"
+        },
+        {
+          "index": 592,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-169.step-1-solid1"
+        },
+        {
+          "index": 593,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-170.step-1-solid1"
+        },
+        {
+          "index": 594,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-171.step-1-solid1"
+        },
+        {
+          "index": 595,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-172.step-1-solid1"
+        },
+        {
+          "index": 596,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-173.step-1-solid1"
+        },
+        {
+          "index": 597,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-174.step-1-solid1"
+        },
+        {
+          "index": 598,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-175.step-1-solid1"
+        },
+        {
+          "index": 599,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-176.step-1-solid1"
+        },
+        {
+          "index": 600,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-177.step-1-solid1"
+        },
+        {
+          "index": 601,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-178.step-1-solid1"
+        },
+        {
+          "index": 602,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-179.step-1-solid1"
+        },
+        {
+          "index": 603,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-180.step-1-solid1"
+        },
+        {
+          "index": 604,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-181.step-1-solid1"
+        },
+        {
+          "index": 605,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-182.step-1-solid1"
+        },
+        {
+          "index": 606,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-183.step-1-solid1"
+        },
+        {
+          "index": 607,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-184.step-1-solid1"
+        },
+        {
+          "index": 608,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-185.step-1-solid1"
+        },
+        {
+          "index": 609,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-186.step-1-solid1"
+        },
+        {
+          "index": 610,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-187.step-1-solid1"
+        },
+        {
+          "index": 611,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-188.step-1-solid1"
+        },
+        {
+          "index": 612,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-189.step-1-solid1"
+        },
+        {
+          "index": 613,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-190.step-1-solid1"
+        },
+        {
+          "index": 614,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-191.step-1-solid1"
+        },
+        {
+          "index": 615,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-192.step-1-solid1"
+        },
+        {
+          "index": 616,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-193.step-1-solid1"
+        },
+        {
+          "index": 617,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-194.step-1-solid1"
+        },
+        {
+          "index": 618,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-195.step-1-solid1"
+        },
+        {
+          "index": 619,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-196.step-1-solid1"
+        },
+        {
+          "index": 620,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-197.step-1-solid1"
+        },
+        {
+          "index": 621,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-198.step-1-solid1"
+        },
+        {
+          "index": 622,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-199.step-1-solid1"
+        },
+        {
+          "index": 623,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-200.step-1-solid1"
+        },
+        {
+          "index": 624,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-201.step-1-solid1"
+        },
+        {
+          "index": 625,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-202.step-1-solid1"
+        },
+        {
+          "index": 626,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-203.step-1-solid1"
+        },
+        {
+          "index": 627,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-204.step-1-solid1"
+        },
+        {
+          "index": 628,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-205.step-1-solid1"
+        },
+        {
+          "index": 629,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-206.step-1-solid1"
+        },
+        {
+          "index": 630,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-207.step-1-solid1"
+        },
+        {
+          "index": 631,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-208.step-1-solid1"
+        },
+        {
+          "index": 632,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-209.step-1-solid1"
+        },
+        {
+          "index": 633,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-210.step-1-solid1"
+        },
+        {
+          "index": 634,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-211.step-1-solid1"
+        },
+        {
+          "index": 635,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-212.step-1-solid1"
+        },
+        {
+          "index": 636,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-213.step-1-solid1"
+        },
+        {
+          "index": 637,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-214.step-1-solid1"
+        },
+        {
+          "index": 638,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-215.step-1-solid1"
+        },
+        {
+          "index": 639,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-216.step-1-solid1"
+        },
+        {
+          "index": 640,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-217.step-1-solid1"
+        },
+        {
+          "index": 641,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-218.step-1-solid1"
+        },
+        {
+          "index": 642,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-219.step-1-solid1"
+        },
+        {
+          "index": 643,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-220.step-1-solid1"
+        },
+        {
+          "index": 644,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-221.step-1-solid1"
+        },
+        {
+          "index": 645,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-222.step-1-solid1"
+        },
+        {
+          "index": 646,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-223.step-1-solid1"
+        },
+        {
+          "index": 647,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-224.step-1-solid1"
+        },
+        {
+          "index": 648,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-225.step-1-solid1"
+        },
+        {
+          "index": 649,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-226.step-1-solid1"
+        },
+        {
+          "index": 650,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-227.step-1-solid1"
+        },
+        {
+          "index": 651,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-228.step-1-solid1"
+        },
+        {
+          "index": 652,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-229.step-1-solid1"
+        },
+        {
+          "index": 653,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-230.step-1-solid1"
+        },
+        {
+          "index": 654,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-231.step-1-solid1"
+        },
+        {
+          "index": 655,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-232.step-1-solid1"
+        },
+        {
+          "index": 656,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-233.step-1-solid1"
+        },
+        {
+          "index": 657,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-234.step-1-solid1"
+        },
+        {
+          "index": 658,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-235.step-1-solid1"
+        },
+        {
+          "index": 659,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-236.step-1-solid1"
+        },
+        {
+          "index": 660,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-237.step-1-solid1"
+        },
+        {
+          "index": 661,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-238.step-1-solid1"
+        },
+        {
+          "index": 662,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-239.step-1-solid1"
+        },
+        {
+          "index": 663,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-240.step-1-solid1"
+        },
+        {
+          "index": 664,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-241.step-1-solid1"
+        },
+        {
+          "index": 665,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-242.step-1-solid1"
+        },
+        {
+          "index": 666,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-243.step-1-solid1"
+        },
+        {
+          "index": 667,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-244.step-1-solid1"
+        },
+        {
+          "index": 668,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-245.step-1-solid1"
+        },
+        {
+          "index": 669,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-246.step-1-solid1"
+        },
+        {
+          "index": 670,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-247.step-1-solid1"
+        },
+        {
+          "index": 671,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-248.step-1-solid1"
+        },
+        {
+          "index": 672,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-249.step-1-solid1"
+        },
+        {
+          "index": 673,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-250.step-1-solid1"
+        },
+        {
+          "index": 674,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-251.step-1-solid1"
+        },
+        {
+          "index": 675,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-252.step-1-solid1"
+        },
+        {
+          "index": 676,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-253.step-1-solid1"
+        },
+        {
+          "index": 677,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-254.step-1-solid1"
+        },
+        {
+          "index": 678,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-255.step-1-solid1"
+        },
+        {
+          "index": 679,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-256.step-1-solid1"
+        },
+        {
+          "index": 680,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-257.step-1-solid1"
+        },
+        {
+          "index": 681,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-258.step-1-solid1"
+        },
+        {
+          "index": 682,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-259.step-1-solid1"
+        },
+        {
+          "index": 683,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-260.step-1-solid1"
+        },
+        {
+          "index": 684,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-261.step-1-solid1"
+        },
+        {
+          "index": 685,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-262.step-1-solid1"
+        },
+        {
+          "index": 686,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-263.step-1-solid1"
+        },
+        {
+          "index": 687,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-264.step-1-solid1"
+        },
+        {
+          "index": 688,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-265.step-1-solid1"
+        },
+        {
+          "index": 689,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-266.step-1-solid1"
+        },
+        {
+          "index": 690,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-267.step-1-solid1"
+        },
+        {
+          "index": 691,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-268.step-1-solid1"
+        },
+        {
+          "index": 692,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-269.step-1-solid1"
+        },
+        {
+          "index": 693,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-270.step-1-solid1"
+        },
+        {
+          "index": 694,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-271.step-1-solid1"
+        },
+        {
+          "index": 695,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-272.step-1-solid1"
+        },
+        {
+          "index": 696,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-273.step-1-solid1"
+        },
+        {
+          "index": 697,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-274.step-1-solid1"
+        },
+        {
+          "index": 698,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-275.step-1-solid1"
+        },
+        {
+          "index": 699,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-276.step-1-solid1"
+        },
+        {
+          "index": 700,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-277.step-1-solid1"
+        },
+        {
+          "index": 701,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-278.step-1-solid1"
+        },
+        {
+          "index": 702,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-279.step-1-solid1"
+        },
+        {
+          "index": 703,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-280.step-1-solid1"
+        },
+        {
+          "index": 704,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-281.step-1-solid1"
+        },
+        {
+          "index": 705,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-282.step-1-solid1"
+        },
+        {
+          "index": 706,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-283.step-1-solid1"
+        },
+        {
+          "index": 707,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-284.step-1-solid1"
+        },
+        {
+          "index": 708,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-285.step-1-solid1"
+        },
+        {
+          "index": 709,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-286.step-1-solid1"
+        },
+        {
+          "index": 710,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-287.step-1-solid1"
+        },
+        {
+          "index": 711,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-288.step-1-solid1"
+        },
+        {
+          "index": 712,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-289.step-1-solid1"
+        },
+        {
+          "index": 713,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-290.step-1-solid1"
+        },
+        {
+          "index": 714,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-291.step-1-solid1"
+        },
+        {
+          "index": 715,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-292.step-1-solid1"
+        },
+        {
+          "index": 716,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-293.step-1-solid1"
+        },
+        {
+          "index": 717,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-294.step-1-solid1"
+        },
+        {
+          "index": 718,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-295.step-1-solid1"
+        },
+        {
+          "index": 719,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-296.step-1-solid1"
+        },
+        {
+          "index": 720,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-297.step-1-solid1"
+        },
+        {
+          "index": 721,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-298.step-1-solid1"
+        },
+        {
+          "index": 722,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-299.step-1-solid1"
+        },
+        {
+          "index": 723,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-300.step-1-solid1"
+        },
+        {
+          "index": 724,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-301.step-1-solid1"
+        },
+        {
+          "index": 725,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-302.step-1-solid1"
+        },
+        {
+          "index": 726,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-303.step-1-solid1"
+        },
+        {
+          "index": 727,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-304.step-1-solid1"
+        },
+        {
+          "index": 728,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-305.step-1-solid1"
+        },
+        {
+          "index": 729,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-306.step-1-solid1"
+        },
+        {
+          "index": 730,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-307.step-1-solid1"
+        },
+        {
+          "index": 731,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-308.step-1-solid1"
+        },
+        {
+          "index": 732,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-309.step-1-solid1"
+        },
+        {
+          "index": 733,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-310.step-1-solid1"
+        },
+        {
+          "index": 734,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-311.step-1-solid1"
+        },
+        {
+          "index": 735,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-312.step-1-solid1"
+        },
+        {
+          "index": 736,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-313.step-1-solid1"
+        },
+        {
+          "index": 737,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-314.step-1-solid1"
+        },
+        {
+          "index": 738,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-315.step-1-solid1"
+        },
+        {
+          "index": 739,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-316.step-1-solid1"
+        },
+        {
+          "index": 740,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-317.step-1-solid1"
+        },
+        {
+          "index": 741,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-318.step-1-solid1"
+        },
+        {
+          "index": 742,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-319.step-1-solid1"
+        },
+        {
+          "index": 743,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-320.step-1-solid1"
+        },
+        {
+          "index": 744,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-321.step-1-solid1"
+        },
+        {
+          "index": 745,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-322.step-1-solid1"
+        },
+        {
+          "index": 746,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-323.step-1-solid1"
+        },
+        {
+          "index": 747,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-324.step-1-solid1"
+        },
+        {
+          "index": 748,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-325.step-1-solid1"
+        },
+        {
+          "index": 749,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-326.step-1-solid1"
+        },
+        {
+          "index": 750,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-327.step-1-solid1"
+        },
+        {
+          "index": 751,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-328.step-1-solid1"
+        },
+        {
+          "index": 752,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-329.step-1-solid1"
+        },
+        {
+          "index": 753,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-330.step-1-solid1"
+        },
+        {
+          "index": 754,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-331.step-1-solid1"
+        },
+        {
+          "index": 755,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-332.step-1-solid1"
+        },
+        {
+          "index": 756,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-333.step-1-solid1"
+        },
+        {
+          "index": 757,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-334.step-1-solid1"
+        },
+        {
+          "index": 758,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-335.step-1-solid1"
+        },
+        {
+          "index": 759,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-336.step-1-solid1"
+        },
+        {
+          "index": 760,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-337.step-1-solid1"
+        },
+        {
+          "index": 761,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-338.step-1-solid1"
+        },
+        {
+          "index": 762,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-339.step-1-solid1"
+        },
+        {
+          "index": 763,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-340.step-1-solid1"
+        },
+        {
+          "index": 764,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-341.step-1-solid1"
+        },
+        {
+          "index": 765,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-342.step-1-solid1"
+        },
+        {
+          "index": 766,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-343.step-1-solid1"
+        },
+        {
+          "index": 767,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-344.step-1-solid1"
+        },
+        {
+          "index": 768,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-345.step-1-solid1"
+        },
+        {
+          "index": 769,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-346.step-1-solid1"
+        },
+        {
+          "index": 770,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-347.step-1-solid1"
+        },
+        {
+          "index": 771,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-348.step-1-solid1"
+        },
+        {
+          "index": 772,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-349.step-1-solid1"
+        },
+        {
+          "index": 773,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-350.step-1-solid1"
+        },
+        {
+          "index": 774,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-351.step-1-solid1"
+        },
+        {
+          "index": 775,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-352.step-1-solid1"
+        },
+        {
+          "index": 776,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-353.step-1-solid1"
+        },
+        {
+          "index": 777,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-354.step-1-solid1"
+        },
+        {
+          "index": 778,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-355.step-1-solid1"
+        },
+        {
+          "index": 779,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-356.step-1-solid1"
+        },
+        {
+          "index": 780,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-357.step-1-solid1"
+        },
+        {
+          "index": 781,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-358.step-1-solid1"
+        },
+        {
+          "index": 782,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-359.step-1-solid1"
+        },
+        {
+          "index": 783,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-360.step-1-solid1"
+        },
+        {
+          "index": 784,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-361.step-1-solid1"
+        },
+        {
+          "index": 785,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-362.step-1-solid1"
+        },
+        {
+          "index": 786,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-363.step-1-solid1"
+        },
+        {
+          "index": 787,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-364.step-1-solid1"
+        },
+        {
+          "index": 788,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-365.step-1-solid1"
+        },
+        {
+          "index": 789,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-366.step-1-solid1"
+        },
+        {
+          "index": 790,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-367.step-1-solid1"
+        },
+        {
+          "index": 791,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-368.step-1-solid1"
+        },
+        {
+          "index": 792,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-369.step-1-solid1"
+        },
+        {
+          "index": 793,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-370.step-1-solid1"
+        },
+        {
+          "index": 794,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-371.step-1-solid1"
+        },
+        {
+          "index": 795,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-372.step-1-solid1"
+        },
+        {
+          "index": 796,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-373.step-1-solid1"
+        },
+        {
+          "index": 797,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-374.step-1-solid1"
+        },
+        {
+          "index": 798,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-375.step-1-solid1"
+        },
+        {
+          "index": 799,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-376.step-1-solid1"
+        },
+        {
+          "index": 800,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-377.step-1-solid1"
+        },
+        {
+          "index": 801,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-378.step-1-solid1"
+        },
+        {
+          "index": 802,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-379.step-1-solid1"
+        },
+        {
+          "index": 803,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-380.step-1-solid1"
+        },
+        {
+          "index": 804,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-381.step-1-solid1"
+        },
+        {
+          "index": 805,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-382.step-1-solid1"
+        },
+        {
+          "index": 806,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-383.step-1-solid1"
+        },
+        {
+          "index": 807,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-384.step-1-solid1"
+        },
+        {
+          "index": 808,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-385.step-1-solid1"
+        },
+        {
+          "index": 809,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-386.step-1-solid1"
+        },
+        {
+          "index": 810,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-387.step-1-solid1"
+        },
+        {
+          "index": 811,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-388.step-1-solid1"
+        },
+        {
+          "index": 812,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-389.step-1-solid1"
+        },
+        {
+          "index": 813,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-390.step-1-solid1"
+        },
+        {
+          "index": 814,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-391.step-1-solid1"
+        },
+        {
+          "index": 815,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-392.step-1-solid1"
+        },
+        {
+          "index": 816,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-393.step-1-solid1"
+        },
+        {
+          "index": 817,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-394.step-1-solid1"
+        },
+        {
+          "index": 818,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-395.step-1-solid1"
+        },
+        {
+          "index": 819,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-396.step-1-solid1"
+        },
+        {
+          "index": 820,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-397.step-1-solid1"
+        },
+        {
+          "index": 821,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-398.step-1-solid1"
+        },
+        {
+          "index": 822,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-399.step-1-solid1"
+        },
+        {
+          "index": 823,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-400.step-1-solid1"
+        },
+        {
+          "index": 824,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-401.step-1-solid1"
+        },
+        {
+          "index": 825,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-402.step-1-solid1"
+        },
+        {
+          "index": 826,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-403.step-1-solid1"
+        },
+        {
+          "index": 827,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-404.step-1-solid1"
+        },
+        {
+          "index": 828,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-405.step-1-solid1"
+        },
+        {
+          "index": 829,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-406.step-1-solid1"
+        },
+        {
+          "index": 830,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-407.step-1-solid1"
+        },
+        {
+          "index": 831,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-408.step-1-solid1"
+        },
+        {
+          "index": 832,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-409.step-1-solid1"
+        },
+        {
+          "index": 833,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-410.step-1-solid1"
+        },
+        {
+          "index": 834,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-411.step-1-solid1"
+        },
+        {
+          "index": 835,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-412.step-1-solid1"
+        },
+        {
+          "index": 836,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-413.step-1-solid1"
+        },
+        {
+          "index": 837,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-414.step-1-solid1"
+        },
+        {
+          "index": 838,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-415.step-1-solid1"
+        },
+        {
+          "index": 839,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-416.step-1-solid1"
+        },
+        {
+          "index": 840,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-417.step-1-solid1"
+        },
+        {
+          "index": 841,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-418.step-1-solid1"
+        },
+        {
+          "index": 842,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-419.step-1-solid1"
+        },
+        {
+          "index": 843,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-420.step-1-solid1"
+        },
+        {
+          "index": 844,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-421.step-1-solid1"
+        },
+        {
+          "index": 845,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-422.step-1-solid1"
+        },
+        {
+          "index": 846,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-423.step-1-solid1"
+        },
+        {
+          "index": 847,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-424.step-1-solid1"
+        },
+        {
+          "index": 848,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-425.step-1-solid1"
+        },
+        {
+          "index": 849,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-426.step-1-solid1"
+        },
+        {
+          "index": 850,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-427.step-1-solid1"
+        },
+        {
+          "index": 851,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-428.step-1-solid1"
+        },
+        {
+          "index": 852,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-429.step-1-solid1"
+        },
+        {
+          "index": 853,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-430.step-1-solid1"
+        },
+        {
+          "index": 854,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-431.step-1-solid1"
+        },
+        {
+          "index": 855,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-432.step-1-solid1"
+        },
+        {
+          "index": 856,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-433.step-1-solid1"
+        },
+        {
+          "index": 857,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-434.step-1-solid1"
+        },
+        {
+          "index": 858,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-435.step-1-solid1"
+        },
+        {
+          "index": 859,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-436.step-1-solid1"
+        },
+        {
+          "index": 860,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-437.step-1-solid1"
+        },
+        {
+          "index": 861,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-438.step-1-solid1"
+        },
+        {
+          "index": 862,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-439.step-1-solid1"
+        },
+        {
+          "index": 863,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-440.step-1-solid1"
+        },
+        {
+          "index": 864,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-441.step-1-solid1"
+        },
+        {
+          "index": 865,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-442.step-1-solid1"
+        },
+        {
+          "index": 866,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-443.step-1-solid1"
+        },
+        {
+          "index": 867,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-444.step-1-solid1"
+        },
+        {
+          "index": 868,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-445.step-1-solid1"
+        },
+        {
+          "index": 869,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-446.step-1-solid1"
+        },
+        {
+          "index": 870,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-447.step-1-solid1"
+        },
+        {
+          "index": 871,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-448.step-1-solid1"
+        },
+        {
+          "index": 872,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-449.step-1-solid1"
+        },
+        {
+          "index": 873,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-450.step-1-solid1"
+        },
+        {
+          "index": 874,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-451.step-1-solid1"
+        },
+        {
+          "index": 875,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-452.step-1-solid1"
+        },
+        {
+          "index": 876,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-453.step-1-solid1"
+        },
+        {
+          "index": 877,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-454.step-1-solid1"
+        },
+        {
+          "index": 878,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-455.step-1-solid1"
+        }
+      ]
+    },
+    {
+      "id": "PUSH_BOTTOM_STEP_1",
+      "category": "button",
+      "fixed": false,
+      "assembledPositionM": [
+        -0.007798792522939,
+        0.0026008504154705313,
+        0.024299151591277005
+      ],
+      "explodeOffsetM": [
+        -0.0027503588510301704,
+        0.014,
+        0.008569453085848593
+      ],
+      "boundsMm": [
+        -9.148792622939004,
+        1.4999998999999962,
+        21.949056313435186,
+        -6.448792422938996,
+        3.7017009309410667,
+        26.649246869118823
+      ],
+      "sourceBodyCount": 9,
+      "classification": {
+        "source_named_component": 9
+      },
+      "sourceBodies": [
+        {
+          "index": 257,
+          "name": "PCB_ESP32-38Pines.step-1/Push_Bottom.step-1-solid1"
+        },
+        {
+          "index": 258,
+          "name": "PCB_ESP32-38Pines.step-1/Push_Bottom.step-1-solid2"
+        },
+        {
+          "index": 259,
+          "name": "PCB_ESP32-38Pines.step-1/Push_Bottom.step-1-solid3"
+        },
+        {
+          "index": 260,
+          "name": "PCB_ESP32-38Pines.step-1/Push_Bottom.step-1-solid4"
+        },
+        {
+          "index": 261,
+          "name": "PCB_ESP32-38Pines.step-1/Push_Bottom.step-1-solid5"
+        },
+        {
+          "index": 262,
+          "name": "PCB_ESP32-38Pines.step-1/Push_Bottom.step-1-solid6"
+        },
+        {
+          "index": 263,
+          "name": "PCB_ESP32-38Pines.step-1/Push_Bottom.step-1-solid7"
+        },
+        {
+          "index": 264,
+          "name": "PCB_ESP32-38Pines.step-1/Push_Bottom.step-1-solid8"
+        },
+        {
+          "index": 265,
+          "name": "PCB_ESP32-38Pines.step-1/Push_Bottom.step-1-solid9"
+        }
+      ]
+    },
+    {
+      "id": "PUSH_BOTTOM_STEP_2",
+      "category": "button",
+      "fixed": false,
+      "assembledPositionM": [
+        0.007477427113167,
+        0.0026008504154705304,
+        0.024299151591277005
+      ],
+      "explodeOffsetM": [
+        0.0026470200555663895,
+        0.016,
+        0.008601934946593661
+      ],
+      "boundsMm": [
+        6.1274270131669955,
+        1.4999998999999962,
+        21.949056313435186,
+        8.827427213167004,
+        3.701700930941065,
+        26.649246869118823
+      ],
+      "sourceBodyCount": 9,
+      "classification": {
+        "source_named_component": 9
+      },
+      "sourceBodies": [
+        {
+          "index": 266,
+          "name": "PCB_ESP32-38Pines.step-1/Push_Bottom.step-2-solid1"
+        },
+        {
+          "index": 267,
+          "name": "PCB_ESP32-38Pines.step-1/Push_Bottom.step-2-solid2"
+        },
+        {
+          "index": 268,
+          "name": "PCB_ESP32-38Pines.step-1/Push_Bottom.step-2-solid3"
+        },
+        {
+          "index": 269,
+          "name": "PCB_ESP32-38Pines.step-1/Push_Bottom.step-2-solid4"
+        },
+        {
+          "index": 270,
+          "name": "PCB_ESP32-38Pines.step-1/Push_Bottom.step-2-solid5"
+        },
+        {
+          "index": 271,
+          "name": "PCB_ESP32-38Pines.step-1/Push_Bottom.step-2-solid6"
+        },
+        {
+          "index": 272,
+          "name": "PCB_ESP32-38Pines.step-1/Push_Bottom.step-2-solid7"
+        },
+        {
+          "index": 273,
+          "name": "PCB_ESP32-38Pines.step-1/Push_Bottom.step-2-solid8"
+        },
+        {
+          "index": 274,
+          "name": "PCB_ESP32-38Pines.step-1/Push_Bottom.step-2-solid9"
+        }
+      ]
+    },
+    {
+      "id": "CAP_0603_STEP_1",
+      "category": "ceramic_capacitor",
+      "fixed": false,
+      "assembledPositionM": [
+        0.007067270571136001,
+        0.00175,
+        0.014102392934688002
+      ],
+      "explodeOffsetM": [
+        0.004032257599645388,
+        0.018000000000000002,
+        0.008046172919475568
+      ],
+      "boundsMm": [
+        6.317270471135998,
+        1.4999998999999982,
+        13.602392834687999,
+        7.8172706711360025,
+        2.0000001000000016,
+        14.602393034688003
+      ],
+      "sourceBodyCount": 3,
+      "classification": {
+        "source_named_component": 3
+      },
+      "sourceBodies": [
+        {
+          "index": 331,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_0603.step-1-solid1"
+        },
+        {
+          "index": 332,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_0603.step-1-solid2"
+        },
+        {
+          "index": 333,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_0603.step-1-solid3"
+        }
+      ]
+    },
+    {
+      "id": "CAP_0603_STEP_2",
+      "category": "ceramic_capacitor",
+      "fixed": false,
+      "assembledPositionM": [
+        0.007067270571136001,
+        0.00175,
+        0.016021420578227
+      ],
+      "explodeOffsetM": [
+        0.0036323302446141657,
+        0.012,
+        0.008234450618836766
+      ],
+      "boundsMm": [
+        6.317270471135998,
+        1.4999998999999973,
+        15.521420478226997,
+        7.8172706711360025,
+        2.0000001000000025,
+        16.521420678227
+      ],
+      "sourceBodyCount": 3,
+      "classification": {
+        "source_named_component": 3
+      },
+      "sourceBodies": [
+        {
+          "index": 334,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_0603.step-2-solid1"
+        },
+        {
+          "index": 335,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_0603.step-2-solid2"
+        },
+        {
+          "index": 336,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_0603.step-2-solid3"
+        }
+      ]
+    },
+    {
+      "id": "CAP_0603_STEP_3",
+      "category": "ceramic_capacitor",
+      "fixed": false,
+      "assembledPositionM": [
+        0.007067270571136003,
+        0.0017499999999999998,
+        0.018266146216619
+      ],
+      "explodeOffsetM": [
+        0.003247549865963543,
+        0.014,
+        0.00839365354706043
+      ],
+      "boundsMm": [
+        6.317270471136,
+        1.4999998999999957,
+        17.766146116618994,
+        7.817270671136004,
+        2.000000100000004,
+        18.766146316619007
+      ],
+      "sourceBodyCount": 3,
+      "classification": {
+        "source_named_component": 3
+      },
+      "sourceBodies": [
+        {
+          "index": 337,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_0603.step-3-solid1"
+        },
+        {
+          "index": 338,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_0603.step-3-solid2"
+        },
+        {
+          "index": 339,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_0603.step-3-solid3"
+        }
+      ]
+    },
+    {
+      "id": "CAP_0603_STEP_4",
+      "category": "ceramic_capacitor",
+      "fixed": false,
+      "assembledPositionM": [
+        0.007067270571136003,
+        0.00175,
+        0.020210115965766003
+      ],
+      "explodeOffsetM": [
+        0.002970805672243395,
+        0.016,
+        0.008495546695638042
+      ],
+      "boundsMm": [
+        6.317270471136,
+        1.499999899999996,
+        19.710115865765992,
+        7.817270671136004,
+        2.0000001000000043,
+        20.710116065766005
+      ],
+      "sourceBodyCount": 3,
+      "classification": {
+        "source_named_component": 3
+      },
+      "sourceBodies": [
+        {
+          "index": 340,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_0603.step-4-solid1"
+        },
+        {
+          "index": 341,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_0603.step-4-solid2"
+        },
+        {
+          "index": 342,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_0603.step-4-solid3"
+        }
+      ]
+    },
+    {
+      "id": "CAP_0603_STEP_5",
+      "category": "ceramic_capacitor",
+      "fixed": false,
+      "assembledPositionM": [
+        0.0014432396929460003,
+        0.00175,
+        0.001164832097318
+      ],
+      "explodeOffsetM": [
+        0.0070035136555021285,
+        0.018000000000000002,
+        0.005652503558353166
+      ],
+      "boundsMm": [
+        0.9432395929459997,
+        1.4999998999999993,
+        0.41483199731799963,
+        1.943239792946001,
+        2.0000001000000007,
+        1.9148321973180003
+      ],
+      "sourceBodyCount": 3,
+      "classification": {
+        "source_named_component": 3
+      },
+      "sourceBodies": [
+        {
+          "index": 413,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_0603.step-5-solid1"
+        },
+        {
+          "index": 414,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_0603.step-5-solid2"
+        },
+        {
+          "index": 415,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_0603.step-5-solid3"
+        }
+      ]
+    },
+    {
+      "id": "CAP_0603_STEP_6",
+      "category": "ceramic_capacitor",
+      "fixed": false,
+      "assembledPositionM": [
+        -0.00801204821136,
+        0.0017499999999999994,
+        0.004502983690316
+      ],
+      "explodeOffsetM": [
+        -0.00784576661675367,
+        0.012,
+        0.004409529021951624
+      ],
+      "boundsMm": [
+        -8.512048311360001,
+        1.4999998999999975,
+        3.7529835903159987,
+        -7.512048111359997,
+        2.000000100000001,
+        5.2529837903160015
+      ],
+      "sourceBodyCount": 3,
+      "classification": {
+        "source_named_component": 3
+      },
+      "sourceBodies": [
+        {
+          "index": 416,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_0603.step-6-solid1"
+        },
+        {
+          "index": 417,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_0603.step-6-solid2"
+        },
+        {
+          "index": 418,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_0603.step-6-solid3"
+        }
+      ]
+    },
+    {
+      "id": "CAP_0603_STEP_7",
+      "category": "ceramic_capacitor",
+      "fixed": false,
+      "assembledPositionM": [
+        -0.00801204821136,
+        0.00175,
+        0.008511332886453
+      ],
+      "explodeOffsetM": [
+        -0.006168846501707391,
+        0.014,
+        0.006553268866632321
+      ],
+      "boundsMm": [
+        -8.512048311360003,
+        1.4999998999999966,
+        7.761332786452998,
+        -7.512048111359997,
+        2.0000001000000034,
+        9.261332986453
+      ],
+      "sourceBodyCount": 3,
+      "classification": {
+        "source_named_component": 3
+      },
+      "sourceBodies": [
+        {
+          "index": 419,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_0603.step-7-solid1"
+        },
+        {
+          "index": 420,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_0603.step-7-solid2"
+        },
+        {
+          "index": 421,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_0603.step-7-solid3"
+        }
+      ]
+    },
+    {
+      "id": "DIODO_K24_STEP_1",
+      "category": "diode",
+      "fixed": false,
+      "assembledPositionM": [
+        0.0009466379861909999,
+        0.002200933177626521,
+        0.019183231679225997
+      ],
+      "explodeOffsetM": [
+        0.0004435846646715789,
+        0.016,
+        0.008989061833432241
+      ],
+      "boundsMm": [
+        -0.4033621138090036,
+        1.4999998999999964,
+        18.48314028994636,
+        2.2966380861910034,
+        2.9018664552530455,
+        19.88332306850564
+      ],
+      "sourceBodyCount": 8,
+      "classification": {
+        "source_named_component": 8
+      },
+      "sourceBodies": [
+        {
+          "index": 275,
+          "name": "PCB_ESP32-38Pines.step-1/Diodo_K24.step-1-solid1"
+        },
+        {
+          "index": 276,
+          "name": "PCB_ESP32-38Pines.step-1/Diodo_K24.step-1-solid2"
+        },
+        {
+          "index": 277,
+          "name": "PCB_ESP32-38Pines.step-1/Diodo_K24.step-1-solid3"
+        },
+        {
+          "index": 278,
+          "name": "PCB_ESP32-38Pines.step-1/Diodo_K24.step-1-solid4"
+        },
+        {
+          "index": 279,
+          "name": "PCB_ESP32-38Pines.step-1/Diodo_K24.step-1-solid5"
+        },
+        {
+          "index": 280,
+          "name": "PCB_ESP32-38Pines.step-1/Diodo_K24.step-1-solid6"
+        },
+        {
+          "index": 281,
+          "name": "PCB_ESP32-38Pines.step-1/Diodo_K24.step-1-solid7"
+        },
+        {
+          "index": 282,
+          "name": "PCB_ESP32-38Pines.step-1/Diodo_K24.step-1-solid8"
+        }
+      ]
+    },
+    {
+      "id": "ESP32_STEP_1",
+      "category": "esp32_module",
+      "fixed": false,
+      "assembledPositionM": [
+        0,
+        0.003055790986460742,
+        -0.014673587484330668
+      ],
+      "explodeOffsetM": [
+        0,
+        0.022,
+        -0.004
+      ],
+      "boundsMm": [
+        -8.950251833364673,
+        1.4897481666353254,
+        -27.373713451013007,
+        8.950251833364673,
+        4.621833806286158,
+        -1.9734615176483268
+      ],
+      "sourceBodyCount": 147,
+      "classification": {
+        "source_named_component": 147
+      },
+      "sourceBodies": [
+        {
+          "index": 7,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid1"
+        },
+        {
+          "index": 8,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid2"
+        },
+        {
+          "index": 9,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid3"
+        },
+        {
+          "index": 10,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid4"
+        },
+        {
+          "index": 11,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid5"
+        },
+        {
+          "index": 12,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid6"
+        },
+        {
+          "index": 13,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid7"
+        },
+        {
+          "index": 14,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid8"
+        },
+        {
+          "index": 15,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid9"
+        },
+        {
+          "index": 16,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid10"
+        },
+        {
+          "index": 17,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid11"
+        },
+        {
+          "index": 18,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid12"
+        },
+        {
+          "index": 19,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid13"
+        },
+        {
+          "index": 20,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid14"
+        },
+        {
+          "index": 21,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid15"
+        },
+        {
+          "index": 22,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid16"
+        },
+        {
+          "index": 23,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid17"
+        },
+        {
+          "index": 24,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid18"
+        },
+        {
+          "index": 25,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid19"
+        },
+        {
+          "index": 26,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid20"
+        },
+        {
+          "index": 27,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid21"
+        },
+        {
+          "index": 28,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid22"
+        },
+        {
+          "index": 29,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid23"
+        },
+        {
+          "index": 30,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid24"
+        },
+        {
+          "index": 31,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid25"
+        },
+        {
+          "index": 32,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid26"
+        },
+        {
+          "index": 33,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid27"
+        },
+        {
+          "index": 34,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid28"
+        },
+        {
+          "index": 35,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid29"
+        },
+        {
+          "index": 36,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid30"
+        },
+        {
+          "index": 37,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid31"
+        },
+        {
+          "index": 38,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid32"
+        },
+        {
+          "index": 39,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid33"
+        },
+        {
+          "index": 40,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid34"
+        },
+        {
+          "index": 41,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid35"
+        },
+        {
+          "index": 42,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid36"
+        },
+        {
+          "index": 43,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid37"
+        },
+        {
+          "index": 44,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid38"
+        },
+        {
+          "index": 45,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid39"
+        },
+        {
+          "index": 46,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid40"
+        },
+        {
+          "index": 47,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid41"
+        },
+        {
+          "index": 48,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid42"
+        },
+        {
+          "index": 49,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid43"
+        },
+        {
+          "index": 50,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid44"
+        },
+        {
+          "index": 51,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid45"
+        },
+        {
+          "index": 52,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid46"
+        },
+        {
+          "index": 53,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid47"
+        },
+        {
+          "index": 54,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid48"
+        },
+        {
+          "index": 55,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid49"
+        },
+        {
+          "index": 56,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid50"
+        },
+        {
+          "index": 57,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid51"
+        },
+        {
+          "index": 58,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid52"
+        },
+        {
+          "index": 59,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid53"
+        },
+        {
+          "index": 60,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid54"
+        },
+        {
+          "index": 61,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid55"
+        },
+        {
+          "index": 62,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid56"
+        },
+        {
+          "index": 63,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid57"
+        },
+        {
+          "index": 64,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid58"
+        },
+        {
+          "index": 65,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid59"
+        },
+        {
+          "index": 66,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid60"
+        },
+        {
+          "index": 67,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid61"
+        },
+        {
+          "index": 68,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid62"
+        },
+        {
+          "index": 69,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid63"
+        },
+        {
+          "index": 70,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid64"
+        },
+        {
+          "index": 71,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid65"
+        },
+        {
+          "index": 72,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid66"
+        },
+        {
+          "index": 73,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid67"
+        },
+        {
+          "index": 74,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid68"
+        },
+        {
+          "index": 75,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid69"
+        },
+        {
+          "index": 76,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid70"
+        },
+        {
+          "index": 77,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid71"
+        },
+        {
+          "index": 78,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid72"
+        },
+        {
+          "index": 79,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid73"
+        },
+        {
+          "index": 80,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid74"
+        },
+        {
+          "index": 81,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid75"
+        },
+        {
+          "index": 82,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid76"
+        },
+        {
+          "index": 83,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid77"
+        },
+        {
+          "index": 84,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid78"
+        },
+        {
+          "index": 85,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid79"
+        },
+        {
+          "index": 86,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid80"
+        },
+        {
+          "index": 87,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid81"
+        },
+        {
+          "index": 88,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid82"
+        },
+        {
+          "index": 89,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid83"
+        },
+        {
+          "index": 90,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid84"
+        },
+        {
+          "index": 91,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid85"
+        },
+        {
+          "index": 92,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid86"
+        },
+        {
+          "index": 93,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid87"
+        },
+        {
+          "index": 94,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid88"
+        },
+        {
+          "index": 95,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid89"
+        },
+        {
+          "index": 96,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid90"
+        },
+        {
+          "index": 97,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid91"
+        },
+        {
+          "index": 98,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid92"
+        },
+        {
+          "index": 99,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid93"
+        },
+        {
+          "index": 100,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid94"
+        },
+        {
+          "index": 101,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid95"
+        },
+        {
+          "index": 102,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid96"
+        },
+        {
+          "index": 103,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid97"
+        },
+        {
+          "index": 104,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid98"
+        },
+        {
+          "index": 105,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid99"
+        },
+        {
+          "index": 106,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid100"
+        },
+        {
+          "index": 107,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid101"
+        },
+        {
+          "index": 108,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid102"
+        },
+        {
+          "index": 109,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid103"
+        },
+        {
+          "index": 110,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid104"
+        },
+        {
+          "index": 111,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid105"
+        },
+        {
+          "index": 112,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid106"
+        },
+        {
+          "index": 113,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid107"
+        },
+        {
+          "index": 114,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid108"
+        },
+        {
+          "index": 115,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid109"
+        },
+        {
+          "index": 116,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid110"
+        },
+        {
+          "index": 117,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid111"
+        },
+        {
+          "index": 118,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid112"
+        },
+        {
+          "index": 119,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid113"
+        },
+        {
+          "index": 120,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid114"
+        },
+        {
+          "index": 121,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid115"
+        },
+        {
+          "index": 122,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid116"
+        },
+        {
+          "index": 123,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid117"
+        },
+        {
+          "index": 124,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid118"
+        },
+        {
+          "index": 125,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid119"
+        },
+        {
+          "index": 126,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid120"
+        },
+        {
+          "index": 127,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid121"
+        },
+        {
+          "index": 128,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid122"
+        },
+        {
+          "index": 129,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid123"
+        },
+        {
+          "index": 130,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid124"
+        },
+        {
+          "index": 131,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid125"
+        },
+        {
+          "index": 132,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid126"
+        },
+        {
+          "index": 133,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid127"
+        },
+        {
+          "index": 134,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid128"
+        },
+        {
+          "index": 135,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid129"
+        },
+        {
+          "index": 136,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid130"
+        },
+        {
+          "index": 137,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid131"
+        },
+        {
+          "index": 138,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid132"
+        },
+        {
+          "index": 139,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid133"
+        },
+        {
+          "index": 140,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid134"
+        },
+        {
+          "index": 141,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid135"
+        },
+        {
+          "index": 142,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid136"
+        },
+        {
+          "index": 143,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid137"
+        },
+        {
+          "index": 144,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid138"
+        },
+        {
+          "index": 145,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid139"
+        },
+        {
+          "index": 146,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid140"
+        },
+        {
+          "index": 147,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid141"
+        },
+        {
+          "index": 148,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid142"
+        },
+        {
+          "index": 149,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid143"
+        },
+        {
+          "index": 150,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid144"
+        },
+        {
+          "index": 151,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid145"
+        },
+        {
+          "index": 152,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid146"
+        },
+        {
+          "index": 153,
+          "name": "PCB_ESP32-38Pines.step-1/esp32.step-1-solid147"
+        }
+      ]
+    },
+    {
+      "id": "LED_RED_0603_STEP_1",
+      "category": "led",
+      "fixed": false,
+      "assembledPositionM": [
+        0.007160892743408999,
+        0.001922713361288241,
+        0.011869610634268
+      ],
+      "explodeOffsetM": [
+        0.0046491264256548195,
+        0.012,
+        0.007706206815176844
+      ],
+      "boundsMm": [
+        6.360716430053728,
+        1.499823686644729,
+        11.469610534268,
+        7.961069056764271,
+        2.3456030359317532,
+        12.269610734268001
+      ],
+      "sourceBodyCount": 2,
+      "classification": {
+        "source_named_component": 2
+      },
+      "sourceBodies": [
+        {
+          "index": 329,
+          "name": "PCB_ESP32-38Pines.step-1/Led_red_0603.step-1-solid1"
+        },
+        {
+          "index": 330,
+          "name": "PCB_ESP32-38Pines.step-1/Led_red_0603.step-1-solid2"
+        }
+      ]
+    },
+    {
+      "id": "PIN_HEADER_LEFT",
+      "category": "pin_header",
+      "fixed": false,
+      "assembledPositionM": [
+        -0.013000000000000001,
+        -0.001675,
+        0
+      ],
+      "explodeOffsetM": [
+        -0.009,
+        -0.012,
+        0
+      ],
+      "boundsMm": [
+        -14.000238044604538,
+        -5.500346407332059,
+        -23.75023804460454,
+        -11.999761955395462,
+        2.150346407332059,
+        23.75023804460454
+      ],
+      "sourceBodyCount": 57,
+      "classification": {
+        "pin_header": 57
+      },
+      "sourceBodies": [
+        {
+          "index": 428,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-5.step-1-solid1"
+        },
+        {
+          "index": 429,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-6.step-1-solid1"
+        },
+        {
+          "index": 430,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-7.step-1-solid1"
+        },
+        {
+          "index": 431,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-8.step-1-solid1"
+        },
+        {
+          "index": 432,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-9.step-1-solid1"
+        },
+        {
+          "index": 433,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-10.step-1-solid1"
+        },
+        {
+          "index": 434,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-11.step-1-solid1"
+        },
+        {
+          "index": 435,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-12.step-1-solid1"
+        },
+        {
+          "index": 436,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-13.step-1-solid1"
+        },
+        {
+          "index": 446,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-23.step-1-solid1"
+        },
+        {
+          "index": 447,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-24.step-1-solid1"
+        },
+        {
+          "index": 448,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-25.step-1-solid1"
+        },
+        {
+          "index": 449,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-26.step-1-solid1"
+        },
+        {
+          "index": 450,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-27.step-1-solid1"
+        },
+        {
+          "index": 451,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-28.step-1-solid1"
+        },
+        {
+          "index": 452,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-29.step-1-solid1"
+        },
+        {
+          "index": 453,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-30.step-1-solid1"
+        },
+        {
+          "index": 454,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-31.step-1-solid1"
+        },
+        {
+          "index": 455,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-32.step-1-solid1"
+        },
+        {
+          "index": 466,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-43.step-1-solid1"
+        },
+        {
+          "index": 467,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-44.step-1-solid1"
+        },
+        {
+          "index": 468,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-45.step-1-solid1"
+        },
+        {
+          "index": 469,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-46.step-1-solid1"
+        },
+        {
+          "index": 470,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-47.step-1-solid1"
+        },
+        {
+          "index": 471,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-48.step-1-solid1"
+        },
+        {
+          "index": 472,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-49.step-1-solid1"
+        },
+        {
+          "index": 473,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-50.step-1-solid1"
+        },
+        {
+          "index": 474,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-51.step-1-solid1"
+        },
+        {
+          "index": 484,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-61.step-1-solid1"
+        },
+        {
+          "index": 485,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-62.step-1-solid1"
+        },
+        {
+          "index": 486,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-63.step-1-solid1"
+        },
+        {
+          "index": 487,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-64.step-1-solid1"
+        },
+        {
+          "index": 488,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-65.step-1-solid1"
+        },
+        {
+          "index": 489,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-66.step-1-solid1"
+        },
+        {
+          "index": 490,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-67.step-1-solid1"
+        },
+        {
+          "index": 491,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-68.step-1-solid1"
+        },
+        {
+          "index": 492,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-69.step-1-solid1"
+        },
+        {
+          "index": 493,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-70.step-1-solid1"
+        },
+        {
+          "index": 518,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-95.step-1-solid1"
+        },
+        {
+          "index": 519,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-96.step-1-solid1"
+        },
+        {
+          "index": 520,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-97.step-1-solid1"
+        },
+        {
+          "index": 521,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-98.step-1-solid1"
+        },
+        {
+          "index": 522,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-99.step-1-solid1"
+        },
+        {
+          "index": 523,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-100.step-1-solid1"
+        },
+        {
+          "index": 524,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-101.step-1-solid1"
+        },
+        {
+          "index": 525,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-102.step-1-solid1"
+        },
+        {
+          "index": 526,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-103.step-1-solid1"
+        },
+        {
+          "index": 527,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-104.step-1-solid1"
+        },
+        {
+          "index": 528,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-105.step-1-solid1"
+        },
+        {
+          "index": 529,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-106.step-1-solid1"
+        },
+        {
+          "index": 530,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-107.step-1-solid1"
+        },
+        {
+          "index": 531,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-108.step-1-solid1"
+        },
+        {
+          "index": 532,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-109.step-1-solid1"
+        },
+        {
+          "index": 533,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-110.step-1-solid1"
+        },
+        {
+          "index": 534,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-111.step-1-solid1"
+        },
+        {
+          "index": 535,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-112.step-1-solid1"
+        },
+        {
+          "index": 536,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-113.step-1-solid1"
+        }
+      ]
+    },
+    {
+      "id": "PIN_HEADER_RIGHT",
+      "category": "pin_header",
+      "fixed": false,
+      "assembledPositionM": [
+        0.013000000000000001,
+        -0.001675,
+        0
+      ],
+      "explodeOffsetM": [
+        0.009,
+        -0.012,
+        0
+      ],
+      "boundsMm": [
+        11.999761955395462,
+        -5.500346407332059,
+        -23.75023804460454,
+        14.000238044604538,
+        2.150346407332059,
+        23.75023804460454
+      ],
+      "sourceBodyCount": 57,
+      "classification": {
+        "pin_header": 57
+      },
+      "sourceBodies": [
+        {
+          "index": 423,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-0.step-1-solid1"
+        },
+        {
+          "index": 424,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-1.step-1-solid1"
+        },
+        {
+          "index": 425,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-2.step-1-solid1"
+        },
+        {
+          "index": 426,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-3.step-1-solid1"
+        },
+        {
+          "index": 427,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-4.step-1-solid1"
+        },
+        {
+          "index": 437,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-14.step-1-solid1"
+        },
+        {
+          "index": 438,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-15.step-1-solid1"
+        },
+        {
+          "index": 439,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-16.step-1-solid1"
+        },
+        {
+          "index": 440,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-17.step-1-solid1"
+        },
+        {
+          "index": 441,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-18.step-1-solid1"
+        },
+        {
+          "index": 442,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-19.step-1-solid1"
+        },
+        {
+          "index": 443,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-20.step-1-solid1"
+        },
+        {
+          "index": 444,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-21.step-1-solid1"
+        },
+        {
+          "index": 445,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-22.step-1-solid1"
+        },
+        {
+          "index": 456,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-33.step-1-solid1"
+        },
+        {
+          "index": 457,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-34.step-1-solid1"
+        },
+        {
+          "index": 458,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-35.step-1-solid1"
+        },
+        {
+          "index": 459,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-36.step-1-solid1"
+        },
+        {
+          "index": 460,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-37.step-1-solid1"
+        },
+        {
+          "index": 461,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-38.step-1-solid1"
+        },
+        {
+          "index": 462,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-39.step-1-solid1"
+        },
+        {
+          "index": 463,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-40.step-1-solid1"
+        },
+        {
+          "index": 464,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-41.step-1-solid1"
+        },
+        {
+          "index": 465,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-42.step-1-solid1"
+        },
+        {
+          "index": 475,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-52.step-1-solid1"
+        },
+        {
+          "index": 476,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-53.step-1-solid1"
+        },
+        {
+          "index": 477,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-54.step-1-solid1"
+        },
+        {
+          "index": 478,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-55.step-1-solid1"
+        },
+        {
+          "index": 479,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-56.step-1-solid1"
+        },
+        {
+          "index": 480,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-57.step-1-solid1"
+        },
+        {
+          "index": 481,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-58.step-1-solid1"
+        },
+        {
+          "index": 482,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-59.step-1-solid1"
+        },
+        {
+          "index": 483,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-60.step-1-solid1"
+        },
+        {
+          "index": 494,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-71.step-1-solid1"
+        },
+        {
+          "index": 495,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-72.step-1-solid1"
+        },
+        {
+          "index": 496,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-73.step-1-solid1"
+        },
+        {
+          "index": 497,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-74.step-1-solid1"
+        },
+        {
+          "index": 498,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-75.step-1-solid1"
+        },
+        {
+          "index": 499,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-76.step-1-solid1"
+        },
+        {
+          "index": 500,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-77.step-1-solid1"
+        },
+        {
+          "index": 501,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-78.step-1-solid1"
+        },
+        {
+          "index": 502,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-79.step-1-solid1"
+        },
+        {
+          "index": 503,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-80.step-1-solid1"
+        },
+        {
+          "index": 504,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-81.step-1-solid1"
+        },
+        {
+          "index": 505,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-82.step-1-solid1"
+        },
+        {
+          "index": 506,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-83.step-1-solid1"
+        },
+        {
+          "index": 507,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-84.step-1-solid1"
+        },
+        {
+          "index": 508,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-85.step-1-solid1"
+        },
+        {
+          "index": 509,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-86.step-1-solid1"
+        },
+        {
+          "index": 510,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-87.step-1-solid1"
+        },
+        {
+          "index": 511,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-88.step-1-solid1"
+        },
+        {
+          "index": 512,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-89.step-1-solid1"
+        },
+        {
+          "index": 513,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-90.step-1-solid1"
+        },
+        {
+          "index": 514,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-91.step-1-solid1"
+        },
+        {
+          "index": 515,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-92.step-1-solid1"
+        },
+        {
+          "index": 516,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-93.step-1-solid1"
+        },
+        {
+          "index": 517,
+          "name": "PCB_ESP32-38Pines.step-1/PCB_ESP32-38Pines (v2~recovered)-94.step-1-solid1"
+        }
+      ]
+    },
+    {
+      "id": "RES_102_STEP_1",
+      "category": "resistor",
+      "fixed": false,
+      "assembledPositionM": [
+        0.007129708503155001,
+        0.0017052707709983668,
+        0.009901736151041
+      ],
+      "explodeOffsetM": [
+        0.005258965249242719,
+        0.018000000000000002,
+        0.0073036487119286795
+      ],
+      "boundsMm": [
+        6.354708403154999,
+        1.4999998999999977,
+        9.476736051040998,
+        7.904708603155004,
+        1.9105416419967358,
+        10.326736251041003
+      ],
+      "sourceBodyCount": 7,
+      "classification": {
+        "source_named_component": 7
+      },
+      "sourceBodies": [
+        {
+          "index": 343,
+          "name": "PCB_ESP32-38Pines.step-1/Res_102.step-1-solid1"
+        },
+        {
+          "index": 344,
+          "name": "PCB_ESP32-38Pines.step-1/Res_102.step-1-solid2"
+        },
+        {
+          "index": 345,
+          "name": "PCB_ESP32-38Pines.step-1/Res_102.step-1-solid3"
+        },
+        {
+          "index": 346,
+          "name": "PCB_ESP32-38Pines.step-1/Res_102.step-1-solid4"
+        },
+        {
+          "index": 347,
+          "name": "PCB_ESP32-38Pines.step-1/Res_102.step-1-solid5"
+        },
+        {
+          "index": 348,
+          "name": "PCB_ESP32-38Pines.step-1/Res_102.step-1-solid6"
+        },
+        {
+          "index": 349,
+          "name": "PCB_ESP32-38Pines.step-1/Res_102.step-1-solid7"
+        }
+      ]
+    },
+    {
+      "id": "RES_123_STEP_1",
+      "category": "resistor",
+      "fixed": false,
+      "assembledPositionM": [
+        0.0071297085031550005,
+        0.0017052707660343538,
+        0.008209192030045
+      ],
+      "explodeOffsetM": [
+        0.005901497611753544,
+        0.012,
+        0.0067950221440748245
+      ],
+      "boundsMm": [
+        6.354708403154998,
+        1.4999998999999977,
+        7.784191930044996,
+        7.904708603155003,
+        1.9105416320687099,
+        8.634192130045003
+      ],
+      "sourceBodyCount": 7,
+      "classification": {
+        "source_named_component": 7
+      },
+      "sourceBodies": [
+        {
+          "index": 350,
+          "name": "PCB_ESP32-38Pines.step-1/Res_123.step-1-solid1"
+        },
+        {
+          "index": 351,
+          "name": "PCB_ESP32-38Pines.step-1/Res_123.step-1-solid2"
+        },
+        {
+          "index": 352,
+          "name": "PCB_ESP32-38Pines.step-1/Res_123.step-1-solid3"
+        },
+        {
+          "index": 353,
+          "name": "PCB_ESP32-38Pines.step-1/Res_123.step-1-solid4"
+        },
+        {
+          "index": 354,
+          "name": "PCB_ESP32-38Pines.step-1/Res_123.step-1-solid5"
+        },
+        {
+          "index": 355,
+          "name": "PCB_ESP32-38Pines.step-1/Res_123.step-1-solid6"
+        },
+        {
+          "index": 356,
+          "name": "PCB_ESP32-38Pines.step-1/Res_123.step-1-solid7"
+        }
+      ]
+    },
+    {
+      "id": "RES_123_STEP_2",
+      "category": "resistor",
+      "fixed": false,
+      "assembledPositionM": [
+        0.0026929808006563825,
+        0.0017052707660343538,
+        0.008122962232266122
+      ],
+      "explodeOffsetM": [
+        0.0028321576785702725,
+        0.014,
+        0.008542767870176236
+      ],
+      "boundsMm": [
+        1.9179618042568662,
+        1.499999899999998,
+        7.6979276731489374,
+        3.4679997970558984,
+        1.9105416320687094,
+        8.547996791383305
+      ],
+      "sourceBodyCount": 7,
+      "classification": {
+        "source_named_component": 7
+      },
+      "sourceBodies": [
+        {
+          "index": 357,
+          "name": "PCB_ESP32-38Pines.step-1/Res_123.step-2-solid1"
+        },
+        {
+          "index": 358,
+          "name": "PCB_ESP32-38Pines.step-1/Res_123.step-2-solid2"
+        },
+        {
+          "index": 359,
+          "name": "PCB_ESP32-38Pines.step-1/Res_123.step-2-solid3"
+        },
+        {
+          "index": 360,
+          "name": "PCB_ESP32-38Pines.step-1/Res_123.step-2-solid4"
+        },
+        {
+          "index": 361,
+          "name": "PCB_ESP32-38Pines.step-1/Res_123.step-2-solid5"
+        },
+        {
+          "index": 362,
+          "name": "PCB_ESP32-38Pines.step-1/Res_123.step-2-solid6"
+        },
+        {
+          "index": 363,
+          "name": "PCB_ESP32-38Pines.step-1/Res_123.step-2-solid7"
+        }
+      ]
+    },
+    {
+      "id": "RES_123_STEP_3",
+      "category": "resistor",
+      "fixed": false,
+      "assembledPositionM": [
+        -0.002505698791954,
+        0.001705270766034354,
+        0.0011543405973739995
+      ],
+      "explodeOffsetM": [
+        -0.00817428347809699,
+        0.016,
+        0.0037657787534201436
+      ],
+      "boundsMm": [
+        -2.9306988919540014,
+        1.4999998999999993,
+        0.37934049737399883,
+        -2.080698691953999,
+        1.9105416320687088,
+        1.9293406973740004
+      ],
+      "sourceBodyCount": 7,
+      "classification": {
+        "source_named_component": 7
+      },
+      "sourceBodies": [
+        {
+          "index": 392,
+          "name": "PCB_ESP32-38Pines.step-1/Res_123.step-3-solid1"
+        },
+        {
+          "index": 393,
+          "name": "PCB_ESP32-38Pines.step-1/Res_123.step-3-solid2"
+        },
+        {
+          "index": 394,
+          "name": "PCB_ESP32-38Pines.step-1/Res_123.step-3-solid3"
+        },
+        {
+          "index": 395,
+          "name": "PCB_ESP32-38Pines.step-1/Res_123.step-3-solid4"
+        },
+        {
+          "index": 396,
+          "name": "PCB_ESP32-38Pines.step-1/Res_123.step-3-solid5"
+        },
+        {
+          "index": 397,
+          "name": "PCB_ESP32-38Pines.step-1/Res_123.step-3-solid6"
+        },
+        {
+          "index": 398,
+          "name": "PCB_ESP32-38Pines.step-1/Res_123.step-3-solid7"
+        }
+      ]
+    },
+    {
+      "id": "RES_471_STEP_1",
+      "category": "resistor",
+      "fixed": false,
+      "assembledPositionM": [
+        0.006941010632643,
+        0.0017051744117949684,
+        0.0011543405973739999
+      ],
+      "explodeOffsetM": [
+        0.008878062175844201,
+        0.018000000000000002,
+        0.0014764863703551417
+      ],
+      "boundsMm": [
+        6.516010532643,
+        1.4999998999999988,
+        0.3793404973739999,
+        7.366010732643,
+        1.9103489235899378,
+        1.9293406973740002
+      ],
+      "sourceBodyCount": 7,
+      "classification": {
+        "source_named_component": 7
+      },
+      "sourceBodies": [
+        {
+          "index": 364,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-1-solid1"
+        },
+        {
+          "index": 365,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-1-solid2"
+        },
+        {
+          "index": 366,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-1-solid3"
+        },
+        {
+          "index": 367,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-1-solid4"
+        },
+        {
+          "index": 368,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-1-solid5"
+        },
+        {
+          "index": 369,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-1-solid6"
+        },
+        {
+          "index": 370,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-1-solid7"
+        }
+      ]
+    },
+    {
+      "id": "RES_471_STEP_2",
+      "category": "resistor",
+      "fixed": false,
+      "assembledPositionM": [
+        0.005145626527214,
+        0.001705174411794968,
+        0.0011543405973739999
+      ],
+      "explodeOffsetM": [
+        0.008781737985131963,
+        0.012,
+        0.0019700451671193714
+      ],
+      "boundsMm": [
+        4.720626427213999,
+        1.4999998999999982,
+        0.3793404973739992,
+        5.5706266272140015,
+        1.9103489235899374,
+        1.9293406973740008
+      ],
+      "sourceBodyCount": 7,
+      "classification": {
+        "source_named_component": 7
+      },
+      "sourceBodies": [
+        {
+          "index": 371,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-2-solid1"
+        },
+        {
+          "index": 372,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-2-solid2"
+        },
+        {
+          "index": 373,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-2-solid3"
+        },
+        {
+          "index": 374,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-2-solid4"
+        },
+        {
+          "index": 375,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-2-solid5"
+        },
+        {
+          "index": 376,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-2-solid6"
+        },
+        {
+          "index": 377,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-2-solid7"
+        }
+      ]
+    },
+    {
+      "id": "RES_471_STEP_3",
+      "category": "resistor",
+      "fixed": false,
+      "assembledPositionM": [
+        -0.000809214116356,
+        0.0017051744117949684,
+        0.0011543405973739999
+      ],
+      "explodeOffsetM": [
+        -0.005166197418669173,
+        0.014,
+        0.007369559296955006
+      ],
+      "boundsMm": [
+        -1.2342142163560004,
+        1.4999998999999988,
+        0.3793404973739999,
+        -0.38421401635599955,
+        1.9103489235899378,
+        1.9293406973740002
+      ],
+      "sourceBodyCount": 7,
+      "classification": {
+        "source_named_component": 7
+      },
+      "sourceBodies": [
+        {
+          "index": 378,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-3-solid1"
+        },
+        {
+          "index": 379,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-3-solid2"
+        },
+        {
+          "index": 380,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-3-solid3"
+        },
+        {
+          "index": 381,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-3-solid4"
+        },
+        {
+          "index": 382,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-3-solid5"
+        },
+        {
+          "index": 383,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-3-solid6"
+        },
+        {
+          "index": 384,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-3-solid7"
+        }
+      ]
+    },
+    {
+      "id": "RES_471_STEP_4",
+      "category": "resistor",
+      "fixed": false,
+      "assembledPositionM": [
+        -0.004447861986976,
+        0.0017051744117949684,
+        0.0011543405973739999
+      ],
+      "explodeOffsetM": [
+        -0.008711405046374592,
+        0.016,
+        0.002260845443191397
+      ],
+      "boundsMm": [
+        -4.872862086976,
+        1.4999998999999988,
+        0.3793404973739999,
+        -4.022861886976,
+        1.9103489235899378,
+        1.9293406973740002
+      ],
+      "sourceBodyCount": 7,
+      "classification": {
+        "source_named_component": 7
+      },
+      "sourceBodies": [
+        {
+          "index": 385,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-4-solid1"
+        },
+        {
+          "index": 386,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-4-solid2"
+        },
+        {
+          "index": 387,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-4-solid3"
+        },
+        {
+          "index": 388,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-4-solid4"
+        },
+        {
+          "index": 389,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-4-solid5"
+        },
+        {
+          "index": 390,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-4-solid6"
+        },
+        {
+          "index": 391,
+          "name": "PCB_ESP32-38Pines.step-1/Res_471.step-4-solid7"
+        }
+      ]
+    },
+    {
+      "id": "RES_512_STEP_1",
+      "category": "resistor",
+      "fixed": false,
+      "assembledPositionM": [
+        0.003316516629297,
+        0.0017052707709983678,
+        0.0011543405973739999
+      ],
+      "explodeOffsetM": [
+        0.008499858982641736,
+        0.018000000000000002,
+        0.0029584450772668696
+      ],
+      "boundsMm": [
+        2.8915165292969993,
+        1.4999998999999986,
+        0.3793404973739996,
+        3.741516729297001,
+        1.9105416419967371,
+        1.9293406973740004
+      ],
+      "sourceBodyCount": 7,
+      "classification": {
+        "source_named_component": 7
+      },
+      "sourceBodies": [
+        {
+          "index": 399,
+          "name": "PCB_ESP32-38Pines.step-1/Res_512.step-1-solid1"
+        },
+        {
+          "index": 400,
+          "name": "PCB_ESP32-38Pines.step-1/Res_512.step-1-solid2"
+        },
+        {
+          "index": 401,
+          "name": "PCB_ESP32-38Pines.step-1/Res_512.step-1-solid3"
+        },
+        {
+          "index": 402,
+          "name": "PCB_ESP32-38Pines.step-1/Res_512.step-1-solid4"
+        },
+        {
+          "index": 403,
+          "name": "PCB_ESP32-38Pines.step-1/Res_512.step-1-solid5"
+        },
+        {
+          "index": 404,
+          "name": "PCB_ESP32-38Pines.step-1/Res_512.step-1-solid6"
+        },
+        {
+          "index": 405,
+          "name": "PCB_ESP32-38Pines.step-1/Res_512.step-1-solid7"
+        }
+      ]
+    },
+    {
+      "id": "RES_512_STEP_2",
+      "category": "resistor",
+      "fixed": false,
+      "assembledPositionM": [
+        -0.006209050630123,
+        0.001705270770998367,
+        0.0011543405973739999
+      ],
+      "explodeOffsetM": [
+        -0.008848383481004559,
+        0.012,
+        0.0016450257666935303
+      ],
+      "boundsMm": [
+        -6.6340507301230005,
+        1.4999998999999973,
+        0.3793404973739989,
+        -5.7840505301229985,
+        1.910541641996737,
+        1.9293406973740013
+      ],
+      "sourceBodyCount": 7,
+      "classification": {
+        "source_named_component": 7
+      },
+      "sourceBodies": [
+        {
+          "index": 406,
+          "name": "PCB_ESP32-38Pines.step-1/Res_512.step-2-solid1"
+        },
+        {
+          "index": 407,
+          "name": "PCB_ESP32-38Pines.step-1/Res_512.step-2-solid2"
+        },
+        {
+          "index": 408,
+          "name": "PCB_ESP32-38Pines.step-1/Res_512.step-2-solid3"
+        },
+        {
+          "index": 409,
+          "name": "PCB_ESP32-38Pines.step-1/Res_512.step-2-solid4"
+        },
+        {
+          "index": 410,
+          "name": "PCB_ESP32-38Pines.step-1/Res_512.step-2-solid5"
+        },
+        {
+          "index": 411,
+          "name": "PCB_ESP32-38Pines.step-1/Res_512.step-2-solid6"
+        },
+        {
+          "index": 412,
+          "name": "PCB_ESP32-38Pines.step-1/Res_512.step-2-solid7"
+        }
+      ]
+    },
+    {
+      "id": "CAP_TAM_106C_STEP_1",
+      "category": "tantalum_capacitor",
+      "fixed": false,
+      "assembledPositionM": [
+        -0.003115175502979,
+        0.0021552707674139192,
+        0.00477026874774
+      ],
+      "explodeOffsetM": [
+        -0.004920987102368278,
+        0.014,
+        0.007535508339742253
+      ],
+      "boundsMm": [
+        -4.865270780820815,
+        1.4999998928311005,
+        4.120268647739999,
+        -1.3650802251371854,
+        2.810541641996738,
+        5.420268847740002
+      ],
+      "sourceBodyCount": 14,
+      "classification": {
+        "source_named_component": 14
+      },
+      "sourceBodies": [
+        {
+          "index": 297,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106C.step-1-solid1"
+        },
+        {
+          "index": 298,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106C.step-1-solid2"
+        },
+        {
+          "index": 299,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106C.step-1-solid3"
+        },
+        {
+          "index": 300,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106C.step-1-solid4"
+        },
+        {
+          "index": 301,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106C.step-1-solid5"
+        },
+        {
+          "index": 302,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106C.step-1-solid6"
+        },
+        {
+          "index": 303,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106C.step-1-solid7"
+        },
+        {
+          "index": 304,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106C.step-1-solid8"
+        },
+        {
+          "index": 305,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106C.step-1-solid9"
+        },
+        {
+          "index": 306,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106C.step-1-solid10"
+        },
+        {
+          "index": 307,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106C.step-1-solid11"
+        },
+        {
+          "index": 308,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106C.step-1-solid12"
+        },
+        {
+          "index": 309,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106C.step-1-solid13"
+        },
+        {
+          "index": 310,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106C.step-1-solid14"
+        }
+      ]
+    },
+    {
+      "id": "CAP_TAM_106_STEP_1",
+      "category": "tantalum_capacitor",
+      "fixed": false,
+      "assembledPositionM": [
+        -0.003642180502066,
+        0.0024053478748821905,
+        0.008827657827042
+      ],
+      "explodeOffsetM": [
+        -0.00343259979153911,
+        0.016,
+        0.008319691020171702
+      ],
+      "boundsMm": [
+        -5.542180602066002,
+        1.4999998999999968,
+        7.477657727041997,
+        -1.7421804020659981,
+        3.3106958497643846,
+        10.177657927042002
+      ],
+      "sourceBodyCount": 14,
+      "classification": {
+        "source_named_component": 14
+      },
+      "sourceBodies": [
+        {
+          "index": 283,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106.step-1-solid1"
+        },
+        {
+          "index": 284,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106.step-1-solid2"
+        },
+        {
+          "index": 285,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106.step-1-solid3"
+        },
+        {
+          "index": 286,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106.step-1-solid4"
+        },
+        {
+          "index": 287,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106.step-1-solid5"
+        },
+        {
+          "index": 288,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106.step-1-solid6"
+        },
+        {
+          "index": 289,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106.step-1-solid7"
+        },
+        {
+          "index": 290,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106.step-1-solid8"
+        },
+        {
+          "index": 291,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106.step-1-solid9"
+        },
+        {
+          "index": 292,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106.step-1-solid10"
+        },
+        {
+          "index": 293,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106.step-1-solid11"
+        },
+        {
+          "index": 294,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106.step-1-solid12"
+        },
+        {
+          "index": 295,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106.step-1-solid13"
+        },
+        {
+          "index": 296,
+          "name": "PCB_ESP32-38Pines.step-1/Cap_Tam_106.step-1-solid14"
+        }
+      ]
+    },
+    {
+      "id": "TRANSISTOR_SMD_STEP_1",
+      "category": "transistor",
+      "fixed": false,
+      "assembledPositionM": [
+        0.007046938040508,
+        0.0020050937468453376,
+        0.005107904571991
+      ],
+      "explodeOffsetM": [
+        0.007287047032806378,
+        0.018000000000000002,
+        0.005281945242206488
+      ],
+      "boundsMm": [
+        5.846755361948719,
+        1.499645871550001,
+        4.107904471990999,
+        8.247120719067281,
+        2.510541622140674,
+        6.107904671991002
+      ],
+      "sourceBodyCount": 9,
+      "classification": {
+        "source_named_component": 9
+      },
+      "sourceBodies": [
+        {
+          "index": 311,
+          "name": "PCB_ESP32-38Pines.step-1/Transistor_smd.step-1-solid1"
+        },
+        {
+          "index": 312,
+          "name": "PCB_ESP32-38Pines.step-1/Transistor_smd.step-1-solid2"
+        },
+        {
+          "index": 313,
+          "name": "PCB_ESP32-38Pines.step-1/Transistor_smd.step-1-solid3"
+        },
+        {
+          "index": 314,
+          "name": "PCB_ESP32-38Pines.step-1/Transistor_smd.step-1-solid4"
+        },
+        {
+          "index": 315,
+          "name": "PCB_ESP32-38Pines.step-1/Transistor_smd.step-1-solid5"
+        },
+        {
+          "index": 316,
+          "name": "PCB_ESP32-38Pines.step-1/Transistor_smd.step-1-solid6"
+        },
+        {
+          "index": 317,
+          "name": "PCB_ESP32-38Pines.step-1/Transistor_smd.step-1-solid7"
+        },
+        {
+          "index": 318,
+          "name": "PCB_ESP32-38Pines.step-1/Transistor_smd.step-1-solid8"
+        },
+        {
+          "index": 319,
+          "name": "PCB_ESP32-38Pines.step-1/Transistor_smd.step-1-solid9"
+        }
+      ]
+    },
+    {
+      "id": "TRANSISTOR_SMD_STEP_2",
+      "category": "transistor",
+      "fixed": false,
+      "assembledPositionM": [
+        0.002675490147892,
+        0.0020050937468453376,
+        0.005107904571991
+      ],
+      "explodeOffsetM": [
+        0.004175966300381735,
+        0.012,
+        0.007972534443831275
+      ],
+      "boundsMm": [
+        1.47530746933272,
+        1.4996458715500012,
+        4.107904471990999,
+        3.87567282645128,
+        2.510541622140674,
+        6.107904671991001
+      ],
+      "sourceBodyCount": 9,
+      "classification": {
+        "source_named_component": 9
+      },
+      "sourceBodies": [
+        {
+          "index": 320,
+          "name": "PCB_ESP32-38Pines.step-1/Transistor_smd.step-2-solid1"
+        },
+        {
+          "index": 321,
+          "name": "PCB_ESP32-38Pines.step-1/Transistor_smd.step-2-solid2"
+        },
+        {
+          "index": 322,
+          "name": "PCB_ESP32-38Pines.step-1/Transistor_smd.step-2-solid3"
+        },
+        {
+          "index": 323,
+          "name": "PCB_ESP32-38Pines.step-1/Transistor_smd.step-2-solid4"
+        },
+        {
+          "index": 324,
+          "name": "PCB_ESP32-38Pines.step-1/Transistor_smd.step-2-solid5"
+        },
+        {
+          "index": 325,
+          "name": "PCB_ESP32-38Pines.step-1/Transistor_smd.step-2-solid6"
+        },
+        {
+          "index": 326,
+          "name": "PCB_ESP32-38Pines.step-1/Transistor_smd.step-2-solid7"
+        },
+        {
+          "index": 327,
+          "name": "PCB_ESP32-38Pines.step-1/Transistor_smd.step-2-solid8"
+        },
+        {
+          "index": 328,
+          "name": "PCB_ESP32-38Pines.step-1/Transistor_smd.step-2-solid9"
+        }
+      ]
+    },
+    {
+      "id": "MICROUSB_STEP_1",
+      "category": "usb_connector",
+      "fixed": false,
+      "assembledPositionM": [
+        -1.1102230246251566e-18,
+        0.0023382962098961995,
+        0.025090697165529016
+      ],
+      "explodeOffsetM": [
+        -3.9823553549376772e-19,
+        0.014,
+        0.009
+      ],
+      "boundsMm": [
+        -3.779558383820843,
+        0.6123329477913719,
+        22.19999989999999,
+        3.7795583838208406,
+        4.0642594720010266,
+        27.98139443105804
+      ],
+      "sourceBodyCount": 7,
+      "classification": {
+        "source_named_component": 7
+      },
+      "sourceBodies": [
+        {
+          "index": 0,
+          "name": "PCB_ESP32-38Pines.step-1/MicroUSB.step-1-solid1"
+        },
+        {
+          "index": 1,
+          "name": "PCB_ESP32-38Pines.step-1/MicroUSB.step-1-solid2"
+        },
+        {
+          "index": 2,
+          "name": "PCB_ESP32-38Pines.step-1/MicroUSB.step-1-solid3"
+        },
+        {
+          "index": 3,
+          "name": "PCB_ESP32-38Pines.step-1/MicroUSB.step-1-solid4"
+        },
+        {
+          "index": 4,
+          "name": "PCB_ESP32-38Pines.step-1/MicroUSB.step-1-solid5"
+        },
+        {
+          "index": 5,
+          "name": "PCB_ESP32-38Pines.step-1/MicroUSB.step-1-solid6"
+        },
+        {
+          "index": 6,
+          "name": "PCB_ESP32-38Pines.step-1/MicroUSB.step-1-solid7"
+        }
+      ]
+    },
+    {
+      "id": "CP2102_STEP_1",
+      "category": "usb_uart",
+      "fixed": false,
+      "assembledPositionM": [
+        0.0011400802672070001,
+        0.0019061117184425705,
+        0.01416513106209325
+      ],
+      "explodeOffsetM": [
+        0.0007220299860283388,
+        0.016,
+        0.008970990619729568
+      ],
+      "boundsMm": [
+        -1.4099198327930038,
+        1.4999998999999964,
+        11.615130901533995,
+        3.690080367207004,
+        2.3122235368851443,
+        16.715131222652506
+      ],
+      "sourceBodyCount": 82,
+      "classification": {
+        "source_named_component": 82
+      },
+      "sourceBodies": [
+        {
+          "index": 175,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid1"
+        },
+        {
+          "index": 176,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid2"
+        },
+        {
+          "index": 177,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid3"
+        },
+        {
+          "index": 178,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid4"
+        },
+        {
+          "index": 179,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid5"
+        },
+        {
+          "index": 180,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid6"
+        },
+        {
+          "index": 181,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid7"
+        },
+        {
+          "index": 182,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid8"
+        },
+        {
+          "index": 183,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid9"
+        },
+        {
+          "index": 184,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid10"
+        },
+        {
+          "index": 185,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid11"
+        },
+        {
+          "index": 186,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid12"
+        },
+        {
+          "index": 187,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid13"
+        },
+        {
+          "index": 188,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid14"
+        },
+        {
+          "index": 189,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid15"
+        },
+        {
+          "index": 190,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid16"
+        },
+        {
+          "index": 191,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid17"
+        },
+        {
+          "index": 192,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid18"
+        },
+        {
+          "index": 193,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid19"
+        },
+        {
+          "index": 194,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid20"
+        },
+        {
+          "index": 195,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid21"
+        },
+        {
+          "index": 196,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid22"
+        },
+        {
+          "index": 197,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid23"
+        },
+        {
+          "index": 198,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid24"
+        },
+        {
+          "index": 199,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid25"
+        },
+        {
+          "index": 200,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid26"
+        },
+        {
+          "index": 201,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid27"
+        },
+        {
+          "index": 202,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid28"
+        },
+        {
+          "index": 203,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid29"
+        },
+        {
+          "index": 204,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid30"
+        },
+        {
+          "index": 205,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid31"
+        },
+        {
+          "index": 206,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid32"
+        },
+        {
+          "index": 207,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid33"
+        },
+        {
+          "index": 208,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid34"
+        },
+        {
+          "index": 209,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid35"
+        },
+        {
+          "index": 210,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid36"
+        },
+        {
+          "index": 211,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid37"
+        },
+        {
+          "index": 212,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid38"
+        },
+        {
+          "index": 213,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid39"
+        },
+        {
+          "index": 214,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid40"
+        },
+        {
+          "index": 215,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid41"
+        },
+        {
+          "index": 216,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid42"
+        },
+        {
+          "index": 217,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid43"
+        },
+        {
+          "index": 218,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid44"
+        },
+        {
+          "index": 219,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid45"
+        },
+        {
+          "index": 220,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid46"
+        },
+        {
+          "index": 221,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid47"
+        },
+        {
+          "index": 222,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid48"
+        },
+        {
+          "index": 223,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid49"
+        },
+        {
+          "index": 224,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid50"
+        },
+        {
+          "index": 225,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid51"
+        },
+        {
+          "index": 226,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid52"
+        },
+        {
+          "index": 227,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid53"
+        },
+        {
+          "index": 228,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid54"
+        },
+        {
+          "index": 229,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid55"
+        },
+        {
+          "index": 230,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid56"
+        },
+        {
+          "index": 231,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid57"
+        },
+        {
+          "index": 232,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid58"
+        },
+        {
+          "index": 233,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid59"
+        },
+        {
+          "index": 234,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid60"
+        },
+        {
+          "index": 235,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid61"
+        },
+        {
+          "index": 236,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid62"
+        },
+        {
+          "index": 237,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid63"
+        },
+        {
+          "index": 238,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid64"
+        },
+        {
+          "index": 239,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid65"
+        },
+        {
+          "index": 240,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid66"
+        },
+        {
+          "index": 241,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid67"
+        },
+        {
+          "index": 242,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid68"
+        },
+        {
+          "index": 243,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid69"
+        },
+        {
+          "index": 244,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid70"
+        },
+        {
+          "index": 245,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid71"
+        },
+        {
+          "index": 246,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid72"
+        },
+        {
+          "index": 247,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid73"
+        },
+        {
+          "index": 248,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid74"
+        },
+        {
+          "index": 249,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid75"
+        },
+        {
+          "index": 250,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid76"
+        },
+        {
+          "index": 251,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid77"
+        },
+        {
+          "index": 252,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid78"
+        },
+        {
+          "index": 253,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid79"
+        },
+        {
+          "index": 254,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid80"
+        },
+        {
+          "index": 255,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid81"
+        },
+        {
+          "index": 256,
+          "name": "PCB_ESP32-38Pines.step-1/cp2102.step-1-solid82"
+        }
+      ]
+    },
+    {
+      "id": "AMS1173_3V_STEP_1",
+      "category": "voltage_regulator",
+      "fixed": false,
+      "assembledPositionM": [
+        -0.006634084883064999,
+        0.0024049846475600874,
+        0.0156801666972641
+      ],
+      "explodeOffsetM": [
+        -0.003506835332367147,
+        0.018000000000000002,
+        0.008288673352935401
+      ],
+      "boundsMm": [
+        -9.784541429463198,
+        1.4991148288750034,
+        12.453642596716197,
+        -3.4836283366667997,
+        3.310854466245171,
+        18.906690797812004
+      ],
+      "sourceBodyCount": 21,
+      "classification": {
+        "source_named_component": 21
+      },
+      "sourceBodies": [
+        {
+          "index": 154,
+          "name": "PCB_ESP32-38Pines.step-1/AMS1173.3V.step-1-solid1"
+        },
+        {
+          "index": 155,
+          "name": "PCB_ESP32-38Pines.step-1/AMS1173.3V.step-1-solid2"
+        },
+        {
+          "index": 156,
+          "name": "PCB_ESP32-38Pines.step-1/AMS1173.3V.step-1-solid3"
+        },
+        {
+          "index": 157,
+          "name": "PCB_ESP32-38Pines.step-1/AMS1173.3V.step-1-solid4"
+        },
+        {
+          "index": 158,
+          "name": "PCB_ESP32-38Pines.step-1/AMS1173.3V.step-1-solid5"
+        },
+        {
+          "index": 159,
+          "name": "PCB_ESP32-38Pines.step-1/AMS1173.3V.step-1-solid6"
+        },
+        {
+          "index": 160,
+          "name": "PCB_ESP32-38Pines.step-1/AMS1173.3V.step-1-solid7"
+        },
+        {
+          "index": 161,
+          "name": "PCB_ESP32-38Pines.step-1/AMS1173.3V.step-1-solid8"
+        },
+        {
+          "index": 162,
+          "name": "PCB_ESP32-38Pines.step-1/AMS1173.3V.step-1-solid9"
+        },
+        {
+          "index": 163,
+          "name": "PCB_ESP32-38Pines.step-1/AMS1173.3V.step-1-solid10"
+        },
+        {
+          "index": 164,
+          "name": "PCB_ESP32-38Pines.step-1/AMS1173.3V.step-1-solid11"
+        },
+        {
+          "index": 165,
+          "name": "PCB_ESP32-38Pines.step-1/AMS1173.3V.step-1-solid12"
+        },
+        {
+          "index": 166,
+          "name": "PCB_ESP32-38Pines.step-1/AMS1173.3V.step-1-solid13"
+        },
+        {
+          "index": 167,
+          "name": "PCB_ESP32-38Pines.step-1/AMS1173.3V.step-1-solid14"
+        },
+        {
+          "index": 168,
+          "name": "PCB_ESP32-38Pines.step-1/AMS1173.3V.step-1-solid15"
+        },
+        {
+          "index": 169,
+          "name": "PCB_ESP32-38Pines.step-1/AMS1173.3V.step-1-solid16"
+        },
+        {
+          "index": 170,
+          "name": "PCB_ESP32-38Pines.step-1/AMS1173.3V.step-1-solid17"
+        },
+        {
+          "index": 171,
+          "name": "PCB_ESP32-38Pines.step-1/AMS1173.3V.step-1-solid18"
+        },
+        {
+          "index": 172,
+          "name": "PCB_ESP32-38Pines.step-1/AMS1173.3V.step-1-solid19"
+        },
+        {
+          "index": 173,
+          "name": "PCB_ESP32-38Pines.step-1/AMS1173.3V.step-1-solid20"
+        },
+        {
+          "index": 174,
+          "name": "PCB_ESP32-38Pines.step-1/AMS1173.3V.step-1-solid21"
+        }
+      ]
+    }
+  ],
+  "compression": {
+    "extension": "EXT_meshopt_compression",
+    "quantized": false,
+    "simplified": false,
+    "decodedVertexBitsPreserved": true,
+    "nodeTransformsPreserved": true,
+    "requiresMeshoptDecoder": true
+  },
+  "posterUrl": "/models/esp32/esp32-poster.webp"
+}

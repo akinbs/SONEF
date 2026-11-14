@@ -1,0 +1,228 @@
+/*
+ * İletişim kart grupları (Blok 08): kişi kartları, e-posta/Instagram, adres/saat.
+ * Üç grup aynı ızgarayı kullanır: < 48rem tek sütun, ≥ 48rem iki eşit sütun (768 px'te sütun
+ * ~345 px; numara, e-posta ve saat satırı bu genişliğe rahat sığar). İki sütunda kartlar
+ * `subgrid` ile üç satırı (başlık, değer, aksiyonlar) paylaşır: aynı sıradaki kartların başlık,
+ * değer ve aksiyon çizgileri hizalanır, kartlar en uzun komşuya eşit yüksekliğe esner.
+ */
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cell {
+  display: grid;
+  min-width: 0;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  align-content: start;
+  gap: 0.75rem;
+  min-width: 0;
+  padding: var(--card-padding);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  color: var(--text-body);
+  box-shadow: var(--shadow-card);
+}
+
+@media (min-width: 48rem) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .aligned > .cell {
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+  }
+
+  .aligned .card {
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    row-gap: 0.75rem;
+  }
+}
+
+/* Adres ve saat panellerinin içerikleri farklı biçimdedir (satırlar + bağlantı / tablo): satır
+   paylaşmazlar, yalnızca başlık çizgisi ortaktır; paneller yine aynı yüksekliğe esner. */
+.panels .card {
+  grid-template-rows: auto auto auto;
+}
+
+.cardTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.titleIcon {
+  flex: none;
+  color: var(--text-muted);
+}
+
+/* Numara metin olarak durur (seçilip kopyalanabilir); arama bağlantısı ayrıdır. 320 px'te de tek satır. */
+.phone {
+  color: var(--text-strong);
+  font-size: clamp(1.5rem, 1.3rem + 0.9vw, 1.875rem);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  white-space: nowrap;
+  user-select: all;
+}
+
+/* E-posta ve kullanıcı adı: dar kartta gerekirse @ veya noktadan sonra satır kırar, taşmaz. */
+.channelValue {
+  color: var(--text-strong);
+  font-size: clamp(1.125rem, 1.05rem + 0.4vw, 1.3125rem);
+  font-weight: 600;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.address {
+  display: grid;
+  gap: 0.125rem;
+  color: var(--text-strong);
+  font-size: 1.0625rem;
+  font-style: normal;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+/* Aksiyonlar: yan yana sığmazsa doğal biçimde alt alta geçer; ölçü hover'da değişmez. */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  align-content: start;
+  gap: 0.625rem;
+  padding-top: 0.25rem;
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 1.125rem;
+  border: 1px solid var(--line-control);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-strong);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+/* İlk aksiyon (arama, e-posta gönder, profil aç) dolu: kartın ana eylemi. */
+.action:first-child {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--text-on-accent);
+}
+
+.actionIcon {
+  flex: none;
+}
+
+/* 320–383 px: en uzun aksiyon ("Instagram profilimizi açın ↗") tek satırda kalsın. */
+@media (max-width: 23.99rem) {
+  .action {
+    gap: 0.4375rem;
+    padding-inline: 0.875rem;
+    font-size: 0.875rem;
+  }
+}
+
+.external {
+  font-size: 0.875em;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .action:hover {
+    background: var(--secondary-hover-bg);
+  }
+
+  .action:first-child:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: var(--text-on-accent-hover);
+  }
+}
+
+.action:active {
+  background: var(--secondary-pressed-bg);
+  color: var(--secondary-pressed-text);
+}
+
+.action:focus-visible,
+.textLink:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-height: 2.75rem;
+  color: var(--text-strong);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--link-decoration);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .textLink:hover {
+    text-decoration-color: var(--text-strong);
+    text-decoration-thickness: 2px;
+  }
+}
+
+/* Çalışma saatleri: gün solda, saat sağda; 320 px'te iki kolon rahat sığar. */
+.hours {
+  display: grid;
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+
+.hoursRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding-block: 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.hoursRow dt {
+  color: var(--text-body);
+  font-weight: 500;
+}
+
+.hoursRow dd {
+  margin: 0;
+  color: var(--text-strong);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}

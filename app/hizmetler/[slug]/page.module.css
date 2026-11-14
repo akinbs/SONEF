@@ -1,0 +1,247 @@
+.section {
+  padding-block: clamp(3rem, 7vw, 5rem) 0;
+}
+
+/* ——— Giriş görseli ——— */
+
+.figure {
+  margin: 0;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  max-width: 28rem;
+  margin-inline: auto;
+}
+
+.caption {
+  max-width: 28rem;
+  margin: 0.75rem auto 0;
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+
+/* ——— Kapsam ——— */
+
+.scopeGrid {
+  display: grid;
+  gap: 2rem;
+}
+
+.scope {
+  display: grid;
+  gap: 0;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.scope li {
+  position: relative;
+  padding: 0.875rem 0 0.875rem 2rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-body);
+}
+
+.scope li::before {
+  content: "";
+  position: absolute;
+  left: 0.25rem;
+  top: 1.25rem;
+  width: 0.75rem;
+  height: 0.4rem;
+  border-bottom: 2px solid var(--highlight);
+  border-left: 2px solid var(--highlight);
+  transform: rotate(-45deg);
+}
+
+/* Beyaz kart: kırık beyaz okuma zemininde önemli bilgiyi ayırır. */
+.need {
+  align-self: start;
+  padding: var(--card-padding);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  color: var(--text-body);
+}
+
+.needTitle {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+}
+
+@media (min-width: 56rem) {
+  .scopeGrid {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: end;
+  }
+}
+
+/* ——— Akış ——— */
+
+.flow {
+  display: grid;
+  gap: 0;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: flow;
+}
+
+.flowStep {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2.75rem minmax(0, 1fr);
+  column-gap: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Adımları bağlayan dikey çizgi */
+.flowStep:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 1.25rem;
+  top: 2rem;
+  bottom: 0.25rem;
+  width: 1px;
+  background: var(--line);
+}
+
+.flowNumber {
+  grid-row: span 2;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--text-on-accent);
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.flowTitle {
+  color: var(--text-strong);
+  font-size: 1.125rem;
+  font-weight: 650;
+  line-height: 2rem;
+}
+
+.flowText {
+  max-width: 34rem;
+  color: var(--text-body);
+}
+
+@media (min-width: 64rem) {
+  .flow {
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .flowStep {
+    grid-template-columns: minmax(0, 1fr);
+    /* Kısa başlıklı adımlar da üstten hizalanır; satırlar fazladan yüksekliği paylaşmaz. */
+    align-content: start;
+    row-gap: 0.75rem;
+    padding-bottom: 0;
+  }
+
+  .flowStep:not(:last-child)::before {
+    left: 3rem;
+    right: -1.25rem;
+    top: 1rem;
+    bottom: auto;
+    width: auto;
+    height: 1px;
+  }
+
+  .flowNumber {
+    grid-row: auto;
+  }
+
+  .flowTitle {
+    line-height: 1.2;
+  }
+}
+
+.journey {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  color: var(--text-body);
+}
+
+.journey a {
+  color: var(--text-strong);
+  font-weight: 600;
+  text-decoration-color: var(--link-decoration);
+  text-decoration-thickness: 1.5px;
+}
+
+/* ——— Ön görüşme ——— */
+
+.prepareGrid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.prepare {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: prepare;
+}
+
+.prepare li {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius-card) * 0.6);
+  background: var(--color-card);
+  color: var(--color-ink);
+  counter-increment: prepare;
+}
+
+.prepare li::before {
+  content: counter(prepare);
+  color: var(--color-ink-soft);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (min-width: 56rem) {
+  .prepareGrid {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+  }
+}
+
+/* ——— İlgili hizmetler ——— */
+
+.related {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.related > li {
+  display: grid;
+}
+
+@media (min-width: 48rem) {
+  .related {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

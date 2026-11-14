@@ -1,0 +1,45 @@
+{
+  "sourceGroups": 486,
+  "matchedGroups": 486,
+  "unmatchedAssemblyOnly": [
+    "PCB_ESP32-38Pines.step-1"
+  ],
+  "maxBoundsErrorMm": 0.016430932439521095,
+  "worst": [
+    {
+      "group": "PCB_ESP32-38Pines (v2~recovered)-142.step-1",
+      "maxErrorMm": 0.016430932439521095
+    },
+    {
+      "group": "PCB_ESP32-38Pines (v2~recovered)-123.step-1",
+      "maxErrorMm": 0.016428669839498866
+    },
+    {
+      "group": "PCB_ESP32-38Pines (v2~recovered)-141.step-1",
+      "maxErrorMm": 0.016418826715444368
+    },
+    {
+      "group": "PCB_ESP32-38Pines (v2~recovered)-143.step-1",
+      "maxErrorMm": 0.016418826715438595
+    },
+    {
+      "group": "PCB_ESP32-38Pines (v2~recovered)-124.step-1",
+      "maxErrorMm": 0.016416529640709276
+    },
+    {
+      "group": "PCB_ESP32-38Pines (v2~recovered)-122.step-1",
+      "maxErrorMm": 0.016416529640707722
+    },
+    {
+      "group": "PCB_ESP32-38Pines (v2~recovered)-144.step-1",
+      "maxErrorMm": 0.016408321894500366
+    },
+    {
+      "group": "PCB_ESP32-38Pines (v2~recovered)-140.step-1",
+      "maxErrorMm": 0.0164083218944997
+    }
+  ],
+  "sourceOrderValidated": true,
+  "comparison": "Saved assembly bounding boxes versus imported STEP BRep bounding boxes; no transforms are changed.",
+  "boundsToleranceMm": 0.025
+}

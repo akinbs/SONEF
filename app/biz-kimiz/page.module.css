@@ -1,0 +1,286 @@
+/*
+ * Biz Kimiz (Blok 05). Hizmet detay sayfalarının görsel dili: kırık beyaz #F7F6F3 içerik zemini,
+ * beyaz #FFFFFF kartlar, #D5CFC5 ince kenarlık, 22px köşe, #252422 ana / #514E48 ikincil metin.
+ *
+ * Kırılma noktaları:
+ * - Giriş (PageIntro): < 56rem metin ve ardından fotoğraf, ≥ 56rem metin solda, fotoğraf sağda.
+ * - Üç kısa bilgi: < 40rem alt alta satırlar (değer solda, açıklama sağda), ≥ 40rem üç eş sütun.
+ * - Kuruluş hikâyesi: < 70rem başlık ve altında metin, ≥ 70rem başlık solda, metin sağda.
+ * - Ekip ve çalışma alanı kartları: < 48rem tek sütun, ≥ 48rem iki sütun.
+ */
+
+.section {
+  padding-top: clamp(3.5rem, 7vw, 5.5rem);
+}
+
+/*
+ * Fotoğraf alanı tek sütunda (tablet) en fazla 36rem; hizmet detay sayfalarıyla aynı sınır.
+ * Yan yana düzende sütun genişliğini alır. Oran (4:3) MediaSlot içinde sabittir.
+ */
+.heroMedia {
+  max-width: 36rem;
+}
+
+@media (min-width: 56rem) {
+  .heroMedia {
+    max-width: none;
+  }
+}
+
+/* ——— Metin bağlantısı (giriş, hizmet bağlantıları, kapanış) ——— */
+
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 100%;
+  min-height: 2.75rem;
+  padding-block: 0.25rem;
+  /* Ton rolleri: açık bantlarda #252422 / #514E48, koyu (net fotoğraflı) girişte beyaz / gök mavisi. */
+  color: var(--text-strong);
+  font-weight: 650;
+  line-height: 1.35;
+  text-decoration: underline;
+  text-decoration-color: var(--link-decoration);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color var(--duration) var(--ease-out);
+}
+
+.textLink:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 0.25rem;
+}
+
+.arrow {
+  flex-shrink: 0;
+  transition: transform var(--duration) var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .textLink:hover {
+    text-decoration-color: currentColor;
+  }
+
+  .textLink:hover .arrow {
+    transform: translateX(3px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .textLink,
+  .arrow {
+    transition: none;
+  }
+}
+
+/* ——— Üç kısa bilgi ——— */
+
+.factsSection {
+  padding-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.facts {
+  display: grid;
+  margin: 0;
+  padding: 0 1.25rem;
+  border: 1px solid var(--color-rule);
+  border-radius: 1.375rem;
+  background: var(--color-card);
+  box-shadow: var(--shadow-card);
+}
+
+/* Dar ekran: her bilgi bir satır; değerler ve açıklamalar kendi sütunlarında aynı çizgiden başlar. */
+.fact {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+  align-items: baseline;
+  column-gap: 1rem;
+  padding-block: 1rem;
+}
+
+.fact + .fact {
+  border-top: 1px solid var(--color-rule);
+}
+
+.factValue {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0;
+  color: var(--color-ink);
+  font-size: clamp(1.375rem, 1.2rem + 0.8vw, 1.875rem);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.factLabel {
+  grid-column: 2;
+  grid-row: 1;
+  color: var(--color-ink-soft);
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+
+/* Geniş ekran: üç eş sütun; değer üstte, açıklama altında, ikisi de sütunun sol çizgisinde. */
+@media (min-width: 40rem) {
+  .facts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 0;
+  }
+
+  .fact {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 0.375rem;
+    padding: 1.5rem 1.75rem;
+  }
+
+  .fact + .fact {
+    border-top: 0;
+    border-left: 1px solid var(--color-rule);
+  }
+
+  .factValue,
+  .factLabel {
+    grid-column: 1;
+  }
+
+  .factLabel {
+    grid-row: 2;
+  }
+}
+
+/* ——— Kuruluş hikâyesi: sayfanın ana anlatısı ——— */
+
+.story {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.storyTitle {
+  max-width: 18ch;
+  color: var(--color-ink);
+  font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+/* 38rem ölçü, 18–20px metinle satır başına yaklaşık 60–70 karakter verir. */
+.storyText {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 38rem;
+  color: var(--color-ink);
+  font-size: clamp(1.125rem, 1.07rem + 0.25vw, 1.25rem);
+  line-height: 1.65;
+}
+
+/*
+ * Yan yana düzen yalnızca metin sütunu tam ölçüsünü (38rem) alabildiğinde başlar; daha dar
+ * ekranda başlık üstte kalır, satır uzunluğu kısalmaz.
+ */
+@media (min-width: 70rem) {
+  .story {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 38rem);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+  }
+}
+
+/* ——— Kartlar (ekip ve çalışma alanları) ——— */
+
+.cards {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards > li {
+  display: grid;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-content: start;
+  row-gap: 0.75rem;
+  height: 100%;
+  padding: 1.25rem;
+  border: 1px solid var(--color-rule);
+  border-radius: 1.375rem;
+  background: var(--color-card);
+  box-shadow: var(--shadow-card);
+}
+
+.cardTitle {
+  color: var(--color-ink);
+  font-size: clamp(1.1875rem, 1.1rem + 0.35vw, 1.375rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  overflow-wrap: break-word;
+}
+
+.cardText {
+  max-width: 36rem;
+  color: var(--color-ink-soft);
+  font-size: clamp(1rem, 0.96rem + 0.15vw, 1.0625rem);
+  line-height: 1.65;
+}
+
+/* Kişi sayısı: başlıktan küçük, koyu rakamla kolay seçilir. */
+.teamCount {
+  color: var(--color-ink-soft);
+  font-size: clamp(1rem, 0.96rem + 0.15vw, 1.0625rem);
+  line-height: 1.5;
+}
+
+.teamNumber {
+  color: var(--color-ink);
+  font-size: 1.1875rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+@media (min-width: 40rem) {
+  .card {
+    padding: 1.75rem;
+  }
+}
+
+/* İki sütun: aynı satırdaki kartların başlık ve metin satırları `subgrid` ile ortaktır. */
+@media (min-width: 48rem) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1.25rem;
+    row-gap: 1.25rem;
+  }
+
+  .cards > li {
+    grid-row: span 2;
+    grid-template-rows: subgrid;
+    row-gap: 0;
+  }
+
+  .cards .card {
+    grid-row: span 2;
+    grid-template-rows: subgrid;
+  }
+}
+
+/* ——— Hizmet detay bağlantıları: dar ekranda alt satıra geçer ——— */
+
+.serviceLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 2rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}

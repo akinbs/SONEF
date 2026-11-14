@@ -1,0 +1,25 @@
+{
+  "sourceBodiesAssignedExactlyOnce": true,
+  "sourceBodyCount": 879,
+  "groupCount": 32,
+  "geometry": {
+    "sourceVertices": 391674,
+    "triangles": 508144,
+    "linearDeflectionMm": 0.035,
+    "glbBytes": 5831192,
+    "drawCalls": 86,
+    "uncompressedGlbBytes": 15568564
+  },
+  "poster": {
+    "size": [
+      1000,
+      1000
+    ],
+    "mode": "RGBA",
+    "bytes": 69734
+  },
+  "cadPreviewReviewed": true,
+  "materialsStatus": "provisional",
+  "scrollAnimationAuthored": false,
+  "actualNextApplicationCreated": false
+}

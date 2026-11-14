@@ -1,0 +1,45 @@
+/* Hizmet detay sayfalarındaki metin bağlantısıyla aynı görünüm; 44px dokunma yüksekliği. */
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 100%;
+  min-height: 2.75rem;
+  padding-block: 0.25rem;
+  color: var(--text-strong);
+  font-weight: 650;
+  line-height: 1.35;
+  text-decoration: underline;
+  text-decoration-color: var(--link-decoration);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color var(--duration) var(--ease-out);
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 0.25rem;
+}
+
+.arrow {
+  flex-shrink: 0;
+  transition: transform var(--duration) var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link:hover {
+    text-decoration-color: currentColor;
+  }
+
+  .link:hover .arrow {
+    transform: translateX(3px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link,
+  .arrow {
+    transition: none;
+  }
+}

@@ -1,0 +1,69 @@
+/*
+ * Arka plan fotoğrafı ve üstündeki katman (::after).
+ *
+ * faint — yüzey rengi (`--surface`) yarı saydam katman; katman ne kadar inceyse fotoğraf o kadar
+ * net ve kendi renkleriyle görünür.
+ * - Dar ekran (metin tam genişlikte): %62 yüzey → fotoğraf yaklaşık %38 görünür.
+ * - Geniş ekran: solda (metin) %72 yüzey, ortada %58, sağ uçta %22 → fotoğraf sağda yaklaşık %78 görünür.
+ * Sağ uçtaki yoğunluk `--backdrop-end` ile değiştirilebilir (ör. sağında bağlantı olan kapanış paneli).
+ * Bu oranlarda #252422 ana metin en koyu fotoğrafta da okunur; ikincil gri metin okunmayacağı için
+ * fotoğraflı yüzeylerde etiket ve breadcrumb da ana metin rengini kullanır (page-intro.module.css).
+ *
+ * clear — beyaz pus yok. Metnin arkasında koyu lacivert geçiş (beyaz/krem metin için), fotoğrafın
+ * geri kalanı net. Değerler page-intro "clear" bantlarında beyaz başlık ve krem metin ≥ 4,5:1
+ * kalacak şekilde seçildi.
+ */
+.backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.faint::after {
+  background: color-mix(in srgb, var(--surface) 62%, transparent);
+}
+
+/* Dar ekran: metin bandın tamamını kaplar; fotoğraf üstte daha açık, metnin yoğunlaştığı altta koyu. */
+.clear::after {
+  background: linear-gradient(
+    180deg,
+    rgb(12 26 46 / 0.55) 0%,
+    rgb(12 26 46 / 0.72) 45%,
+    rgb(12 26 46 / 0.8) 100%
+  );
+}
+
+@media (min-width: 56rem) {
+  .faint::after {
+    background: linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--surface) 72%, transparent) 0%,
+      color-mix(in srgb, var(--surface) 58%, transparent) 45%,
+      color-mix(in srgb, var(--surface) var(--backdrop-end, 22%), transparent) 100%
+    );
+  }
+
+  /* Geniş ekran: metin solda; sağa doğru katman tamamen kalkar, fotoğraf olduğu gibi görünür. */
+  .clear::after {
+    background: linear-gradient(
+      90deg,
+      rgb(12 26 46 / 0.86) 0%,
+      rgb(12 26 46 / 0.74) 38%,
+      rgb(12 26 46 / 0.25) 62%,
+      rgb(12 26 46 / 0) 80%
+    );
+  }
+}

@@ -1,0 +1,4 @@
+/* Girişin hemen altındaki bölüm; hizmet detayları ve Vizyon–Misyon ile aynı üst boşluk. */
+.section {
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+}

@@ -1,0 +1,139 @@
+/*
+ * İş birliği paneli (Blok 07). Beyaz #FFFFFF yüzey, #D5CFC5 ince kenarlık, 22px köşe, hafif gölge.
+ * < 48rem: logo üstte, bilgiler altta. ≥ 48rem: logo solda (yaklaşık 320–350px alan), bilgiler sağda.
+ * Logo alanı ile metin arasında ince ayırıcı vardır; panel yüksekliği içerikten gelir.
+ */
+.list {
+  display: grid;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.panel {
+  display: grid;
+  border: 1px solid var(--color-rule);
+  border-radius: 1.375rem;
+  background: var(--color-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.logo {
+  display: grid;
+  place-items: center start;
+  padding: 1.75rem 1.375rem;
+  border-bottom: 1px solid var(--color-rule);
+  background: var(--color-white);
+}
+
+/* Geniş yatay logo (≈ 4,1:1): oran `width`/`height` özniteliklerinden gelir, kırpılmaz. */
+.logoImage {
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.body {
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: 0.625rem;
+  min-width: 0;
+  padding: 1.375rem;
+}
+
+.name {
+  color: var(--color-ink);
+  font-size: clamp(1.375rem, 1.2rem + 0.9vw, 1.875rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  overflow-wrap: break-word;
+}
+
+.partnership {
+  color: var(--color-ink-soft);
+  font-size: clamp(1.0625rem, 1.02rem + 0.2vw, 1.125rem);
+  line-height: 1.5;
+}
+
+.summary {
+  max-width: 36rem;
+  color: var(--color-ink-soft);
+  line-height: 1.65;
+}
+
+.linkRow {
+  margin-top: 0.25rem;
+}
+
+/*
+ * Satır içi akış: metin dar ekranda iki satıra bölündüğünde ok son kelimenin hemen ardında kalır
+ * (flex düzeninde ok sağ kenara kopuyordu). Dokunma yüksekliği dikey iç boşlukla sağlanır.
+ */
+.link {
+  display: inline-block;
+  max-width: 100%;
+  padding-block: 0.625rem;
+  color: var(--color-ink);
+  font-weight: 650;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-decoration-color: var(--color-ink-soft);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color var(--duration) var(--ease-out);
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 3px;
+  border-radius: 0.25rem;
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 0.5rem;
+  transition: transform var(--duration) var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link:hover {
+    text-decoration-color: currentColor;
+  }
+
+  .link:hover .arrow {
+    transform: translate(2px, -2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link,
+  .arrow {
+    transition: none;
+  }
+}
+
+@media (min-width: 48rem) {
+  .panel {
+    grid-template-columns: clamp(20rem, 30%, 22rem) minmax(0, 1fr);
+  }
+
+  .logo {
+    place-items: center;
+    padding: clamp(2rem, 3vw, 2.5rem);
+    border-right: 1px solid var(--color-rule);
+    border-bottom: 0;
+  }
+
+  .logoImage {
+    max-width: 17.5rem;
+  }
+
+  .body {
+    padding: clamp(2rem, 3vw, 2.5rem);
+  }
+}

@@ -1,0 +1,75 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3rem;
+  padding: 0.75rem 1.5rem;
+  border: 1.5px solid transparent;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background-color var(--duration) var(--ease-out),
+    color var(--duration) var(--ease-out),
+    border-color var(--duration) var(--ease-out);
+}
+
+/*
+ * Ana CTA: bulunduğu tonun vurgusu (globals.css). İçerikte (light/stone/card) #252422 dolgu /
+ * #FFFFFF metin; lacivert çerçevede (navbar, footer) açık mavi dolgu / lacivert metin.
+ * Hover ve basılı durumda dolgu ile metin rengi birlikte değişir.
+ */
+.primary {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--text-on-accent);
+}
+
+.primary:active {
+  border-color: var(--accent-pressed);
+  background: var(--accent-pressed);
+  color: var(--text-on-accent-pressed);
+}
+
+/* İkincil CTA: şeffaf yüzey, tonun güçlü metni ve düz kenarlık; ana CTA'dan sakin. */
+.secondary {
+  border-color: var(--line-control);
+  background: transparent;
+  color: var(--text-strong);
+}
+
+.secondary:active {
+  border-color: var(--secondary-pressed-bg);
+  background: var(--secondary-pressed-bg);
+  color: var(--secondary-pressed-text);
+}
+
+@media (hover: hover) {
+  .primary:hover {
+    border-color: var(--accent-hover);
+    background: var(--accent-hover);
+    color: var(--text-on-accent-hover);
+  }
+
+  .secondary:hover {
+    border-color: var(--line-control);
+    background: var(--secondary-hover-bg);
+    color: var(--secondary-hover-text);
+  }
+
+  .primary:active {
+    border-color: var(--accent-pressed);
+    background: var(--accent-pressed);
+    color: var(--text-on-accent-pressed);
+  }
+
+  .secondary:active {
+    border-color: var(--secondary-pressed-bg);
+    background: var(--secondary-pressed-bg);
+    color: var(--secondary-pressed-text);
+  }
+}

@@ -1,0 +1,261 @@
+/*
+ * Navbar tonu kaydırmaya bağlıdır (header-tone.tsx): hero görünürken beyaz
+ * (data-tone="header", altta ince nötr çizgi), hero ekrandan çıkınca lacivert #1B365D
+ * (data-tone="dark", alt çizgi yok). Hero'su olmayan sayfalarda beyaz kalır.
+ * Bağlantılar: seçili sekme (`aria-current`) kalıcı alt çizgiyle işaretlenir; diğer
+ * sekmelerde hover'da aynı çizgi soldan uzanır (önceki sürümle aynı). Hover yalnızca gerçek
+ * işaretçili cihazlarda (hover + fine pointer) etkindir; dokunmatikte takılı kalmaz.
+ * Klavye odağı ayrı bir :focus-visible çerçevesidir; rengi tondan gelir.
+ */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text-strong);
+  transition:
+    background-color var(--duration) var(--ease-out),
+    border-color var(--duration) var(--ease-out),
+    color var(--duration) var(--ease-out);
+}
+
+.header[data-tone="dark"] {
+  border-bottom-color: transparent;
+}
+
+/* İki logo üst üste; yalnızca navbar tonuna uyan görünür (gizli olan erişilebilirlik ağacından da çıkar). */
+.logoStack {
+  display: grid;
+}
+
+.logoLight,
+.logoDark {
+  grid-area: 1 / 1;
+  transition:
+    opacity var(--duration) var(--ease-out),
+    visibility var(--duration);
+}
+
+.logoDark,
+.header[data-tone="dark"] .logoLight {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header[data-tone="dark"] .logoDark {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header,
+  .logoLight,
+  .logoDark {
+    transition: none;
+  }
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: var(--header-height);
+}
+
+.home {
+  display: block;
+  flex-shrink: 0;
+  padding-block: 0.5rem;
+}
+
+/* Masaüstü */
+.desktopNav {
+  display: none;
+}
+
+.desktopList {
+  display: flex;
+  align-items: center;
+  /* Beş ya da altı bağlantıyla (Ürünlerimiz açık/kapalı) 68rem'den itibaren tek satıra sığar. */
+  gap: clamp(1.25rem, 2.2vw, 2.5rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.desktopLink {
+  position: relative;
+  display: inline-block;
+  padding-block: 0.5rem;
+  color: var(--text-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color var(--duration) var(--ease-out);
+}
+
+/* Alt çizgi: seçili sekmede kalıcı, diğerlerinde hover'da soldan uzanır. */
+.desktopLink::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0.125rem;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--highlight);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--duration) var(--ease-out);
+}
+
+.desktopLink[aria-current] {
+  color: var(--text-strong);
+  font-weight: 600;
+}
+
+.desktopLink[aria-current]::after {
+  transform: scaleX(1);
+}
+
+.desktopLink:focus-visible,
+.mobileLink:focus-visible,
+.mobileSubLink:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .desktopLink:hover {
+    color: var(--text-strong);
+  }
+
+  .desktopLink:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+/* Mobil */
+.mobile {
+  display: contents;
+}
+
+.menuButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.875rem;
+  border: 1.5px solid var(--line-control);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--text-strong);
+  font: inherit;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.menuIcon,
+.menuIcon::before,
+.menuIcon::after {
+  display: block;
+  width: 1.125rem;
+  height: 1.5px;
+  background: currentColor;
+  transition: transform var(--duration) var(--ease-out), opacity var(--duration) var(--ease-out);
+}
+
+.menuIcon {
+  position: relative;
+}
+
+.menuIcon::before,
+.menuIcon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.menuIcon::before {
+  top: -6px;
+}
+
+.menuIcon::after {
+  top: 6px;
+}
+
+.menuIcon[data-open="true"] {
+  background: transparent;
+}
+
+.menuIcon[data-open="true"]::before {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menuIcon[data-open="true"]::after {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Tam opak panel: arkadaki içerik menü okunurluğunu bozmaz. */
+.mobilePanel {
+  position: absolute;
+  inset: 100% 0 auto;
+  border-bottom: 1px solid var(--line);
+  /* Yatay telefonda menü ekrandan uzunsa kendi içinde kayar. */
+  max-height: calc(100dvh - var(--header-height));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--surface);
+}
+
+.mobilePanel[hidden] {
+  display: none;
+}
+
+.mobileList {
+  margin: 0;
+  padding: 0.5rem var(--gutter) 1.25rem;
+  list-style: none;
+}
+
+.mobileLink {
+  display: block;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid var(--line-subtle);
+  color: var(--text-strong);
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.mobileSubList {
+  margin: 0;
+  padding: 0.25rem 0 0.5rem 1rem;
+  border-bottom: 1px solid var(--line-subtle);
+  list-style: none;
+}
+
+.mobileSubLink {
+  display: block;
+  padding: 0.5rem 0;
+  color: var(--text-body);
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+/* Alt liste varsa ana bağlantının çizgisi listenin altına taşınır. */
+.mobileLink:has(+ .mobileSubList) {
+  border-bottom: 0;
+}
+
+@media (min-width: 68rem) {
+  .desktopNav {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+}

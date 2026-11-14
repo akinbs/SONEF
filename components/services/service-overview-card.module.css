@@ -1,0 +1,201 @@
+/*
+ * Hizmet genel bakış kartı (Blok 04A)
+ * Beyaz #FFFFFF yüzey, ince #D5CFC5 kenarlık, 22px köşe, hafif gölge. Yükseklik içerikten gelir.
+ *
+ * Üç düzen; kırılma noktaları app/hizmetler/page.module.css içindeki liste ile aynı olmalı:
+ * - Mobil (< 40rem): tek sütun; numara+ikon, başlık, açıklama, bağlantı alt alta.
+ * - Yatay (40rem–70rem): tek sütunlu liste; numara ve ikon solda dar bir sütunda, metin sağda.
+ * - Üç sütun (≥ 70rem): kart satırları `subgrid` ile listeye bağlanır; başlıklar aynı üst
+ *   çizgiden başlar, açıklama satırı en uzun metne göre esner, bağlantılar aynı alt çizgide durur.
+ *
+ * Etkileşim yalnızca renk değiştirir (kenarlık, alt çizgi, ok); kartın ölçüsü ve komşuların
+ * konumu sabit kalır.
+ */
+.card {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  row-gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid var(--color-rule);
+  border-radius: 1.375rem;
+  background: var(--color-card);
+  box-shadow: var(--shadow-card);
+  transition: border-color var(--duration) var(--ease-out);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.number {
+  color: var(--color-ink-soft);
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+/* İkon alanı her kartta aynı ölçüde. */
+.icon {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--color-rule);
+  border-radius: 0.875rem;
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.icon svg {
+  width: 1.625rem;
+  height: 1.625rem;
+}
+
+.title {
+  margin-top: 0.25rem;
+  color: var(--color-ink);
+  font-size: clamp(1.375rem, 1.25rem + 0.5vw, 1.625rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.text {
+  max-width: 40rem;
+  color: var(--color-ink-soft);
+  font-size: clamp(1rem, 0.96rem + 0.15vw, 1.0625rem);
+  line-height: 1.65;
+}
+
+.footer {
+  align-self: end;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-rule);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-block: 0.25rem;
+  color: var(--color-ink);
+  font-size: 0.9375rem;
+  font-weight: 650;
+  line-height: 1.35;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1.5px;
+  transition: text-decoration-color var(--duration) var(--ease-out);
+}
+
+/* Kartın tamamını tıklanabilir yapan katman. */
+.link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1.375rem;
+}
+
+/* Odak çerçevesi bağlantının kendisinde, kartın beyaz zemininde. */
+.link:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 3px;
+  border-radius: 0.25rem;
+}
+
+.card:has(.link:focus-visible) {
+  border-color: var(--color-ink);
+}
+
+.arrow {
+  flex-shrink: 0;
+  transition: transform var(--duration) var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    border-color: rgb(37 36 34 / 0.42);
+  }
+
+  .card:hover .link {
+    text-decoration-color: currentColor;
+  }
+
+  .card:hover .arrow {
+    transform: translateX(3px);
+  }
+}
+
+/* ——— Yatay kart: tablet ——— */
+@media (min-width: 40rem) {
+  .card {
+    grid-template-columns: 4.5rem minmax(0, 1fr);
+    grid-template-rows: auto 1fr auto;
+    column-gap: 1.5rem;
+    row-gap: 0.75rem;
+    padding: 1.75rem;
+  }
+
+  .meta {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .title {
+    grid-column: 2;
+    margin-top: 0;
+  }
+
+  .text,
+  .footer {
+    grid-column: 2;
+  }
+
+  .footer {
+    margin-top: 0.25rem;
+  }
+}
+
+/* ——— Üç sütun: kart satırları listeye bağlı ——— */
+@media (min-width: 70rem) {
+  .card {
+    grid-row: span 4;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: subgrid;
+    row-gap: 1rem;
+    padding: 1.875rem;
+  }
+
+  .meta {
+    grid-column: 1;
+    grid-row: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .title,
+  .text,
+  .footer {
+    grid-column: 1;
+  }
+
+  .title {
+    margin-top: 0.375rem;
+  }
+
+  .footer {
+    margin-top: 0.5rem;
+  }
+}

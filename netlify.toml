@@ -1,0 +1,20 @@
+# Netlify yapılandırması. Next.js projeyi Netlify kendiliğinden tanır (OpenNext adaptörü);
+# burada yalnızca derleme komutu, çıktı klasörü ve ortam değerleri sabitlenir.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  # Next.js 16 en az Node 20.9 ister.
+  NODE_VERSION = "22"
+  # Ana adres: canonical, og:url, sitemap ve yapılandırılmış veri bu değerden üretilir.
+  NEXT_PUBLIC_SITE_URL = "https://sonefteknoloji.com.tr"
+
+# İndeksleme (lib/site.ts → indexingAllowed) varsayılan olarak KAPALIDIR: her sayfa noindex,
+# sitemap boş. Alan adı (sonefteknoloji.com.tr) Netlify'a bağlanıp yayına hazır olduğunda
+# aşağıdaki iki satırın başındaki # işaretini kaldırın veya aynı değeri Netlify arayüzünde
+# yalnızca "Production" bağlamı için girin. Deploy Preview ve branch derlemeleri Netlify'ın
+# CONTEXT değeri sayesinde bu ayar verilse bile noindex kalır.
+# [context.production.environment]
+#   SITE_ENV = "production"

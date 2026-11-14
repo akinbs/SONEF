@@ -1,0 +1,19 @@
+.heading {
+  display: grid;
+  gap: 0.875rem;
+  max-width: 44rem;
+}
+
+.title {
+  font-size: clamp(1.625rem, 1.25rem + 1.5vw, 2.375rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.lead {
+  display: grid;
+  gap: 0.75rem;
+  max-width: var(--measure);
+  color: var(--text-body);
+  font-size: 1.0625rem;
+}

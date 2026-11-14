@@ -1,0 +1,19 @@
+/*
+ * İletişim (Blok 08). Zeminler: giriş net fotoğraflı lacivert bant (PageIntro clear, iletisim-hd) → kart grupları ana zeminde (#F7F6F3)
+ * → beyaz footer. Üç grup aynı kapsayıcıda ve aynı iki sütunlu ızgarada (contact-channels.module.css).
+ * Gruplar aynı konunun parçası olduğu için aralarındaki boşluk normal bölüm boşluğundan kısadır.
+ */
+
+.section {
+  padding-top: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+/* Girişin hemen altındaki ilk grup: diğer iç sayfaların ilk bölümüyle aynı üst boşluk. */
+.sectionFirst {
+  padding-top: clamp(2rem, 4vw, 3rem);
+}
+
+.stack {
+  display: grid;
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
+}

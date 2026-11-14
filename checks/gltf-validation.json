@@ -1,0 +1,101 @@
+{
+  "reference": {
+    "uri": "reference/esp32-38pines-uncompressed.glb",
+    "mimeType": "model/gltf-binary",
+    "validatorVersion": "2.0.0-dev.3.10",
+    "validatedAt": "2026-11-04T15:26:20.453Z",
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 0,
+      "numHints": 0,
+      "messages": [],
+      "truncated": false
+    },
+    "info": {
+      "version": "2.0",
+      "generator": "SONEF STEP geometry preparation",
+      "resources": [
+        {
+          "pointer": "/buffers/0",
+          "mimeType": "application/gltf-buffer",
+          "storage": "glb",
+          "byteLength": 15497904
+        }
+      ],
+      "animationCount": 0,
+      "materialCount": 10,
+      "hasMorphTargets": false,
+      "hasSkins": false,
+      "hasTextures": false,
+      "hasDefaultScene": true,
+      "drawCallCount": 86,
+      "totalVertexCount": 391674,
+      "totalTriangleCount": 508144,
+      "maxUVs": 0,
+      "maxInfluences": 0,
+      "maxAttributes": 2
+    }
+  },
+  "web": {
+    "uri": "public/models/esp32/esp32-38pines.glb",
+    "mimeType": "model/gltf-binary",
+    "validatorVersion": "2.0.0-dev.3.10",
+    "validatedAt": "2026-11-04T15:26:20.474Z",
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 2,
+      "numHints": 0,
+      "messages": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'.",
+          "severity": 2,
+          "pointer": "/extensionsUsed/0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/buffers/0"
+        }
+      ],
+      "truncated": false
+    },
+    "info": {
+      "version": "2.0",
+      "generator": "glTF-Transform v4.5.1",
+      "extensionsUsed": [
+        "EXT_meshopt_compression"
+      ],
+      "extensionsRequired": [
+        "EXT_meshopt_compression"
+      ],
+      "resources": [
+        {
+          "pointer": "/buffers/0",
+          "mimeType": "application/gltf-buffer",
+          "storage": "glb",
+          "byteLength": 5733620
+        },
+        {
+          "pointer": "/buffers/1",
+          "mimeType": "application/gltf-buffer"
+        }
+      ],
+      "animationCount": 0,
+      "materialCount": 10,
+      "hasMorphTargets": false,
+      "hasSkins": false,
+      "hasTextures": false,
+      "hasDefaultScene": true,
+      "drawCallCount": 86,
+      "totalVertexCount": 391674,
+      "totalTriangleCount": 508144,
+      "maxUVs": 0,
+      "maxInfluences": 0,
+      "maxAttributes": 2
+    }
+  }
+}

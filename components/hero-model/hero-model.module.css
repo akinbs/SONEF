@@ -1,0 +1,72 @@
+.root {
+  position: absolute;
+  inset: 0;
+}
+
+/*
+ * Canvas, doğru ilk kare çizilene kadar görünmez; poster görünür kalır.
+ * - fade: ilk kare posterle aynı pozda (giriş) → kısa çapraz geçiş
+ * - cut: sayfa ortasında farklı poz → geçişsiz; iki kart üst üste görünmez
+ * Posterlerin aynı kurallara uyan geçişi journey-section.module.css içindedir.
+ */
+.layer {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.layer[data-model-state="ready"] {
+  opacity: 1;
+}
+
+.layer[data-model-reveal="fade"] {
+  transition: opacity 250ms var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .layer[data-model-reveal] {
+    transition: none;
+  }
+}
+
+.controls {
+  position: absolute;
+  inset: auto 0 var(--model-controls-bottom, 0.5rem);
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  min-height: 2.75rem;
+  padding: 0.625rem 1.125rem;
+  border: 1.5px solid var(--line-control);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-strong);
+  font: inherit;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    border-color var(--duration) var(--ease-out),
+    background-color var(--duration) var(--ease-out);
+}
+
+/* Düğme taş ve kırık beyaz zeminde durabilir: halka düğmenin kendi beyaz zemininde, içeride. */
+.button:focus-visible {
+  outline-offset: -6px;
+}
+
+/* Yüklenirken metin soluklaştırılmaz; durum imleç ve kesikli kenarlıkla belirtilir. */
+.button[aria-disabled="true"] {
+  border-style: dashed;
+  cursor: progress;
+}
+
+@media (hover: hover) {
+  .button:not([aria-disabled="true"]):hover {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: var(--text-on-accent);
+  }
+}
