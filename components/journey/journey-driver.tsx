@@ -5,17 +5,12 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 import { lanePose, stageSide, traceEase } from "@/lib/journey/motion-plan";
-import { journeySceneConfig, resolvePoint } from "@/lib/journey/scene-config";
+import { journeySceneConfig, resolvePoint, SPLIT_LAYOUT_QUERY } from "@/lib/journey/scene-config";
 import { STAGE_COUNT } from "@/lib/journey/stages";
 import { journeyStore } from "./journey-store";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-/**
- * Yan yana yerleşim: geniş ekranlar ve yatay/basık ekranlar (ör. yatay telefon).
- * `journey-section.module.css` içindeki medya sorgusuyla aynı olmalı.
- */
-const SPLIT_LAYOUT_QUERY = "(min-width: 64rem), (min-width: 30rem) and (min-aspect-ratio: 4/3)";
 /** Alt alta yerleşimde referans çizgisi, metin alanının bu oranında. */
 const STACKED_REFERENCE_RATIO = 0.3;
 const ASSEMBLED_POSTER_FROM = resolvePoint(journeySceneConfig.assembledPosterFrom);

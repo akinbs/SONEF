@@ -5,6 +5,7 @@ import { useCallback, useEffect, useState } from "react";
 import type { MotionGroupInput } from "@/lib/journey/motion-plan";
 import type { ModelReadyInfo } from "./model-canvas";
 import { ModelErrorBoundary } from "./model-error-boundary";
+import { SPLIT_LAYOUT_QUERY } from "@/lib/journey/scene-config";
 import { detectModelSupport } from "./model-support";
 import styles from "./hero-model.module.css";
 
@@ -39,16 +40,39 @@ export function HeroModel({ modelUrl, presentationScale, groups }: HeroModelProp
 
   useEffect(() => {
     // Destek kontrolü ve olası indirme, metin ve poster boyandıktan sonra yapılır.
+    // Alt alta yerleşimde (dikey mobil) 3D sahne yoktur: model indirilmez, düğme gösterilmez.
+    // Ekran yan yana yerleşime geçerse (ör. telefon yatay çevrildi) karar yeniden verilir.
+    const split = window.matchMedia(SPLIT_LAYOUT_QUERY);
     const decide = () => {
+      if (!split.matches) {
+        setStatus((current) => (current === "idle" ? "unsupported" : current));
+        return;
+      }
       const support = detectModelSupport();
-      setStatus(support.kind === "auto" ? "loading" : support.kind === "on-demand" ? "offer" : "unsupported");
+      setStatus((current) =>
+        current === "idle" || current === "unsupported"
+          ? support.kind === "auto"
+            ? "loading"
+            : support.kind === "on-demand"
+              ? "offer"
+              : "unsupported"
+          : current,
+      );
     };
+    const onLayoutChange = () => decide();
+    split.addEventListener("change", onLayoutChange);
     if ("requestIdleCallback" in window) {
       const id = window.requestIdleCallback(decide, { timeout: 1500 });
-      return () => window.cancelIdleCallback(id);
+      return () => {
+        window.cancelIdleCallback(id);
+        split.removeEventListener("change", onLayoutChange);
+      };
     }
     const id = setTimeout(decide, 200);
-    return () => clearTimeout(id);
+    return () => {
+      clearTimeout(id);
+      split.removeEventListener("change", onLayoutChange);
+    };
   }, []);
 
   const handleReady = useCallback((info: ModelReadyInfo) => {

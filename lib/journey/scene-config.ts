@@ -28,6 +28,14 @@ export type HighlightRegion = {
   window: readonly [number, number];
 };
 
+/**
+ * Yan yana yerleşim (masaüstü ve yatay/basık ekranlar): 3D sahne yalnızca bu yerleşimde vardır.
+ * Alt alta yerleşimde (dikey telefon/tablet) yolculuk yalnızca adım kartları ve üstteki ince
+ * aşama şeridiyle anlatılır; 3D model indirilmez. journey-section.module.css içindeki medya
+ * sorgularıyla aynı olmalıdır.
+ */
+export const SPLIT_LAYOUT_QUERY = "(min-width: 64rem), (min-width: 30rem) and (min-aspect-ratio: 4/3)";
+
 export const journeySceneConfig = {
   /** Kartın üst yüzeyi (manifest boundsMm'den): 1,5 mm. */
   boardTopM: 0.0015,
