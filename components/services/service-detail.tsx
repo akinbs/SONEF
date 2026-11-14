@@ -14,7 +14,7 @@ import { servicesHref } from "@/lib/site";
 import styles from "./service-detail.module.css";
 
 /**
- * Revize hizmet detay sayfası (Blok 04B SMD Dizgi, 04C PCB Tedariki, 04D Komponent Tedariki). Bütün metinler
+ * Revize hizmet detay sayfası (Blok 04B SMD Dizgi, 04C PCB Tedariği, 04D Komponent Tedariği). Bütün metinler
  * `service.detail` verisinden gelir; bileşen metin üretmez.
  *
  * Sıra: giriş (metin + fotoğraf alanı) → `detail.sections` (verideki sırayla) →

@@ -14,7 +14,7 @@ export const metadata: Metadata = siteSections.products
   ? createPageMetadata({
       title: "Ürünlerimiz",
       description:
-        "SONEF Teknoloji ürünleri ve elektronik üretim hizmetleri: fikrinizi ya da hazır projenizi PCB ve komponent tedariki, SMD dizgi ve kontrol adımlarıyla ürüne dönüştürün.",
+        "SONEF Teknoloji ürünleri ve elektronik üretim hizmetleri: fikrinizi ya da hazır projenizi PCB ve komponent tedariği, SMD dizgi ve kontrol adımlarıyla ürüne dönüştürün.",
       path: productsHref,
     })
   : {};

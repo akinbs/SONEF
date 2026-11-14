@@ -8,7 +8,7 @@ import { siteJsonLd } from "@/lib/structured-data";
 import "./globals.css";
 
 const siteDescription =
-  "SONEF Teknoloji: PCB ve komponent tedariki, kendi üretim bandımızda SMD dizgi ve fırınlama, dizgi sonrası kontrol, Ar-Ge ve yazılım. Fikirden üretime, İstanbul.";
+  "SONEF Teknoloji: PCB ve komponent tedariği, kendi üretim bandımızda SMD dizgi ve fırınlama, dizgi sonrası kontrol, Ar-Ge ve yazılım. Fikirden üretime, İstanbul.";
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,

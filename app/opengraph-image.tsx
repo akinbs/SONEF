@@ -39,7 +39,7 @@ export default async function OpenGraphImage() {
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 96, letterSpacing: -2, lineHeight: 1.05 }}>Fikirden Üretime</div>
           <div style={{ marginTop: 28, fontSize: 38, color: "#FCF1D0" }}>
-            SMD dizgi · PCB tedariki · Komponent tedariki
+            SMD dizgi · PCB tedariği · Komponent tedariği
           </div>
         </div>
 

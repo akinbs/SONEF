@@ -7,7 +7,7 @@ import { siteName } from "@/lib/site";
 const pageMetadata = createPageMetadata({
   title: "Fikirden Üretime",
   description:
-    "Fikrinizi projeye, projenizi üretime taşıyoruz: PCB ve komponent tedariki, kendi üretim bandımızda SMD dizgi, kontrol, paketleme ve ürün sonrası destek.",
+    "Fikrinizi projeye, projenizi üretime taşıyoruz: PCB ve komponent tedariği, kendi üretim bandımızda SMD dizgi, kontrol, paketleme ve ürün sonrası destek.",
   path: "/",
 });
 

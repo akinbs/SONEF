@@ -15,7 +15,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Vizyon ve Misyon | SONEF Teknoloji",
   absoluteTitle: true,
   description:
-    "SONEF Teknoloji’nin SMD dizgi, PCB ve komponent tedariki, Ar-Ge ve yazılım hizmetlerine yön veren misyonunu, vizyonunu ve çalışma ilkelerini keşfedin.",
+    "SONEF Teknoloji’nin SMD dizgi, PCB ve komponent tedariği, Ar-Ge ve yazılım hizmetlerine yön veren misyonunu, vizyonunu ve çalışma ilkelerini keşfedin.",
   path: "/vizyon-ve-misyon",
 });
 

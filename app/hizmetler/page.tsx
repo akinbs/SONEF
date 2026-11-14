@@ -8,9 +8,9 @@ import { servicesHref } from "@/lib/site";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "SMD Dizgi, PCB ve Komponent Tedariki",
+  title: "SMD Dizgi, PCB ve Komponent Tedariği",
   description:
-    "SONEF Teknoloji’nin SMD dizgi, PCB ve elektronik komponent tedariki hizmetlerini inceleyin. Projenize uygun üretim kapsamını birlikte belirleyelim.",
+    "SONEF Teknoloji’nin SMD dizgi, PCB ve elektronik komponent tedariği hizmetlerini inceleyin. Projenize uygun üretim kapsamını birlikte belirleyelim.",
   path: servicesHref,
 });
 
@@ -24,14 +24,14 @@ export default function ServicesPage() {
     <>
       <PageIntro
         eyebrow="Elektronik üretim hizmetleri"
-        title="SMD dizgi, PCB ve komponent tedariki"
+        title="SMD dizgi, PCB ve komponent tedariği"
         breadcrumb={[{ label: "Ana Sayfa", href: "/" }, { label: "Hizmetler" }]}
         background="/backgrounds/hizmetler-hd.webp"
         backgroundMode="clear"
         backgroundPosition="60% 30%"
       >
         <p>
-          Elektronik projeniz için kart ve komponent tedarikinden SMD dizgiye kadar ihtiyaç duyduğunuz
+          Elektronik projeniz için kart ve komponent tedariğinden SMD dizgiye kadar ihtiyaç duyduğunuz
           adımları birlikte planlıyoruz. Fikir aşamasında da hazır bir kart tasarımıyla da
           başlayabilirsiniz.
         </p>

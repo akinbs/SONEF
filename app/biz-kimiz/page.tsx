@@ -13,7 +13,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Biz Kimiz | SONEF Teknoloji",
   absoluteTitle: true,
   description:
-    "2026 yılında İstanbul’da kurulan SONEF Teknoloji’yi tanıyın. PCB tasarımı ve tedariki, SMD dizgi, komponent tedariki, Ar-Ge ve yazılım çalışmalarımızı keşfedin.",
+    "2026 yılında İstanbul’da kurulan SONEF Teknoloji’yi tanıyın. PCB tasarımı ve tedariği, SMD dizgi, komponent tedariği, Ar-Ge ve yazılım çalışmalarımızı keşfedin.",
   path: "/biz-kimiz",
 });
 

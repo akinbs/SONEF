@@ -170,7 +170,7 @@ export const services = [
       "SMD komponentlerin kart üzerindeki yerlerine yerleştirilmesi",
       "Dizginin ardından fırınlama ile lehimleme",
       "Dizgisi tamamlanan kartların ekibimizce kozmetik kontrolü; müşteri onayıyla elektronik kontrol",
-      "Gerektiğinde PCB ve komponent tedarikinin dizgiyle birlikte planlanması",
+      "Gerektiğinde PCB ve komponent tedariğinin dizgiyle birlikte planlanması",
     ],
     flowTitle: "Karttan çalışır devreye",
     flow: [
@@ -180,7 +180,7 @@ export const services = [
       },
       {
         title: "Kart ve komponentlerin hazırlanması",
-        text: "PCB ve komponentler sizden gelebilir; tedarikin de bizde olması gerekiyorsa bunu dizgiyle aynı plan içinde ele alırız.",
+        text: "PCB ve komponentler sizden gelebilir; tedariğin de bizde olması gerekiyorsa bunu dizgiyle aynı plan içinde ele alırız.",
       },
       {
         title: "Dizgi",
@@ -200,7 +200,7 @@ export const services = [
       "Komponent listesi (BOM) ve komponentlerin kart üzerindeki yerleşim bilgisi",
       "Kartın ne iş yaptığına dair kısa bir açıklama",
       "Hedeflediğiniz adet ve zamanlama beklentiniz",
-      "Kartın ve komponentlerin sizden mi geleceği, yoksa tedarikin de mi gerektiği",
+      "Kartın ve komponentlerin sizden mi geleceği, yoksa tedariğin de mi gerektiği",
     ],
     processSteps: ["dizgi-islemleri", "firinlama", "kontrol-ve-test"],
     homeStep: "dizgi-islemleri",
@@ -214,7 +214,7 @@ export const services = [
     detail: {
       metaTitle: "SMD Dizgi Hizmeti | SONEF Teknoloji",
       metaDescription:
-        "SMD komponentleri PCB üzerine yerleştiriyor, kartı fırınlıyor ve kozmetik kontrolden geçiriyoruz. PCB ve komponentleri siz sağlayabilir veya tedariki birlikte planlayabilirsiniz.",
+        "SMD komponentleri PCB üzerine yerleştiriyor, kartı fırınlıyor ve kozmetik kontrolden geçiriyoruz. PCB ve komponentleri siz sağlayabilir veya tedariği birlikte planlayabilirsiniz.",
       eyebrow: "Kart montajı",
       lead: "SMD komponentleri kart tasarımınıza göre PCB üzerindeki yerlerine yerleştiriyoruz. Dizgi ve fırınlama tamamlandığında ekibimiz kartı görünüm açısından inceliyor. PCB ve komponentleri siz sağlayabilir veya tedarik kapsamını bizimle birlikte planlayabilirsiniz.",
       primaryAction: { label: "Dizgi projenizi konuşalım", href: contactHref },
@@ -240,11 +240,11 @@ export const services = [
               text: "Elinizdeki PCB ve komponentlerle dizgi talebi oluşturabilirsiniz. Elinizde hangi malzemelerin bulunduğunu ve dizgi ihtiyacınızı görüşmede netleştiriyoruz.",
             },
             {
-              title: "Tedariki birlikte planlayabiliriz",
-              text: "PCB veya komponent tedarikine ihtiyacınız varsa, gerekli malzemeleri dizgi projenizle birlikte değerlendirebiliriz.",
+              title: "Tedariği birlikte planlayabiliriz",
+              text: "PCB veya komponent tedariğine ihtiyacınız varsa, gerekli malzemeleri dizgi projenizle birlikte değerlendirebiliriz.",
               links: [
-                { slug: "pcb-tedarigi", label: "PCB Tedariki" },
-                { slug: "komponent-tedarigi", label: "Komponent Tedariki" },
+                { slug: "pcb-tedarigi", label: "PCB Tedariği" },
+                { slug: "komponent-tedarigi", label: "Komponent Tedariği" },
               ],
             },
           ],
@@ -306,17 +306,17 @@ export const services = [
   {
     slug: "pcb-tedarigi",
     status: "draft",
-    title: "PCB Tedariki",
-    shortTitle: "PCB Tedariki",
+    title: "PCB Tedariği",
+    shortTitle: "PCB Tedariği",
     summary: "Projenizin PCB ihtiyacının belirlenmesi ve projeye uygun kartın temin edilmesi.",
     need: "Kart tasarımınız hazır ama kartın teminini üretimle birlikte planlamak istediğinizde ya da fikriniz projeye dönüşürken.",
-    lead: "Her elektronik proje, ona uygun bir baskılı devre kartı (PCB) gerektirir. PCB tedarikinde önce projenizin kart ihtiyacını anlar, ardından uygun kartın teminini sonraki üretim adımlarıyla birlikte planlarız.",
+    lead: "Her elektronik proje, ona uygun bir baskılı devre kartı (PCB) gerektirir. PCB tedariğinde önce projenizin kart ihtiyacını anlar, ardından uygun kartın teminini sonraki üretim adımlarıyla birlikte planlarız.",
     description:
-      "SONEF’in PCB tedariki hizmeti: projenin kart ihtiyacının anlaşılması ve uygun PCB’nin komponent tedariki ve dizgiyle birlikte planlanarak temin edilmesi.",
+      "SONEF’in PCB tedariği hizmeti: projenin kart ihtiyacının anlaşılması ve uygun PCB’nin komponent tedariği ve dizgiyle birlikte planlanarak temin edilmesi.",
     scope: [
       "Projenin PCB ihtiyacının birlikte değerlendirilmesi",
       "Tasarım bilgilerinize uygun kartın temin edilmesi",
-      "PCB tedarikinin komponent tedariki ve dizgiyle aynı plan içinde ele alınması",
+      "PCB tedariğinin komponent tedariği ve dizgiyle aynı plan içinde ele alınması",
     ],
     flowTitle: "İhtiyaçtan karta",
     flow: [
@@ -342,25 +342,25 @@ export const services = [
       "Kartın kullanılacağı ürün veya devre hakkında kısa bilgi",
       "Kart için belirlediğiniz özellikler",
       "İhtiyaç duyduğunuz kart adedi",
-      "Komponent tedariki ve dizginin de gerekip gerekmediği",
+      "Komponent tedariği ve dizginin de gerekip gerekmediği",
     ],
     processSteps: ["tanisma-ve-projelendirme", "pcb-ve-komponent-tedarigi"],
     homeStep: "pcb-ve-komponent-tedarigi",
-    homeLinkLabel: "PCB tedariki hizmetini inceleyin",
+    homeLinkLabel: "PCB tedariği hizmetini inceleyin",
     overview: {
-      title: "PCB Tedariki",
+      title: "PCB Tedariği",
       text: "Kart tasarımınıza ve proje gereksinimlerinize uygun PCB’nin tedarik sürecini yürütüyoruz. Sipariş öncesinde kart için gereken bilgileri birlikte netleştiriyoruz.",
-      linkLabel: "PCB tedarikini inceleyin",
+      linkLabel: "PCB tedariğini inceleyin",
       icon: "pcb",
     },
     detail: {
-      metaTitle: "PCB Tedariki | SONEF Teknoloji",
+      metaTitle: "PCB Tedariği | SONEF Teknoloji",
       metaDescription:
-        "SONEF Teknoloji ile PCB tedarikini tek başına veya SMD dizgiyle birlikte planlayın. Teklif dosyalarını ve tasarım desteği seçeneklerini inceleyin.",
-      pageTitle: "PCB Tedariki",
+        "SONEF Teknoloji ile PCB tedariğini tek başına veya SMD dizgiyle birlikte planlayın. Teklif dosyalarını ve tasarım desteği seçeneklerini inceleyin.",
+      pageTitle: "PCB Tedariği",
       eyebrow: "Baskı devre kartı",
-      lead: "Elektronik projeniz için baskı devre kartı tedarikini, üretim dosyalarınız ve kart özellikleriniz üzerinden planlıyoruz. Yalnızca PCB talep edebilir veya kart tedarikini SMD dizgiyle birlikte değerlendirebilirsiniz.",
-      note: "PCB tedarikinde minimum sipariş adedi şartı yoktur.",
+      lead: "Elektronik projeniz için baskı devre kartı tedariğini, üretim dosyalarınız ve kart özellikleriniz üzerinden planlıyoruz. Yalnızca PCB talep edebilir veya kart tedariğini SMD dizgiyle birlikte değerlendirebilirsiniz.",
+      note: "PCB tedariğinde minimum sipariş adedi şartı yoktur.",
       primaryAction: { label: "Teklif için gerekenleri inceleyin", href: "#teklif-dosyalari" },
       heroMedia: {
         placeholderLabel: "Çıplak PCB fotoğrafı alanı",
@@ -380,12 +380,12 @@ export const services = [
           title: "PCB’yi nasıl sipariş edebilirsiniz?",
           cards: [
             {
-              title: "Yalnızca PCB tedariki",
+              title: "Yalnızca PCB tedariği",
               text: "Üretim dosyalarınız hazırsa çıplak PCB siparişi için bize ulaşabilirsiniz. Tedarik kapsamını kart özellikleriniz ve ihtiyacınız olan adet üzerinden belirliyoruz.",
             },
             {
-              title: "PCB tedariki ve SMD dizgi",
-              text: "PCB tedarikini ve SMD dizgiyi aynı proje kapsamında planlayabilirsiniz. Dizgide kullanılacak komponentleri siz sağlayabilir veya komponent tedarikini de talebinize ekleyebilirsiniz.",
+              title: "PCB tedariği ve SMD dizgi",
+              text: "PCB tedariğini ve SMD dizgiyi aynı proje kapsamında planlayabilirsiniz. Dizgide kullanılacak komponentleri siz sağlayabilir veya komponent tedariğini de talebinize ekleyebilirsiniz.",
               links: [{ slug: "smd-dizgi", label: "SMD dizgiyi inceleyin" }],
             },
           ],
@@ -435,7 +435,7 @@ export const services = [
         {
           kind: "steps",
           id: "pcb-tedarik-sureci",
-          title: "PCB tedariki nasıl ilerler?",
+          title: "PCB tedariği nasıl ilerler?",
           steps: [
             {
               title: "Dosyaları inceliyoruz",
@@ -446,7 +446,7 @@ export const services = [
               text: "Kartın teknik tercihlerini, ölçüsünü ve ihtiyacınız olan adedi birlikte belirliyoruz.",
             },
             {
-              title: "Teklifi ve tedariki planlıyoruz",
+              title: "Teklifi ve tedariği planlıyoruz",
               text: "Projenin kapsamına göre teklif hazırlıyor ve onay sonrasında tedarik sürecini yürütüyoruz.",
             },
             {
@@ -461,18 +461,18 @@ export const services = [
   {
     slug: "komponent-tedarigi",
     status: "draft",
-    title: "Komponent Tedariki",
-    shortTitle: "Komponent Tedariki",
+    title: "Komponent Tedariği",
+    shortTitle: "Komponent Tedariği",
     summary: "Projenin ihtiyaç duyduğu elektronik komponentlerin belirlenmesi ve temin edilmesi.",
     need: "Komponent listenizin temin edilmesi ya da listedeki parçaların projenize göre netleştirilmesi gerektiğinde.",
-    lead: "Bir kartın çalışması, gereken komponentlerin eksiksiz bir araya gelmesine bağlıdır. Komponent tedarikinde projenizin ihtiyaç duyduğu parçaları sizinle birlikte belirler ve teminini dizgi planıyla birlikte ele alırız.",
+    lead: "Bir kartın çalışması, gereken komponentlerin eksiksiz bir araya gelmesine bağlıdır. Komponent tedariğinde projenizin ihtiyaç duyduğu parçaları sizinle birlikte belirler ve teminini dizgi planıyla birlikte ele alırız.",
     description:
-      "SONEF’in elektronik komponent tedariki hizmeti: komponent listesinin birlikte incelenmesi, projenin ihtiyaç duyduğu parçaların belirlenmesi ve temin edilmesi.",
+      "SONEF’in elektronik komponent tedariği hizmeti: komponent listesinin birlikte incelenmesi, projenin ihtiyaç duyduğu parçaların belirlenmesi ve temin edilmesi.",
     scope: [
       "Komponent listesinin (BOM) birlikte incelenmesi",
       "Projenin ihtiyaç duyduğu komponentlerin ve adetlerin belirlenmesi",
       "Komponentlerin temin edilmesi",
-      "Tedarikin PCB tedariki ve dizgiyle birlikte planlanması",
+      "Tedariğin PCB tedariği ve dizgiyle birlikte planlanması",
     ],
     flowTitle: "Listeden dizgiye",
     flow: [
@@ -497,25 +497,25 @@ export const services = [
       "Komponent listesi (BOM): parça numaraları ve adetler",
       "Varsa kabul ettiğiniz muadil parçalar",
       "Toplam üretim adedi",
-      "PCB tedariki ve dizginin de gerekip gerekmediği",
+      "PCB tedariği ve dizginin de gerekip gerekmediği",
       "Zamanlama beklentiniz",
     ],
     processSteps: ["pcb-ve-komponent-tedarigi"],
     homeStep: "pcb-ve-komponent-tedarigi",
-    homeLinkLabel: "Komponent tedariki hizmetini inceleyin",
+    homeLinkLabel: "Komponent tedariği hizmetini inceleyin",
     overview: {
-      title: "Komponent Tedariki",
+      title: "Komponent Tedariği",
       text: "Projenizdeki elektronik komponentleri parça listenize göre tedarik ediyoruz. Montaj öncesinde gereken parçaları proje kapsamına göre belirliyoruz.",
-      linkLabel: "Komponent tedarikini inceleyin",
+      linkLabel: "Komponent tedariğini inceleyin",
       icon: "component",
     },
     detail: {
-      metaTitle: "Komponent Tedariki | SONEF Teknoloji",
+      metaTitle: "Komponent Tedariği | SONEF Teknoloji",
       metaDescription:
-        "SONEF Teknoloji ile elektronik komponent tedariki ve eksik parça tamamlama. Teklif için gerekli parça bilgilerini ve SMD dizgiyle birlikte tedarik seçeneğini inceleyin.",
-      pageTitle: "Komponent Tedariki",
-      eyebrow: "Elektronik parça tedariki",
-      lead: "Elektronik komponentleri parça listenize göre tedarik ediyoruz. Listenizin tamamını veya yalnızca eksik parçaları paylaşabilirsiniz. Tedariki tek başına talep edebilir ya da SMD dizgiyle birlikte planlayabilirsiniz.",
+        "SONEF Teknoloji ile elektronik komponent tedariği ve eksik parça tamamlama. Teklif için gerekli parça bilgilerini ve SMD dizgiyle birlikte tedarik seçeneğini inceleyin.",
+      pageTitle: "Komponent Tedariği",
+      eyebrow: "Elektronik parça tedariği",
+      lead: "Elektronik komponentleri parça listenize göre tedarik ediyoruz. Listenizin tamamını veya yalnızca eksik parçaları paylaşabilirsiniz. Tedariği tek başına talep edebilir ya da SMD dizgiyle birlikte planlayabilirsiniz.",
       note: "Komponent siparişlerinde minimum adet şartı yoktur.",
       primaryAction: { label: "Teklif listesini hazırlayın", href: "#teklif-listesi" },
       heroMedia: {
@@ -536,16 +536,16 @@ export const services = [
           title: "İhtiyacınıza uygun tedarik kapsamı",
           cards: [
             {
-              title: "Yalnızca komponent tedariki",
+              title: "Yalnızca komponent tedariği",
               text: "Parça listenizi ve ihtiyacınız olan adetleri paylaşın. Teklifinizi listedeki komponentler üzerinden değerlendirelim.",
             },
             {
               title: "Eksik parçaların tamamlanması",
-              text: "Komponentlerin bir bölümü elinizdeyse yalnızca eksik olan parçaları ve adetlerini iletin. Tedariki bu listeye göre planlayalım.",
+              text: "Komponentlerin bir bölümü elinizdeyse yalnızca eksik olan parçaları ve adetlerini iletin. Tedariği bu listeye göre planlayalım.",
             },
             {
               title: "SMD dizgiyle birlikte tedarik",
-              text: "Dizgide kullanılacak komponentlerin tedarikini ve kart montajını aynı proje kapsamında planlayabilirsiniz.",
+              text: "Dizgide kullanılacak komponentlerin tedariğini ve kart montajını aynı proje kapsamında planlayabilirsiniz.",
               links: [{ slug: "smd-dizgi", label: "SMD dizgi hizmetini inceleyin" }],
             },
           ],
@@ -566,7 +566,7 @@ export const services = [
           },
           aside: {
             title: "Ek proje dosyası: Gerber",
-            text: "Kart tedariki veya dizgi de talebinize dâhilse Gerber dosyalarını parça listenizle birlikte paylaşabilirsiniz.",
+            text: "Kart tedariği veya dizgi de talebinize dâhilse Gerber dosyalarını parça listenizle birlikte paylaşabilirsiniz.",
           },
           link: { href: `mailto:${contactInfo.email}`, label: "Listenizi e-postayla paylaşın" },
           media: {
@@ -589,7 +589,7 @@ export const services = [
         {
           kind: "steps",
           id: "komponent-tedarik-sureci",
-          title: "Komponent tedariki nasıl ilerler?",
+          title: "Komponent tedariği nasıl ilerler?",
           steps: [
             {
               title: "Listeyi paylaşırsınız",
@@ -600,7 +600,7 @@ export const services = [
               text: "Listeyi ve parçaların temin durumunu inceleriz. Muadil gündeme gelirse seçeneği sizinle görüşürüz.",
             },
             {
-              title: "Tedariki planlarız",
+              title: "Tedariği planlarız",
               text: "Teklif onaylandıktan sonra parçaların teslimatını veya dizgiye geçişini sipariş kapsamına göre planlarız.",
             },
           ],

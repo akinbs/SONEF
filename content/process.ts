@@ -35,11 +35,11 @@ export const processSteps = [
   },
   {
     slug: "pcb-ve-komponent-tedarigi",
-    title: "PCB ve komponent tedariki",
+    title: "PCB ve komponent tedariği",
     summary: "Projeye uygun PCB’nin ve gerekli komponentlerin temin edilmesi.",
     label: "Tedarik",
     headline: "Kart ve parçaları hazırlıyoruz",
-    description: "PCB ve komponentleri siz sağlayabilir ya da tedarikini bize bırakabilirsiniz.",
+    description: "PCB ve komponentleri siz sağlayabilir ya da tedariğini bize bırakabilirsiniz.",
   },
   {
     slug: "dizgi-islemleri",

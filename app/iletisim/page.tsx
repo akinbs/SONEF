@@ -33,7 +33,7 @@ export default function ContactPage() {
         compact
       >
         <p>
-          PCB tasarımı ve tedariki, SMD dizgi, komponent tedariki, Ar‑Ge ve yazılım ihtiyaçlarınız için bize
+          PCB tasarımı ve tedariği, SMD dizgi, komponent tedariği, Ar‑Ge ve yazılım ihtiyaçlarınız için bize
           ulaşabilirsiniz.
         </p>
       </PageIntro>

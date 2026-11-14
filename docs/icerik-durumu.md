@@ -146,7 +146,7 @@ Temsilî stok fotoğraflardır (Unsplash Lisansı). Özellikle **Biz Kimiz "Üre
 | `uretim-alani.webp` | Biz Kimiz giriş | Clint Patterson (@cbpsc1), `lPcXuJyoIjU` |
 | `smd-yerlestirme.webp` | SMD Dizgi giriş | Vishnu Mohanan (@vishnumaiea), `zs4gtT8thO0` |
 | `smd-kart-detay.webp` | SMD Dizgi kart detayı | Akshat Sharma (@asphotographypics), `mrTVz_fosMY` |
-| `ciplak-pcb.webp` | PCB Tedariki giriş | Vishnu Mohanan (@vishnumaiea), `vE6WEdZA6Vg` |
-| `pcb-detay.webp` | PCB Tedariki detay | Mathew Schwartz (@cadop), `iGheu30xAi8` |
-| `komponent.webp` | Komponent Tedariki giriş | Vishnu Mohanan (@vishnumaiea), `hus1z0tYELg` |
-| `parca-detay.webp` | Komponent Tedariki parça detayı | Syed kumail Haider (@kumail_art), `-A8NZuHR-Co` |
+| `ciplak-pcb.webp` | PCB Tedariği giriş | Vishnu Mohanan (@vishnumaiea), `vE6WEdZA6Vg` |
+| `pcb-detay.webp` | PCB Tedariği detay | Mathew Schwartz (@cadop), `iGheu30xAi8` |
+| `komponent.webp` | Komponent Tedariği giriş | Vishnu Mohanan (@vishnumaiea), `hus1z0tYELg` |
+| `parca-detay.webp` | Komponent Tedariği parça detayı | Syed kumail Haider (@kumail_art), `-A8NZuHR-Co` |

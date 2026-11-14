@@ -76,7 +76,7 @@ export function JourneySection() {
               Fikirden Üretime.
             </h1>
             <p className={styles.lead}>
-              Fikrinizi projeye, projenizi üretime taşıyoruz. PCB ve komponent tedarikinden dizgi,
+              Fikrinizi projeye, projenizi üretime taşıyoruz. PCB ve komponent tedariğinden dizgi,
               kontrol ve ürün sonrası desteğe kadar yanınızdayız.
             </p>
             <div className={styles.actions}>

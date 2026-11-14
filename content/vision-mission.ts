@@ -37,7 +37,7 @@ export const mission = {
   label: "Misyonumuz",
   paragraphs: [
     "Müşterilerimizin sorunlarını ve proje gereksinimlerini doğru anlayarak elektronik projelerin sağlıklı biçimde hayata geçmesine destek olmak.",
-    "PCB tasarımı ve tedariki, SMD dizgi, komponent tedariki, Ar‑Ge ve yazılım hizmetlerini açık iletişim, hız ve güvenilirlik anlayışıyla sunmak.",
+    "PCB tasarımı ve tedariği, SMD dizgi, komponent tedariği, Ar‑Ge ve yazılım hizmetlerini açık iletişim, hız ve güvenilirlik anlayışıyla sunmak.",
   ],
 } as const satisfies Statement;
 

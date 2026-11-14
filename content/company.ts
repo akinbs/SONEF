@@ -43,7 +43,7 @@ export const companyProfile = {
   foundingYear: 2026,
   city: "İstanbul",
 
-  lead: "SONEF Teknoloji, 2026 yılında İstanbul’da kuruldu. Elektronik sektöründeki çalışma deneyimimizi kendi üretim bandımızla birleştirerek kart tasarımı, üretim süreçleri, komponent tedariki, Ar‑Ge ve yazılım alanlarında hizmet veriyoruz.",
+  lead: "SONEF Teknoloji, 2026 yılında İstanbul’da kuruldu. Elektronik sektöründeki çalışma deneyimimizi kendi üretim bandımızla birleştirerek kart tasarımı, üretim süreçleri, komponent tedariği, Ar‑Ge ve yazılım alanlarında hizmet veriyoruz.",
 
   /**
    * Girişteki üretim alanı fotoğrafı. Gerçek fotoğraf geldiğinde `image` eklenir
@@ -71,7 +71,7 @@ export const companyProfile = {
     title: "Sektörden kendi üretim bandımıza",
     paragraphs: [
       "Elektronik sektöründe çalışırken edindiğimiz deneyimi kendi hizmet anlayışımızla sürdürmek istedik. Bu hedefle SONEF Teknoloji’yi kurduk ve kendi üretim bandımızı oluşturduk.",
-      "Bugün fikir aşamasındaki projelerle de üretime hazırlanmış kart tasarımlarıyla da çalışıyoruz. Projenin ihtiyacına göre tasarım, PCB ve komponent tedariki, dizgi ve yazılım çalışmalarını birlikte değerlendiriyoruz.",
+      "Bugün fikir aşamasındaki projelerle de üretime hazırlanmış kart tasarımlarıyla da çalışıyoruz. Projenin ihtiyacına göre tasarım, PCB ve komponent tedariği, dizgi ve yazılım çalışmalarını birlikte değerlendiriyoruz.",
     ],
   },
 
@@ -93,8 +93,8 @@ export const companyProfile = {
         text: "Kart tasarımını ve üretim için gereken hazırlıkları projenin ihtiyaçlarına göre ele alıyoruz.",
       },
       {
-        title: "PCB ve komponent tedariki",
-        text: "Baskı devre kartı ve elektronik parçaların tedarikini, proje dosyaları ve parça listesi üzerinden planlıyoruz.",
+        title: "PCB ve komponent tedariği",
+        text: "Baskı devre kartı ve elektronik parçaların tedariğini, proje dosyaları ve parça listesi üzerinden planlıyoruz.",
       },
       {
         title: "Kart dizgisi ve üretim süreçleri",
@@ -108,8 +108,8 @@ export const companyProfile = {
     /** Ayrıntılı kapsam hizmet detay sayfalarındadır; `slug` content/services.ts ile eşleşir. */
     links: [
       { slug: "smd-dizgi", label: "SMD Dizgi" },
-      { slug: "pcb-tedarigi", label: "PCB Tedariki" },
-      { slug: "komponent-tedarigi", label: "Komponent Tedariki" },
+      { slug: "pcb-tedarigi", label: "PCB Tedariği" },
+      { slug: "komponent-tedarigi", label: "Komponent Tedariği" },
     ],
   },
 
